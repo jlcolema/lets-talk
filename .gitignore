@@ -1,0 +1,47 @@
+# Ignore everything in the root except the "wp-content" directory.
+
+dist/html/*
+!dist/html/wp-content/
+
+# Ignore everything in the "wp-content" directory, except:
+# "mu-plugins", "plugins", "themes" directory.
+
+dist/html/wp-content/*
+!dist/html/wp-content/mu-plugins/
+!dist/html/wp-content/plugins/
+!dist/html/wp-content/themes/
+
+# Ignore these plugins.
+
+dist/html/wp-content/plugins/hello.php
+
+# Ignore specific themes.
+
+dist/html/wp-content/themes/*
+!dist/html/wp-content/themes/letstalk/
+
+# Ignore theme assets directory.
+
+dist/html/wp-content/themes/letstalk/assets/*
+
+# Ignore source files.
+
+src/ssl/
+
+# Ignore node dependency directories.
+
+node_modules/
+
+# Ignore log files and databases.
+
+*.log
+*.sql
+*.sqlite
+
+# Title
+
+# *.code-workspace
+
+# Ignore OS generated files.
+
+.DS_Store

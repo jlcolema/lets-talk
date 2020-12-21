@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			// The entire project folder
+			"name": "Everything",
+			"path": "."
+		},
+		{
+			// Source files
+			"name": "Source",
+			"path": "src"
+		},
+		{
+			// Theme files
+			"name": "Theme",
+			"path": "dist/html/wp-content/themes/letstalk"
+		}
+	],
+	"settings": {}
+}
