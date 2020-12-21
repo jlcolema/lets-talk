@@ -1,0 +1,32 @@
+{
+  "name": "letstalk",
+  "version": "1.0.0",
+  "description": "A WordPress-based theme for Let's Talk IAPT",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlcolema/letstalk.git"
+  },
+  "keywords": [
+    "wordpress"
+  ],
+  "author": "Joshua Coleman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jlcolema/letstalk/issues"
+  },
+  "homepage": "https://github.com/jlcolema/letstalk#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^5.0.0"
+  }
+}
