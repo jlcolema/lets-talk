@@ -1,0 +1,586 @@
+# Copyright (C) 2020 WP Media Library
+# This file is distributed under the same license as the Media Library Organizer plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Media Library Organizer 1.2.8\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/media-library-organizer\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-12-17T19:26:36+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.5.0-alpha\n"
+"X-Domain: media-library-organizer\n"
+
+#. Plugin Name of the plugin
+msgid "Media Library Organizer"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://wpmedialibrary.com"
+msgstr ""
+
+#. Description of the plugin
+msgid "Organize and Search your Media Library, quicker and easier."
+msgstr ""
+
+#. Author of the plugin
+msgid "WP Media Library"
+msgstr ""
+
+#: addons/tree-view/views/admin/settings.php:43
+msgid "If enabled, only top level Categories are displayed in the Tree View. Clicking the icon next to them will reveal Subcategories."
+msgstr ""
+
+#: includes/admin/admin-ajax.php:48
+msgid "Unauthorized."
+msgstr ""
+
+#: includes/admin/admin-ajax.php:56
+msgid "No settings data detected."
+msgstr ""
+
+#: includes/admin/admin-ajax.php:78
+#: includes/admin/admin.php:788
+#: includes/admin/admin.php:817
+msgid "Settings saved."
+msgstr ""
+
+#: includes/admin/admin.php:302
+msgid "Saving"
+msgstr ""
+
+#: includes/admin/admin.php:303
+msgid "Saved!"
+msgstr ""
+
+#: includes/admin/admin.php:401
+msgid "Settings"
+msgstr ""
+
+#: includes/admin/admin.php:402
+msgid "Defines Plugin-wide settings for Media Library Organizer."
+msgstr ""
+
+#: includes/admin/admin.php:455
+msgid "The requested administration screen does not exist"
+msgstr ""
+
+#: includes/admin/admin.php:552
+msgid "Filters"
+msgstr ""
+
+#: includes/admin/admin.php:558
+msgid "User Options"
+msgstr ""
+
+#: includes/admin/admin.php:596
+msgid "Auto Categorization"
+msgstr ""
+
+#: includes/admin/admin.php:603
+msgid "Defaults"
+msgstr ""
+
+#: includes/admin/admin.php:609
+msgid "EXIF"
+msgstr ""
+
+#: includes/admin/admin.php:616
+msgid "IPTC"
+msgstr ""
+
+#: includes/admin/admin.php:623
+#: views/admin/settings-upgrade.php:76
+msgid "Output"
+msgstr ""
+
+#: includes/admin/admin.php:629
+msgid "ZIP"
+msgstr ""
+
+#: includes/admin/admin.php:747
+msgid "Invalid nonce specified. Settings NOT saved."
+msgstr ""
+
+#: includes/admin/import.php:62
+#: views/admin/import-enhanced-media-library.php:5
+msgid "Import from Enhanced Media Library"
+msgstr ""
+
+#: includes/admin/import.php:76
+#: views/admin/import-filebird.php:5
+msgid "Import from FileBird"
+msgstr ""
+
+#: includes/admin/import.php:87
+#: views/admin/import-folders.php:5
+msgid "Import from Folders (Premio)"
+msgstr ""
+
+#: includes/admin/import.php:98
+#: views/admin/import-happyfiles.php:5
+msgid "Import from HappyFiles"
+msgstr ""
+
+#: includes/admin/import.php:109
+#: views/admin/import-wp-media-folder.php:5
+msgid "Import from WP Media Folder"
+msgstr ""
+
+#: includes/admin/import.php:120
+#: views/admin/import-wicked-folders.php:5
+msgid "Import from Wicked Folders"
+msgstr ""
+
+#: includes/admin/import.php:144
+msgid "Supplied file is not a valid JSON settings file, or has become corrupt."
+msgstr ""
+
+#: includes/admin/import.php:208
+msgid "Import from Enhanced Media Library: Please select at least one Taxonomy to import."
+msgstr ""
+
+#. translators: %1$s: Term name to create, %2$s: Error message from attempting to create term
+#: includes/admin/import.php:298
+msgid "Term Name: %1$s, Error: %2$s"
+msgstr ""
+
+#. translators: Errors when trying to import Terms from another Plugin
+#: includes/admin/import.php:318
+msgid "No Terms were imported, as the following errors were encountered: %s"
+msgstr ""
+
+#: includes/admin/import.php:325
+msgid "No Terms were imported"
+msgstr ""
+
+#. translators: %1$s: Attachment ID, %2$s: Term IDs to assign to Attachment ID, %3$s: Error message when trying to assign Terms to Attachment
+#: includes/admin/import.php:360
+msgid "Attachment ID: %1$s, Term IDs: %2$s, Error: %3$s"
+msgstr ""
+
+#. translators: Errors encountered when trying to import and assign Terms to Attachments
+#: includes/admin/import.php:375
+msgid "Terms were imported, however some errors were encountered.  They may have no impact on the import, but you'll need to check: %s"
+msgstr ""
+
+#: includes/global/ajax.php:87
+#: includes/global/ajax.php:123
+msgid "Category does not exist, so cannot be deleted"
+msgstr ""
+
+#: includes/global/common.php:107
+msgid "All"
+msgstr ""
+
+#: includes/global/common.php:108
+msgid "Any"
+msgstr ""
+
+#: includes/global/common.php:136
+msgid "Above"
+msgstr ""
+
+#: includes/global/common.php:137
+msgid "Below"
+msgstr ""
+
+#: includes/global/common.php:138
+msgid "Above and Below"
+msgstr ""
+
+#: includes/global/common.php:206
+msgid "Attachment ID"
+msgstr ""
+
+#: includes/global/common.php:207
+msgid "Author (Uploader)"
+msgstr ""
+
+#: includes/global/common.php:208
+msgid "Date"
+msgstr ""
+
+#: includes/global/common.php:209
+msgid "Filename"
+msgstr ""
+
+#: includes/global/common.php:210
+msgid "Modified Date"
+msgstr ""
+
+#: includes/global/common.php:211
+msgid "Uploaded to"
+msgstr ""
+
+#: includes/global/common.php:212
+msgid "Title"
+msgstr ""
+
+#: includes/global/common.php:213
+msgid "Uploaded Date"
+msgstr ""
+
+#: includes/global/common.php:266
+msgid "Ascending (A-Z)"
+msgstr ""
+
+#: includes/global/common.php:267
+msgid "Descending (Z-A)"
+msgstr ""
+
+#: includes/global/common.php:319
+#: includes/global/common.php:348
+#: includes/global/common.php:372
+#: includes/global/common.php:383
+msgid "None"
+msgstr ""
+
+#: includes/global/common.php:320
+msgid "Left"
+msgstr ""
+
+#: includes/global/common.php:321
+msgid "Center"
+msgstr ""
+
+#: includes/global/common.php:322
+msgid "Right"
+msgstr ""
+
+#: includes/global/common.php:349
+#: includes/global/common.php:373
+#: includes/global/common.php:384
+msgid "Media File"
+msgstr ""
+
+#: includes/global/common.php:350
+#: includes/global/common.php:374
+#: includes/global/common.php:385
+msgid "Attachment Page"
+msgstr ""
+
+#: includes/global/common.php:351
+msgid "Custom URL"
+msgstr ""
+
+#: includes/global/common.php:361
+msgid "Link to Media File"
+msgstr ""
+
+#: includes/global/common.php:362
+msgid "Embed Media Player"
+msgstr ""
+
+#: includes/global/common.php:363
+msgid "Link to Attachment Page"
+msgstr ""
+
+#. translators: Folder name
+#: includes/global/filesystem.php:134
+#: includes/global/filesystem.php:155
+msgid "Could not create temporary folder at %s"
+msgstr ""
+
+#. translators: %1$s: Folder Name, %2$s: WordPress Uploads Folder Path
+#: includes/global/filesystem.php:196
+msgid "Cannot delete %1$s, as it is not within %2$s."
+msgstr ""
+
+#. translators: Folder Name
+#: includes/global/filesystem.php:210
+msgid "Unable to delete %s"
+msgstr ""
+
+#: includes/global/media.php:162
+msgid "All Media Categories"
+msgstr ""
+
+#: includes/global/media.php:163
+msgid "(Unassigned)"
+msgstr ""
+
+#: includes/global/mime.php:84
+msgid "Images"
+msgstr ""
+
+#: includes/global/mime.php:85
+msgid "Videos"
+msgstr ""
+
+#: includes/global/mime.php:86
+msgid "Audio"
+msgstr ""
+
+#: includes/global/mime.php:87
+msgid "Text"
+msgstr ""
+
+#: includes/global/mime.php:88
+msgid "Documents"
+msgstr ""
+
+#: includes/global/mime.php:89
+msgid "Spreadsheets"
+msgstr ""
+
+#: includes/global/mime.php:90
+msgid "Presentations"
+msgstr ""
+
+#: includes/global/mime.php:91
+msgid "Archives"
+msgstr ""
+
+#: includes/global/mime.php:92
+msgid "Other"
+msgstr ""
+
+#: includes/global/taxonomy.php:80
+msgid "Media Category"
+msgstr ""
+
+#: includes/global/taxonomy.php:81
+#: views/admin/settings-general.php:57
+msgid "Media Categories"
+msgstr ""
+
+#: includes/global/taxonomy.php:82
+msgid "Category"
+msgstr ""
+
+#: includes/global/taxonomy.php:83
+msgid "Categories"
+msgstr ""
+
+#. translators: Taxonomy Label, Plural ("Categories")
+#: includes/global/taxonomy.php:103
+msgid "Search %s"
+msgstr ""
+
+#. translators: Taxonomy Label, Plural ("Categories")
+#: includes/global/taxonomy.php:105
+msgid "All %s"
+msgstr ""
+
+#. translators: Taxonomy Label, Singular ("Category")
+#: includes/global/taxonomy.php:107
+msgid "Parent %s"
+msgstr ""
+
+#. translators: Taxonomy Label, Singular ("Category")
+#: includes/global/taxonomy.php:109
+msgid "Parent %s:"
+msgstr ""
+
+#. translators: Taxonomy Label, Singular ("Category")
+#: includes/global/taxonomy.php:111
+msgid "Edit %s"
+msgstr ""
+
+#. translators: Taxonomy Label, Singular ("Category")
+#: includes/global/taxonomy.php:113
+msgid "Update %s"
+msgstr ""
+
+#. translators: Taxonomy Label, Singular ("Category")
+#: includes/global/taxonomy.php:115
+msgid "Add New %s"
+msgstr ""
+
+#. translators: Taxonomy Label, Singular ("Category")
+#: includes/global/taxonomy.php:117
+msgid "New %s"
+msgstr ""
+
+#: views/admin/import-enhanced-media-library.php:11
+msgid "Taxonomies"
+msgstr ""
+
+#: views/admin/import-enhanced-media-library.php:30
+msgid "Select the Taxonomies to import.  The Terms from the chosen Enhanced Media Library Taxonomies above will be imported into Media Library Organizer's Media Categories Taxonomy."
+msgstr ""
+
+#: views/admin/import-enhanced-media-library.php:36
+#: views/admin/import-filebird.php:22
+#: views/admin/import-folders.php:22
+#: views/admin/import-happyfiles.php:22
+#: views/admin/import-wicked-folders.php:22
+#: views/admin/import-wp-media-folder.php:22
+#: views/admin/settings-import-export.php:26
+#: views/admin/settings-import-export.php:42
+#: views/admin/settings-import-export.php:75
+msgid "Import"
+msgstr ""
+
+#: views/admin/import-filebird.php:12
+msgid "FileBird's folders (categories) will be imported into Media Library Organizer."
+msgstr ""
+
+#: views/admin/import-filebird.php:16
+msgid "Attachments assigned to FileBird folders will be reassigned to the equivalent Categories imported into Media Library Organizer."
+msgstr ""
+
+#: views/admin/import-folders.php:12
+msgid "Folder's folders (categories) will be imported into Media Library Organizer."
+msgstr ""
+
+#: views/admin/import-folders.php:16
+msgid "Attachments assigned to Folder's folders will be reassigned to the equivalent Categories imported into Media Library Organizer."
+msgstr ""
+
+#: views/admin/import-happyfiles.php:12
+msgid "HappyFiles's folders (categories) will be imported into Media Library Organizer."
+msgstr ""
+
+#: views/admin/import-happyfiles.php:16
+msgid "Attachments assigned to HappyFiles folders will be reassigned to the equivalent Categories imported into Media Library Organizer."
+msgstr ""
+
+#: views/admin/import-wicked-folders.php:12
+msgid "Wicked Folder's folders (categories) will be imported into Media Library Organizer."
+msgstr ""
+
+#: views/admin/import-wicked-folders.php:16
+msgid "Attachments assigned to Wicked Folder's folders will be reassigned to the equivalent Categories imported into Media Library Organizer."
+msgstr ""
+
+#: views/admin/import-wp-media-folder.php:12
+msgid "WP Media Folder's folders (categories) will be imported into Media Library Organizer."
+msgstr ""
+
+#: views/admin/import-wp-media-folder.php:16
+msgid "Attachments assigned to WP Media Folder's folders will be reassigned to the equivalent Categories imported into Media Library Organizer."
+msgstr ""
+
+#: views/admin/settings-general.php:32
+msgid "Pro"
+msgstr ""
+
+#: views/admin/settings-general.php:49
+msgid "Filter Settings"
+msgstr ""
+
+#: views/admin/settings-general.php:51
+msgid "Determines which filters should be displayed on list and grid Media Library views."
+msgstr ""
+
+#: views/admin/settings-general.php:61
+#: views/admin/settings-general.php:77
+#: views/admin/settings-general.php:93
+msgid "Enabled"
+msgstr ""
+
+#: views/admin/settings-general.php:62
+#: views/admin/settings-general.php:78
+#: views/admin/settings-general.php:94
+msgid "Disabled"
+msgstr ""
+
+#: views/admin/settings-general.php:66
+msgid "If enabled, displays a dropdown option to filter Media Library items by Category"
+msgstr ""
+
+#: views/admin/settings-general.php:73
+#: views/admin/settings-general.php:119
+msgid "Sorting"
+msgstr ""
+
+#: views/admin/settings-general.php:82
+msgid "If enabled, displays a dropdown option to select how to order Media Library items"
+msgstr ""
+
+#: views/admin/settings-general.php:89
+#: views/admin/settings-general.php:135
+msgid "Sort Order"
+msgstr ""
+
+#: views/admin/settings-general.php:98
+msgid "If enabled, displays a dropdown option to select whether to order Media Library items ascending or descending"
+msgstr ""
+
+#: views/admin/settings-general.php:111
+msgid "User Settings"
+msgstr ""
+
+#: views/admin/settings-general.php:113
+msgid "Determines which filter settings should persist across different screens for the logged in WordPress User."
+msgstr ""
+
+#: views/admin/settings-general.php:123
+#: views/admin/settings-general.php:139
+msgid "Remember"
+msgstr ""
+
+#: views/admin/settings-general.php:124
+#: views/admin/settings-general.php:140
+msgid "Don't Remember"
+msgstr ""
+
+#: views/admin/settings-general.php:128
+msgid "When set to Remembered, the User's last chosen Order By filter option will be remembered across all Media Views.  When set to Don't Remember, the filters will reset when switching between WordPress Administration screens."
+msgstr ""
+
+#: views/admin/settings-general.php:144
+msgid "When set to Remembered, the User's last chosen Order filter option will be remembered across all Media Views.  When set to Don't Remember, the filters will reset when switching between WordPress Administration screens."
+msgstr ""
+
+#: views/admin/settings-import-export.php:28
+msgid "Upload a JSON file generated by this Plugin's export functionality.  This will overwrite any existing settings stored on this installation."
+msgstr ""
+
+#: views/admin/settings-import-export.php:34
+msgid "JSON File"
+msgstr ""
+
+#. translators: Import Source Name
+#: views/admin/settings-import-export.php:58
+msgid "Import from %s"
+msgstr ""
+
+#. translators: Import Source Name
+#: views/admin/settings-import-export.php:64
+msgid "Imports %s data found on this WordPress installation. This will overwrite any existing settings in this Plugin."
+msgstr ""
+
+#: views/admin/settings-import-export.php:88
+#: views/admin/settings-import-export.php:97
+#: views/admin/settings-import-export.php:98
+msgid "Export"
+msgstr ""
+
+#: views/admin/settings-import-export.php:90
+msgid "To export this Plugin's settings, click the Export button below."
+msgstr ""
+
+#: views/admin/settings-import-export.php:92
+msgid "You can then import the generated JSON file into another Plugin installation."
+msgstr ""
+
+#: views/admin/settings-upgrade.php:4
+msgid "Auto Categorization Settings"
+msgstr ""
+
+#: views/admin/settings-upgrade.php:22
+msgid "Defaults Settings"
+msgstr ""
+
+#: views/admin/settings-upgrade.php:40
+msgid "EXIF Settings"
+msgstr ""
+
+#: views/admin/settings-upgrade.php:58
+msgid "IPTC Settings"
+msgstr ""
+
+#: views/admin/settings-upgrade.php:94
+msgid "ZIP Settings"
+msgstr ""
+
+#: views/admin/settings.php:23
+msgid "Documentation"
+msgstr ""

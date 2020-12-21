@@ -1,0 +1,187 @@
+<?php
+/**
+ * Upload class.
+ * 
+ * @package   Media_Library_Organizer_Zip
+ * @author    WP Media Library
+ * @version   1.0.0
+ */
+class Media_Library_Organizer_Upload {
+
+    /**
+     * Holds the base class object.
+     *
+     * @since   1.0.5
+     *
+     * @var     object
+     */
+    public $base;
+
+    /**
+     * Constructor
+     * 
+     * @since   1.0.5
+     *
+     * @param   object $base    Base Plugin Class
+     */
+    public function __construct( $base ) {
+
+        // Store base class
+        $this->base = $base;
+
+        // Prepend the UI
+        add_action( 'pre-upload-ui', array( $this, 'output_upload_ui' ) );
+
+        // Define the pluploader's options
+        add_filter( 'plupload_init', array( $this, 'plupload_options' ) );
+
+        // Run actions just before an attachment is added
+        add_filter( 'wp_insert_attachment_data', array( $this, 'filter_attachment_data_before_save' ), 10, 2 );
+        
+        // Run actions when an attachment is uploaded
+        add_action( 'add_attachment', array( $this, 'add_attachment' ) );
+
+    }
+
+    /**
+     * Allows Addons to output below the HTML and JS uploaders at Media > Add New
+     *
+     * @since   1.0.5
+     */
+    public function output_upload_ui() {
+
+        /**
+         * Allows Addons to output below the HTML and JS uploaders at Media > Add New
+         *
+         * @since   1.0.5
+         */
+        do_action( 'media_library_organizer_upload_output_upload_ui' );
+
+    }
+
+    /**
+     * Define the pluploader's options
+     *
+     * @since   1.0.5
+     *
+     * @param   array   $options    Plupload Options
+     * @return  array               Plupload Options
+     */
+    public function plupload_options( $options ) {
+
+        // Get taxonomy
+        $taxonomy = $this->base->get_class( 'taxonomy' )->get_taxonomy();
+
+        // Define form fields to send with file uploads
+        // The field values must be updated when the user updates the form, which is done at assets/js/upload.js
+        $fields = array( 
+            $taxonomy->name => $this->base->get_class( 'media' )->get_selected_terms_slugs(),
+        );
+
+        // Define a multipart_params array if not defined
+        if ( ! is_array( $options['multipart_params'] ) ) {
+            $options['multipart_params'] = array();
+        }
+
+        // Assign fields to multipart_params
+        $options['multipart_params']['media_library_organizer'] = $fields;
+
+        /**
+         * Define the pluploader's options
+         *
+         * @since   1.0.5
+         *
+         * @param   array   $options    Plupload Options
+         */
+        $options = apply_filters( 'media_library_organizer_upload_plupload_options', $options );
+
+        // Return
+        return $options;
+
+    }
+
+    /**
+     * Filters attachment post data before it is saved to the WordPress Media Library, for new
+     * and existing Attachments
+     *
+     * @since   1.1.9
+     *
+     * @param   array   $data               Slashed, sanitized, and processed attachment post data.
+     * @param   array   $unprocessed_data   Slashed and sanitized attachment post data, but not processed.
+     * @return  array                       Attachment Post Data
+     */
+    public function filter_attachment_data_before_save( $data, $unprocessed_data ) {
+
+        // Determine if we're saving Attachment data for a new upload or an existing file
+        if ( isset( $data['ID'] ) && ! empty( $data['ID'] ) ) {
+
+            /**
+             * Filters attachment post data for an existing Attachment before it is saved to the WordPress Media Library
+             *
+             * @since   1.1.9
+             *
+             * @param   array   $data               Slashed, sanitized, and processed attachment post data.
+             * @param   array   $unprocessed_data   Slashed and sanitized attachment post data, but not processed. 
+             */
+            $data = apply_filters( 'media_library_organizer_upload_filter_existing_attachment_data_before_save', $data, $unprocessed_data, $data['ID'] );
+        
+        } else {
+
+            /**
+             * Filters attachment post data before a new Attachment is saved to the WordPress Media Library
+             *
+             * @since   1.1.9
+             *
+             * @param   array   $data               Slashed, sanitized, and processed attachment post data.
+             * @param   array   $unprocessed_data   Slashed and sanitized attachment post data, but not processed.
+             */
+            $data = apply_filters( 'media_library_organizer_upload_filter_new_attachment_data_before_save', $data, $unprocessed_data );
+
+        }
+
+        return $data;
+
+    }
+
+    /**
+     * Allows Addons to run actions on an attachment that has just been
+     * uploaded to the WordPress Media Library
+     *
+     * @since   1.0.5
+     */
+    public function add_attachment( $attachment_id ) {
+
+        // Get taxonomy
+        $taxonomy = Media_Library_Organizer()->get_class( 'taxonomy' )->get_taxonomy();
+
+        // Conditionally set Media Categories, as they won't be included in the request if no checkboxes were selected
+        if ( isset( $_REQUEST['media_library_organizer'] ) && isset( $_REQUEST['media_library_organizer'][ $taxonomy->name ] ) && ! empty( $_REQUEST['media_library_organizer'][ $taxonomy->name ] ) ) {
+            // Get Attachment
+            $attachment = new Media_Library_Organizer_Attachment( $attachment_id );
+
+            // Set Category
+            $term = get_term_by( 'slug', sanitize_text_field( $_REQUEST['media_library_organizer'][ $taxonomy->name ] ), $taxonomy->name );
+            if ( $term ) {
+                $attachment->set_media_categories( array( $term->term_id ) );
+
+                // Update the Attachment
+                $attachment->update();
+
+                // Destroy the class
+                unset( $attachment );
+            }
+        }
+
+        /**
+         * Allows Addons to run actions on an attachment that has just been
+         * uploaded to the WordPress Media Library
+         *
+         * @since   1.0.5
+         *
+         * @param   int     $attachment_id  Attachment ID
+         */
+        do_action( 'media_library_organizer_upload_add_attachment', $attachment_id );
+
+    }
+
+}
