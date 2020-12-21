@@ -1,0 +1,32 @@
+/*--------------------------------------
+   Common: Mixins
+--------------------------------------*/
+
+// Notes...
+
+// Self-Clearing Elements
+
+@mixin group {
+
+	&:after {
+
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+		font-size: 0;
+
+	}
+
+}
+
+// Image Replacement
+
+@mixin hide-text() {
+
+	text-indent: -9999px;
+	white-space: nowrap;
+	overflow: hidden;
+
+}

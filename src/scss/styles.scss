@@ -1,0 +1,82 @@
+/*
+Theme Name: Let's Talk IAPT
+Text Domain: letstalk
+Version: 1.0
+Requires at least: 4.7
+Requires PHP: 5.2.4
+Description: A custom WordPress theme for Let's Talk IAPT.
+Tags: one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, full-width-template, rtl-language-support, theme-options, translation-ready, accessibility-ready
+Author: Joshua Coleman
+Author URI: https://github.com/jlcolema/
+Theme URI: https://github.com/jlcolema/letstalk
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+All files, unless otherwise stated, are released under the GNU General Public
+License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned
+with others.
+*/
+
+// Table of Contents
+
+// 1. Configuration and Helpers
+// 2. Baseline
+// 3. Layouts
+// 4. Components
+// 5. Vendor
+// 6. Page-specific
+// 7. Editor
+
+@charset 'utf-8';
+
+// 1. Configuration, Utilities, and Helpers
+
+@import 'common/_normalize';
+@import 'common/_variables';
+@import 'common/_mixins';
+@import 'common/_fonts';
+
+// 2. Baseline
+
+@import 'common/_baseline';
+@import 'common/miscellaneous';
+
+// 3. Layouts
+
+@import 'layouts/_header';
+@import 'layouts/_main';
+@import 'layouts/_footer';
+
+// 4. Components
+
+// @import 'components/_button';
+// @import 'components/_carousel';
+@import 'components/_form';
+
+// 5. Vendor
+
+// @import 'vendor/_contact-form-7';
+// @import 'vendor/locomotive-scroll';
+
+// 6. Page-specific
+
+@import 'pages/_home';
+// @import 'pages/_work';
+// @import 'pages/_project';
+// @import 'pages/_proposal';
+@import 'pages/_404';
+
+// 7. Sections
+
+// @import 'sections/_welcome';
+// @import 'sections/_clients';
+// @import 'sections/_work';
+// @import 'sections/_about';
+// @import 'sections/_contact';
+
+// 8. Editor
+
+@import 'editor/_admin';
