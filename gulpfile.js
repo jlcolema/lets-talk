@@ -151,7 +151,12 @@ gulp.task('watch', function() {
 		proxy: "https://letstalk.local",
 		host: "letstalk.local",
 		open: "external",
-		// browser: 'microsoft edge'
+		https: {
+			// browser-sync will pick these settings up and use them instead of its self-signed SSL cert for localhost
+			key: '/Applications/MAMP/Library/OpenSSL/certs/letstalk.local.key',
+			cert: '/Applications/MAMP/Library/OpenSSL/certs/letstalk.local.crt',
+		  },
+		browser: 'microsoft edge'
 
 	});
 
