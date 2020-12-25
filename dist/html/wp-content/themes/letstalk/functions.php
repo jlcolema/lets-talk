@@ -105,9 +105,6 @@ function lets_talk_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'lets_talk_scripts' );
 
-// Enhance the theme by hooking into WordPress.
-require get_template_directory() . '/inc/template-functions.php';
-
 // Menu functions and filters.
 require get_template_directory() . '/inc/menu-functions.php';
 
