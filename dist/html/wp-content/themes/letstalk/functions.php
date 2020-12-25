@@ -77,14 +77,6 @@ if ( ! function_exists( 'lets_talk_setup' ) ) {
 		// Enqueue editor styles.
 		add_editor_style( $editor_stylesheet_path );
 
-		// Custom background color.
-		add_theme_support(
-			'custom-background',
-			array(
-				'default-color' => 'd1e4dd',
-			)
-		);
-
 		// Editor color palette.
 		$black     = '#000000';
 		$dark_gray = '#28303D';
