@@ -77,16 +77,6 @@ if ( ! function_exists( 'lets_talk_setup' ) ) {
 		// Enqueue editor styles.
 		add_editor_style( $editor_stylesheet_path );
 
-		/*
-		* Adds starter content to highlight the theme on fresh sites.
-		* This is done conditionally to avoid loading the starter content on every
-		* page load, as it is a one-off operation only needed once in the customizer.
-		*/
-		if ( is_customize_preview() ) {
-			require get_template_directory() . '/inc/starter-content.php';
-			add_theme_support( 'starter-content', lets_talk_get_starter_content() );
-		}
-
 		// Add support for responsive embedded content.
 		add_theme_support( 'responsive-embeds' );
 
