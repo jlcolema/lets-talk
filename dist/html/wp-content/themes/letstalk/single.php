@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_One
+ * @subpackage Lets_Talk_IAPT
  * @since 1.0.0
  */
 
@@ -22,7 +22,7 @@ while ( have_posts() ) :
 		the_post_navigation(
 			array(
 				/* translators: %s: parent post link. */
-				'prev_text' => sprintf( __( '<span class="meta-nav">Published in</span><span class="post-title">%s</span>', 'twentytwentyone' ), '%title' ),
+				'prev_text' => sprintf( __( '<span class="meta-nav">Published in</span><span class="post-title">%s</span>', 'letstalk' ), '%title' ),
 			)
 		);
 	}
@@ -33,29 +33,29 @@ while ( have_posts() ) :
 	}
 
 	// Previous/next post navigation.
-	$twentytwentyone_next = is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' );
-	$twentytwentyone_prev = is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' );
+	$letstalk_next = is_rtl() ? lets_talk_get_icon_svg( 'ui', 'arrow_left' ) : lets_talk_get_icon_svg( 'ui', 'arrow_right' );
+	$letstalk_prev = is_rtl() ? lets_talk_get_icon_svg( 'ui', 'arrow_right' ) : lets_talk_get_icon_svg( 'ui', 'arrow_left' );
 
-	$twentytwentyone_post_type      = get_post_type_object( get_post_type() );
-	$twentytwentyone_post_type_name = '';
+	$letstalk_post_type      = get_post_type_object( get_post_type() );
+	$letstalk_post_type_name = '';
 	if (
-		is_object( $twentytwentyone_post_type ) &&
-		property_exists( $twentytwentyone_post_type, 'labels' ) &&
-		is_object( $twentytwentyone_post_type->labels ) &&
-		property_exists( $twentytwentyone_post_type->labels, 'singular_name' )
+		is_object( $letstalk_post_type ) &&
+		property_exists( $letstalk_post_type, 'labels' ) &&
+		is_object( $letstalk_post_type->labels ) &&
+		property_exists( $letstalk_post_type->labels, 'singular_name' )
 	) {
-		$twentytwentyone_post_type_name = $twentytwentyone_post_type->labels->singular_name;
+		$letstalk_post_type_name = $letstalk_post_type->labels->singular_name;
 	}
 
 	/* translators: %s: The post-type singlular name (example: Post, Page etc) */
-	$twentytwentyone_next_label = sprintf( esc_html__( 'Next %s', 'twentytwentyone' ), $twentytwentyone_post_type_name );
+	$letstalk_next_label = sprintf( esc_html__( 'Next %s', 'letstalk' ), $letstalk_post_type_name );
 	/* translators: %s: The post-type singlular name (example: Post, Page etc) */
-	$twentytwentyone_previous_label = sprintf( esc_html__( 'Previous %s', 'twentytwentyone' ), $twentytwentyone_post_type_name );
+	$letstalk_previous_label = sprintf( esc_html__( 'Previous %s', 'letstalk' ), $letstalk_post_type_name );
 
 	the_post_navigation(
 		array(
-			'next_text' => '<p class="meta-nav">' . $twentytwentyone_next_label . $twentytwentyone_next . '</p><p class="post-title">%title</p>',
-			'prev_text' => '<p class="meta-nav">' . $twentytwentyone_prev . $twentytwentyone_previous_label . '</p><p class="post-title">%title</p>',
+			'next_text' => '<p class="meta-nav">' . $letstalk_next_label . $letstalk_next . '</p><p class="post-title">%title</p>',
+			'prev_text' => '<p class="meta-nav">' . $letstalk_prev . $letstalk_previous_label . '</p><p class="post-title">%title</p>',
 		)
 	);
 endwhile; // End of the loop.

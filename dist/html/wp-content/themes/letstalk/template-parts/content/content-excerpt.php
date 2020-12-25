@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_One
+ * @subpackage Lets_Talk_IAPT
  * @since 1.0.0
  */
 
@@ -20,6 +20,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer default-max-width">
-		<?php twenty_twenty_one_entry_meta_footer(); ?>
+		<?php lets_talk_entry_meta_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-${ID} -->

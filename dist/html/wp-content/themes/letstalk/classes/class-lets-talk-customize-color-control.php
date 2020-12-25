@@ -3,7 +3,7 @@
  * Customize API: WP_Customize_Color_Control class
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_One
+ * @subpackage Lets_Talk_IAPT
  * @since 1.0.0
  */
 
@@ -14,7 +14,7 @@
  *
  * @see WP_Customize_Control
  */
-class Twenty_Twenty_One_Customize_Color_Control extends WP_Customize_Color_Control {
+class Lets_Talk_Customize_Color_Control extends WP_Customize_Color_Control {
 	/**
 	 * The control type.
 	 *
@@ -22,7 +22,7 @@ class Twenty_Twenty_One_Customize_Color_Control extends WP_Customize_Color_Contr
 	 *
 	 * @var string
 	 */
-	public $type = 'twenty-twenty-one-color';
+	public $type = 'lets-talk-color';
 
 	/**
 	 * Colorpicker palette
@@ -49,7 +49,7 @@ class Twenty_Twenty_One_Customize_Color_Control extends WP_Customize_Color_Contr
 
 		// Enqueue the script.
 		wp_enqueue_script(
-			'twentytwentyone-control-color',
+			'letstalk-control-color',
 			get_theme_file_uri( 'assets/js/palette-colorpicker.js' ),
 			array( 'customize-controls', 'jquery', 'customize-base', 'wp-color-picker' ),
 			(string) filemtime( get_theme_file_path( 'assets/js/palette-colorpicker.js' ) ),

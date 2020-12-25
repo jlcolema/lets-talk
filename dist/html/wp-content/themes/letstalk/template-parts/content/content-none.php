@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_One
+ * @subpackage Lets_Talk_IAPT
  * @since 1.0.0
  */
 
@@ -19,7 +19,7 @@
 				<?php
 				printf(
 					/* translators: %s: search term. */
-					esc_html__( 'Results for "%s"', 'twentytwentyone' ),
+					esc_html__( 'Results for "%s"', 'letstalk' ),
 					'<span class="page-description search-term">' . esc_html( get_search_query() ) . '</span>'
 				);
 				?>
@@ -27,7 +27,7 @@
 
 		<?php else : ?>
 
-			<h1 class="page-title"><?php esc_html_e( 'Nothing here', 'twentytwentyone' ); ?></h1>
+			<h1 class="page-title"><?php esc_html_e( 'Nothing here', 'letstalk' ); ?></h1>
 
 		<?php endif; ?>
 	</header><!-- .page-header -->
@@ -40,7 +40,7 @@
 			printf(
 				'<p>' . wp_kses(
 					/* translators: 1: link to WP admin new post page. */
-					__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'twentytwentyone' ),
+					__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'letstalk' ),
 					array(
 						'a' => array(
 							'href' => array(),
@@ -53,12 +53,12 @@
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'twentytwentyone' ); ?></p>
+			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'letstalk' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php else : ?>
 
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'twentytwentyone' ); ?></p>
+			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'letstalk' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php endif; ?>

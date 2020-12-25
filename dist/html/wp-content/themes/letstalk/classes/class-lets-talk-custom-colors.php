@@ -3,14 +3,14 @@
  * Custom Colors Class
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_One
+ * @subpackage Lets_Talk_IAPT
  * @since 1.0.0
  */
 
 /**
  * This class is in charge of color customization via the Customizer.
  */
-class Twenty_Twenty_One_Custom_Colors {
+class Lets_Talk_Custom_Colors {
 
 	/**
 	 * Instantiate the object.
@@ -95,7 +95,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 */
 	public function custom_color_variables() {
 		if ( 'd1e4dd' !== strtolower( get_theme_mod( 'background_color', 'D1E4DD' ) ) ) {
-			wp_add_inline_style( 'twenty-twenty-one-style', $this->generate_custom_color_variables() );
+			wp_add_inline_style( 'lets-talk-style', $this->generate_custom_color_variables() );
 		}
 	}
 
@@ -110,7 +110,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 */
 	public function editor_custom_color_variables() {
 		wp_enqueue_style(
-			'twenty-twenty-one-custom-color-overrides',
+			'lets-talk-custom-color-overrides',
 			get_theme_file_uri( 'assets/css/custom-color-overrides.css' ),
 			array(),
 			(string) filemtime( get_theme_file_path( 'assets/css/custom-color-overrides.css' ) )
@@ -118,7 +118,7 @@ class Twenty_Twenty_One_Custom_Colors {
 
 		$background_color = get_theme_mod( 'background_color', 'D1E4DD' );
 		if ( 'd1e4dd' !== strtolower( $background_color ) ) {
-			wp_add_inline_style( 'twenty-twenty-one-custom-color-overrides', $this->generate_custom_color_variables( 'editor' ) );
+			wp_add_inline_style( 'lets-talk-custom-color-overrides', $this->generate_custom_color_variables( 'editor' ) );
 		}
 	}
 

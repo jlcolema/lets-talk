@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_One
+ * @subpackage Lets_Talk_IAPT
  * @since 1.0.0
  */
 
@@ -16,11 +16,11 @@
 	<?php if ( ! is_front_page() ) : ?>
 		<header class="entry-header alignwide">
 			<?php get_template_part( 'template-parts/header/entry-header' ); ?>
-			<?php twenty_twenty_one_post_thumbnail(); ?>
+			<?php lets_talk_post_thumbnail(); ?>
 		</header>
 	<?php elseif ( has_post_thumbnail() ) : ?>
 		<header class="entry-header alignwide">
-			<?php twenty_twenty_one_post_thumbnail(); ?>
+			<?php lets_talk_post_thumbnail(); ?>
 		</header>
 	<?php endif; ?>
 
@@ -30,10 +30,10 @@
 
 		wp_link_pages(
 			array(
-				'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', 'twentytwentyone' ) . '">',
+				'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', 'letstalk' ) . '">',
 				'after'    => '</nav>',
 				/* translators: %: page number. */
-				'pagelink' => esc_html__( 'Page %', 'twentytwentyone' ),
+				'pagelink' => esc_html__( 'Page %', 'letstalk' ),
 			)
 		);
 		?>
@@ -45,7 +45,7 @@
 			edit_post_link(
 				sprintf(
 					/* translators: %s: Name of current post. Only visible to screen readers. */
-					esc_html__( 'Edit %s', 'twentytwentyone' ),
+					esc_html__( 'Edit %s', 'letstalk' ),
 					'<span class="screen-reader-text">' . get_the_title() . '</span>'
 				),
 				'<span class="edit-link">',

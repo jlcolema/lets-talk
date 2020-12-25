@@ -3,7 +3,7 @@
  * Custom CSS
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_One
+ * @subpackage Lets_Talk_IAPT
  * @since 1.0.0
  */
 
@@ -21,7 +21,7 @@
  *
  * @return string
  */
-function twenty_twenty_one_generate_css( $selector, $style, $value, $prefix = '', $suffix = '', $echo = true ) {
+function lets_talk_generate_css( $selector, $style, $value, $prefix = '', $suffix = '', $echo = true ) {
 
 	// Bail early if there is no $selector elements or properties and $value.
 	if ( ! $value || ! $selector ) {

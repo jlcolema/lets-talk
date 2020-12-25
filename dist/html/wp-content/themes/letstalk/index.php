@@ -10,7 +10,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_One
+ * @subpackage Lets_Talk_IAPT
  * @since 1.0.0
  */
 
@@ -26,7 +26,7 @@ if ( have_posts() ) {
 	}
 
 	// Previous/next page navigation.
-	twenty_twenty_one_the_posts_navigation();
+	lets_talk_the_posts_navigation();
 
 } else {
 

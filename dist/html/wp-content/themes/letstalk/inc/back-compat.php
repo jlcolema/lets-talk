@@ -7,7 +7,7 @@
  * relies on many newer functions and markup changes introduced in 5.3.
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_One
+ * @subpackage Lets_Talk_IAPT
  * @since 1.0.0
  */
 
@@ -18,10 +18,10 @@
  *
  * @return void
  */
-function twenty_twenty_one_switch_theme() {
-	add_action( 'admin_notices', 'twenty_twenty_one_upgrade_notice' );
+function lets_talk_switch_theme() {
+	add_action( 'admin_notices', 'lets_talk_upgrade_notice' );
 }
-add_action( 'after_switch_theme', 'twenty_twenty_one_switch_theme' );
+add_action( 'after_switch_theme', 'lets_talk_switch_theme' );
 
 /**
  * Adds a message for unsuccessful theme switch.
@@ -35,11 +35,11 @@ add_action( 'after_switch_theme', 'twenty_twenty_one_switch_theme' );
  *
  * @return void
  */
-function twenty_twenty_one_upgrade_notice() {
+function lets_talk_upgrade_notice() {
 	echo '<div class="error"><p>';
 	printf(
 		/* translators: %s: WordPress Version. */
-		esc_html__( 'This theme requires WordPress 5.3 or newer. You are running version %s. Please upgrade.', 'twentytwentyone' ),
+		esc_html__( 'This theme requires WordPress 5.3 or newer. You are running version %s. Please upgrade.', 'letstalk' ),
 		esc_html( $GLOBALS['wp_version'] )
 	);
 	echo '</p></div>';
@@ -54,11 +54,11 @@ function twenty_twenty_one_upgrade_notice() {
  *
  * @return void
  */
-function twenty_twenty_one_customize() {
+function lets_talk_customize() {
 	wp_die(
 		sprintf(
 			/* translators: %s: WordPress Version. */
-			esc_html__( 'This theme requires WordPress 5.3 or newer. You are running version %s. Please upgrade.', 'twentytwentyone' ),
+			esc_html__( 'This theme requires WordPress 5.3 or newer. You are running version %s. Please upgrade.', 'letstalk' ),
 			esc_html( $GLOBALS['wp_version'] )
 		),
 		'',
@@ -67,7 +67,7 @@ function twenty_twenty_one_customize() {
 		)
 	);
 }
-add_action( 'load-customize.php', 'twenty_twenty_one_customize' );
+add_action( 'load-customize.php', 'lets_talk_customize' );
 
 /**
  * Prevents the Theme Preview from being loaded on WordPress versions prior to 5.3.
@@ -78,15 +78,15 @@ add_action( 'load-customize.php', 'twenty_twenty_one_customize' );
  *
  * @return void
  */
-function twenty_twenty_one_preview() {
+function lets_talk_preview() {
 	if ( isset( $_GET['preview'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification
 		wp_die(
 			sprintf(
 				/* translators: %s: WordPress Version. */
-				esc_html__( 'This theme requires WordPress 5.3 or newer. You are running version %s. Please upgrade.', 'twentytwentyone' ),
+				esc_html__( 'This theme requires WordPress 5.3 or newer. You are running version %s. Please upgrade.', 'letstalk' ),
 				esc_html( $GLOBALS['wp_version'] )
 			)
 		);
 	}
 }
-add_action( 'template_redirect', 'twenty_twenty_one_preview' );
+add_action( 'template_redirect', 'lets_talk_preview' );

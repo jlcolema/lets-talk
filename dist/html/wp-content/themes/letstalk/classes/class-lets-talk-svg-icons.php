@@ -3,7 +3,7 @@
  * SVG Icons class
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_One
+ * @subpackage Lets_Talk_IAPT
  * @since 1.0.0
  */
 
@@ -19,7 +19,7 @@
  *
  * @since 1.0.0
  */
-class Twenty_Twenty_One_SVG_Icons {
+class Lets_Talk_SVG_Icons {
 
 	/**
 	 * User Interface icons – svg sources.
@@ -169,7 +169,7 @@ class Twenty_Twenty_One_SVG_Icons {
 		}
 
 		/**
-		 * Filters Twenty Twenty-Ones's array of icons.
+		 * Filters Let's Talk IAPT's array of icons.
 		 *
 		 * The dynamic portion of the hook name, `$group`, refers to
 		 * the name of the group of icons, either "ui" or "social".
@@ -178,7 +178,7 @@ class Twenty_Twenty_One_SVG_Icons {
 		 *
 		 * @param array $arr Array of icons.
 		 */
-		$arr = apply_filters( "twenty_twenty_one_svg_icons_{$group}", $arr );
+		$arr = apply_filters( "lets_talk_svg_icons_{$group}", $arr );
 
 		$svg = '';
 		if ( array_key_exists( $icon, $arr ) ) {
@@ -212,7 +212,7 @@ class Twenty_Twenty_One_SVG_Icons {
 			$regex_map = array();
 
 			/**
-			 * Filters Twenty Twenty-Ones's array of domain mappings for social icons.
+			 * Filters Let's Talk IAPT's array of domain mappings for social icons.
 			 *
 			 * By default, each Icon ID is matched against a .com TLD. To override this behavior,
 			 * specify all the domains it covers (including the .com TLD too, if applicable).
@@ -221,16 +221,16 @@ class Twenty_Twenty_One_SVG_Icons {
 			 *
 			 * @param array $social_icons_map Array of default social icons.
 			 */
-			$map = apply_filters( 'twenty_twenty_one_social_icons_map', self::$social_icons_map );
+			$map = apply_filters( 'lets_talk_social_icons_map', self::$social_icons_map );
 
 			/**
-			 * Filters Twenty Twenty-One's array of social icons.
+			 * Filters Let's Talk IAPT's array of social icons.
 			 *
 			 * @since 1.0.0
 			 *
 			 * @param array $social_icons Array of default social icons.
 			 */
-			$social_icons = apply_filters( 'twenty_twenty_one_svg_icons_social', self::$social_icons );
+			$social_icons = apply_filters( 'lets_talk_svg_icons_social', self::$social_icons );
 
 			foreach ( array_keys( $social_icons ) as $icon ) {
 				$domains            = array_key_exists( $icon, $map ) ? $map[ $icon ] : array( sprintf( '%s.com', $icon ) );
