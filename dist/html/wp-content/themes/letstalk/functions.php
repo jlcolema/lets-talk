@@ -77,9 +77,6 @@ if ( ! function_exists( 'lets_talk_setup' ) ) {
 		// Enqueue editor styles.
 		add_editor_style( $editor_stylesheet_path );
 
-		// Add support for experimental cover block spacing.
-		add_theme_support( 'custom-spacing' );
-
 		// Add support for custom units.
 		// This was removed in WordPress 5.6 but is still required to properly support WP 5.5.
 		add_theme_support( 'custom-units' );
