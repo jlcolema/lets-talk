@@ -9,11 +9,6 @@
  * @since 1.0.0
  */
 
-// This theme requires WordPress 5.3 or later.
-if ( version_compare( $GLOBALS['wp_version'], '5.3', '<' ) ) {
-	require get_template_directory() . '/inc/back-compat.php';
-}
-
 if ( ! function_exists( 'lets_talk_setup' ) ) {
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
