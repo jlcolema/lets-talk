@@ -93,9 +93,6 @@ function lets_talk_scripts() {
 	// Use the standard stylesheet.
 	wp_enqueue_style( 'lets-talk-style', get_template_directory_uri() . '/assets/css/styles.css', array(), wp_get_theme()->get( 'Version' ) );
 
-	// Print styles.
-	wp_enqueue_style( 'lets-talk-print-style', get_template_directory_uri() . '/assets/css/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
-
 	// Threaded comment reply styles.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
