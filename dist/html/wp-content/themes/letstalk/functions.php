@@ -93,17 +93,6 @@ function lets_talk_scripts() {
 	// Use the standard stylesheet.
 	wp_enqueue_style( 'lets-talk-style', get_template_directory_uri() . '/assets/css/styles.css', array(), wp_get_theme()->get( 'Version' ) );
 
-	// Main navigation scripts.
-	if ( has_nav_menu( 'primary' ) ) {
-		wp_enqueue_script(
-			'lets-talk-primary-navigation-script',
-			get_template_directory_uri() . '/assets/js/primary-navigation.js',
-			array( 'lets-talk-ie11-polyfills' ),
-			wp_get_theme()->get( 'Version' ),
-			true
-		);
-	}
-
 	// Responsive embeds script.
 	wp_enqueue_script(
 		'lets-talk-responsive-embeds-script',
