@@ -69,25 +69,6 @@ if ( ! function_exists( 'lets_talk_setup' ) ) {
 			)
 		);
 
-		/**
-		 * Add support for core custom logo.
-		 *
-		 * @link https://codex.wordpress.org/Theme_Logo
-		 */
-		$logo_width  = 300;
-		$logo_height = 100;
-
-		add_theme_support(
-			'custom-logo',
-			array(
-				'height'               => $logo_height,
-				'width'                => $logo_width,
-				'flex-width'           => true,
-				'flex-height'          => true,
-				'unlink-homepage-logo' => true,
-			)
-		);
-
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
