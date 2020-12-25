@@ -105,9 +105,6 @@ function lets_talk_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'lets_talk_scripts' );
 
-// SVG Icons class.
-require get_template_directory() . '/classes/class-lets-talk-svg-icons.php';
-
 // Custom color classes.
 require get_template_directory() . '/classes/class-lets-talk-custom-colors.php';
 new Lets_Talk_Custom_Colors();
