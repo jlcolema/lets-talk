@@ -77,55 +77,6 @@ if ( ! function_exists( 'lets_talk_setup' ) ) {
 		// Enqueue editor styles.
 		add_editor_style( $editor_stylesheet_path );
 
-		// Add custom editor font sizes.
-		add_theme_support(
-			'editor-font-sizes',
-			array(
-				array(
-					'name'      => esc_html__( 'Extra small', 'letstalk' ),
-					'shortName' => esc_html_x( 'XS', 'Font size', 'letstalk' ),
-					'size'      => 16,
-					'slug'      => 'extra-small',
-				),
-				array(
-					'name'      => esc_html__( 'Small', 'letstalk' ),
-					'shortName' => esc_html_x( 'S', 'Font size', 'letstalk' ),
-					'size'      => 18,
-					'slug'      => 'small',
-				),
-				array(
-					'name'      => esc_html__( 'Normal', 'letstalk' ),
-					'shortName' => esc_html_x( 'M', 'Font size', 'letstalk' ),
-					'size'      => 20,
-					'slug'      => 'normal',
-				),
-				array(
-					'name'      => esc_html__( 'Large', 'letstalk' ),
-					'shortName' => esc_html_x( 'L', 'Font size', 'letstalk' ),
-					'size'      => 24,
-					'slug'      => 'large',
-				),
-				array(
-					'name'      => esc_html__( 'Extra large', 'letstalk' ),
-					'shortName' => esc_html_x( 'XL', 'Font size', 'letstalk' ),
-					'size'      => 40,
-					'slug'      => 'extra-large',
-				),
-				array(
-					'name'      => esc_html__( 'Huge', 'letstalk' ),
-					'shortName' => esc_html_x( 'XXL', 'Font size', 'letstalk' ),
-					'size'      => 96,
-					'slug'      => 'huge',
-				),
-				array(
-					'name'      => esc_html__( 'Gigantic', 'letstalk' ),
-					'shortName' => esc_html_x( 'XXXL', 'Font size', 'letstalk' ),
-					'size'      => 144,
-					'slug'      => 'gigantic',
-				),
-			)
-		);
-
 		// Custom background color.
 		add_theme_support(
 			'custom-background',
