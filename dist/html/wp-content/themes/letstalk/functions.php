@@ -77,9 +77,6 @@ if ( ! function_exists( 'lets_talk_setup' ) ) {
 		// Enqueue editor styles.
 		add_editor_style( $editor_stylesheet_path );
 
-		// Add support for experimental link color control.
-		add_theme_support( 'experimental-link-color' );
-
 		// Add support for experimental cover block spacing.
 		add_theme_support( 'custom-spacing' );
 
