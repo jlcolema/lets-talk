@@ -69,9 +69,6 @@ if ( ! function_exists( 'lets_talk_setup' ) ) {
 			)
 		);
 
-		// Add support for full and wide align images.
-		add_theme_support( 'align-wide' );
-
 		// Add support for editor styles.
 		add_theme_support( 'editor-styles' );
 		$background_color = get_theme_mod( 'background_color', 'D1E4DD' );
