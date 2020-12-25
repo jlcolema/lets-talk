@@ -105,10 +105,6 @@ function lets_talk_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'lets_talk_scripts' );
 
-// Custom color classes.
-require get_template_directory() . '/classes/class-lets-talk-custom-colors.php';
-new Lets_Talk_Custom_Colors();
-
 // Enhance the theme by hooking into WordPress.
 require get_template_directory() . '/inc/template-functions.php';
 
