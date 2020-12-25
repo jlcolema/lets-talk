@@ -106,20 +106,6 @@ function lets_talk_scripts() {
 add_action( 'wp_enqueue_scripts', 'lets_talk_scripts' );
 
 /**
- * Enqueue block editor script.
- *
- * @since 1.0.0
- *
- * @return void
- */
-function letstalk_block_editor_script() {
-
-	wp_enqueue_script( 'letstalk-editor', get_theme_file_uri( '/assets/js/editor.js' ), array( 'wp-blocks', 'wp-dom' ), wp_get_theme()->get( 'Version' ), true );
-}
-
-add_action( 'enqueue_block_editor_assets', 'letstalk_block_editor_script' );
-
-/**
  * Fix skip link focus in IE11.
  *
  * This does not enqueue the script because it is tiny and because it is only for IE11,
