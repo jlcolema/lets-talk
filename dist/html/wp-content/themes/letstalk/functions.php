@@ -93,14 +93,6 @@ function lets_talk_scripts() {
 	// Use the standard stylesheet.
 	wp_enqueue_style( 'lets-talk-style', get_template_directory_uri() . '/assets/css/styles.css', array(), wp_get_theme()->get( 'Version' ) );
 
-	wp_register_script(
-		'lets-talk-ie11-polyfills',
-		get_template_directory_uri() . '/assets/js/polyfills.js',
-		array(),
-		wp_get_theme()->get( 'Version' ),
-		true
-	);
-
 	// Main navigation scripts.
 	if ( has_nav_menu( 'primary' ) ) {
 		wp_enqueue_script(
