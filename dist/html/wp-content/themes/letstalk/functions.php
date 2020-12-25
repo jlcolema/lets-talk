@@ -77,9 +77,6 @@ if ( ! function_exists( 'lets_talk_setup' ) ) {
 		// Enqueue editor styles.
 		add_editor_style( $editor_stylesheet_path );
 
-		// Add support for custom line height controls.
-		add_theme_support( 'custom-line-height' );
-
 		// Add support for experimental link color control.
 		add_theme_support( 'experimental-link-color' );
 
