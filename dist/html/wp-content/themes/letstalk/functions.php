@@ -30,9 +30,6 @@ if ( ! function_exists( 'lets_talk_setup' ) ) {
 		 */
 		load_theme_textdomain( 'letstalk', get_template_directory() . '/languages' );
 
-		// Add default posts and comments RSS feed links to head.
-		add_theme_support( 'automatic-feed-links' );
-
 		/*
 		 * Let WordPress manage the document title.
 		 * This theme does not use a hard-coded <title> tag in the document head,
