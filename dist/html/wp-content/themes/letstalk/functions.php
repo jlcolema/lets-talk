@@ -91,7 +91,7 @@ add_action( 'after_setup_theme', 'lets_talk_setup' );
 function lets_talk_scripts() {
 
 	// Use the standard stylesheet.
-	wp_enqueue_style( 'lets-talk-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'lets-talk-style', get_template_directory_uri() . '/assets/css/styles.css', array(), wp_get_theme()->get( 'Version' ) );
 
 	// RTL styles.
 	wp_style_add_data( 'lets-talk-style', 'rtl', 'replace' );
