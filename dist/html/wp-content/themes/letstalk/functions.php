@@ -105,9 +105,6 @@ function lets_talk_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'lets_talk_scripts' );
 
-// Custom template tags for the theme.
-require get_template_directory() . '/inc/template-tags.php';
-
 // Customizer additions.
 require get_template_directory() . '/classes/class-lets-talk-customize.php';
 new Lets_Talk_Customize();
