@@ -105,10 +105,6 @@ function lets_talk_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'lets_talk_scripts' );
 
-// Dark Mode.
-require_once get_template_directory() . '/classes/class-lets-talk-dark-mode.php';
-new Lets_Talk_Dark_Mode();
-
 /**
  * Enqueue scripts for the customizer preview.
  *
