@@ -14,6 +14,11 @@
 			// Theme files
 			"name": "Theme",
 			"path": "dist/html/wp-content/themes/letstalk"
+		},
+		{
+			// Reference theme
+			"name": "Reference",
+			"path": "dist/html/wp-content/themes/twentytwentyone"
 		}
 	],
 	"settings": {}
