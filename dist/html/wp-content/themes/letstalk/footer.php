@@ -17,7 +17,7 @@
 
 	</main>
 
-	<footer class="footer" role="contentinfo">
+	<footer role="contentinfo" class="footer">
 
 		<div class="footer__inner-wrap">
 
