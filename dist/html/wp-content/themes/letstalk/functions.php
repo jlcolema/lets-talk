@@ -105,10 +105,6 @@ function lets_talk_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'lets_talk_scripts' );
 
-// Customizer additions.
-require get_template_directory() . '/classes/class-lets-talk-customize.php';
-new Lets_Talk_Customize();
-
 // Block Patterns.
 require get_template_directory() . '/inc/block-patterns.php';
 
