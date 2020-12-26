@@ -26,7 +26,7 @@ if ( have_posts() ) {
 	}
 
 	// Previous/next page navigation.
-	lets_talk_the_posts_navigation();
+	// lets_talk_the_posts_navigation();
 
 } else {
 
