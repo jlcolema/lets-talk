@@ -98,7 +98,7 @@ function lets_talk_scripts() {
 		wp_get_theme()->get( 'Version' )
 	);
 
-	// Responsive embeds script.
+	// Use the standard scripts file.
 	wp_enqueue_script(
 		'lets-talk-scripts',
 		get_template_directory_uri() . '/assets/js/scripts.js',
