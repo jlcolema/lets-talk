@@ -106,51 +106,6 @@ function lets_talk_scripts() {
 add_action( 'wp_enqueue_scripts', 'lets_talk_scripts' );
 
 /**
- * Enqueue scripts for the customizer preview.
- *
- * @since 1.0.0
- *
- * @return void
- */
-function letstalk_customize_preview_init() {
-	wp_enqueue_script(
-		'letstalk-customize-helpers',
-		get_theme_file_uri( '/assets/js/customize-helpers.js' ),
-		array(),
-		wp_get_theme()->get( 'Version' ),
-		true
-	);
-
-	wp_enqueue_script(
-		'letstalk-customize-preview',
-		get_theme_file_uri( '/assets/js/customize-preview.js' ),
-		array( 'customize-preview', 'customize-selective-refresh', 'jquery', 'letstalk-customize-helpers' ),
-		wp_get_theme()->get( 'Version' ),
-		true
-	);
-}
-add_action( 'customize_preview_init', 'letstalk_customize_preview_init' );
-
-/**
- * Enqueue scripts for the customizer.
- *
- * @since 1.0.0
- *
- * @return void
- */
-function letstalk_customize_controls_enqueue_scripts() {
-
-	wp_enqueue_script(
-		'letstalk-customize-helpers',
-		get_theme_file_uri( '/assets/js/customize-helpers.js' ),
-		array(),
-		wp_get_theme()->get( 'Version' ),
-		true
-	);
-}
-add_action( 'customize_controls_enqueue_scripts', 'letstalk_customize_controls_enqueue_scripts' );
-
-/**
  * Calculate classes for the main <html> element.
  *
  * @since 1.0.0
