@@ -105,9 +105,6 @@ function lets_talk_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'lets_talk_scripts' );
 
-// Menu functions and filters.
-require get_template_directory() . '/inc/menu-functions.php';
-
 // Custom template tags for the theme.
 require get_template_directory() . '/inc/template-tags.php';
 
