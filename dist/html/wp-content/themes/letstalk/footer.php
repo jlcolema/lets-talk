@@ -19,37 +19,89 @@
 
 	<footer role="contentinfo" class="footer">
 
-		<div class="footer__inner-wrap">
+		<div class="footer__wrap">
 
-			<?php if ( has_nav_menu( 'footer' ) ) : ?>
+			<nav role="" class="">
 
-				<nav aria-label="<?php esc_attr_e( 'Secondary menu', 'letstalk' ); ?>" class="footer-navigation">
+				<ol class="">
 
-					<ul class="footer-navigation-wrapper">
-	
-						<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'footer',
-								'items_wrap'     => '%3$s',
-								'container'      => false,
-								'depth'          => 1,
-								'link_before'    => '<span>',
-								'link_after'     => '</span>',
-								'fallback_cb'    => false,
-							)
-						);
-						?>
-					
-					</ul>
-				
-				</nav>
-			
-			<?php endif; ?>
+					<li class="">
+
+						<a href="#" class="">Urgent Help</li>
+
+					</li>
+
+					<li class="">
+
+						<a href="#" class="">Make a Referral</a>
+
+					</li>
+
+				</ol>
+
+			</nav>
+
+			<div class="logo">
+
+				<a href="#" class="logo__link">Let's Talk IAPT</a>
+
+			</div>
+
+			<div class="">
+
+				<a href="#" class="">NHS</a>
+
+			</div>
+
+			<nav role="navigation" class="secondary-navigation">
+
+				<ol class="secondary-navigation__list">
+
+					<li class="secondary-navigation__item secondary-navigation__item--is-current">
+
+						<a href="#" class="secondary-navigation__link">Cookie Policy</a>
+
+					</li>
+
+					<li class="secondary-navigation__item">
+
+						<a href="#" class="secondary-navigation__link">Social Media</a>
+
+					</li>
+
+					<li class="secondary-navigation__item">
+
+						<a href="#" class="secondary-navigation__link">Accessibility</a>
+
+					</li>
+
+					<li class="secondary-navigation__item">
+
+						<a href="#" class="secondary-navigation__link">Privacy Policy</a>
+
+					</li>
+
+				</ol>
+
+			</nav>
+
+			&copy; Let's Talk 2020
+
+			Enfield, Barnet &amp; Haringey
 
 		</div>
 
 	</footer>
+
+	<div class="cookies">
+
+		<div class="cookies__wrap">
+
+			Cookie Consent
+
+		</div>
+
+	</div>
 
 	<?php wp_footer(); ?>
 

@@ -28,10 +28,83 @@
 
 <body <?php body_class(); ?>>
 
+	<div class="alerts">
+
+		<div class="alerts__wrap">
+
+			Alerts
+
+		</div>
+
+	</div>
+
 	<header role="banner" class="header">
 
-		<div class="header__inner-wrap">
+		<div class="header__wrap">
 
+			<div class="logo">
+
+				<a href="#" class="logo__link">Let's Talk IAPT</a>
+
+			</div>
+
+			<div class="">
+
+				<a href="#" class="">NHS</a>
+
+			</div>
+
+			<nav role="" class="">
+
+				<ol class="">
+
+					<li class="">
+
+						<a href="#" class="">Urgent Help</li>
+
+					</li>
+
+					<li class="">
+
+						<a href="#" class="">Make a Referral</a>
+
+					</li>
+
+				</ol>
+
+			</nav>
+
+			<nav role="navigation" class="navigation">
+
+				<div class="navigation__toggle">
+
+					<span class="navigation__label">Menu</span>
+
+				</div>
+
+				<ol class="navigation__list">
+
+					<li class="navigation__item navigaiton__item--is-current">
+
+						<a href="#" class="navigation__link">Barnet</a>
+
+					</li>
+
+					<li class="navigation__item">
+
+						<a href="#" class="navigation__link">Enfield</a>
+
+					</li>
+
+					<li class="navigation__item">
+
+						<a href="#" class="navigation__link">Haringey</a>
+
+					</li>
+
+				</ol>
+
+			</nav>
 
 		</div>
 
@@ -39,4 +112,4 @@
 
 	<main role="main" class="main">
 
-		<div class="main__inner-wrap">
+		<div class="main__wrap">
