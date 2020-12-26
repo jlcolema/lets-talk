@@ -91,16 +91,21 @@ add_action( 'after_setup_theme', 'lets_talk_setup' );
 function lets_talk_scripts() {
 
 	// Use the standard stylesheet.
-	wp_enqueue_style( 'lets-talk-style', get_template_directory_uri() . '/assets/css/styles.css', array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style(
+		'lets-talk-styles',
+		get_template_directory_uri() . '/assets/css/styles.css',
+		array(),
+		wp_get_theme()->get( 'Version' )
+	);
 
 	// Responsive embeds script.
-	// wp_enqueue_script(
-		// 'lets-talk-responsive-embeds-script',
-		// get_template_directory_uri() . '/assets/js/responsive-embeds.js',
-		// array( 'lets-talk-ie11-polyfills' ),
-		// wp_get_theme()->get( 'Version' ),
-		// true
-	// );
+	wp_enqueue_script(
+		'lets-talk-scripts',
+		get_template_directory_uri() . '/assets/js/scripts.js',
+		array(),
+		wp_get_theme()->get( 'Version' ),
+		true
+	);
 
 }
 add_action( 'wp_enqueue_scripts', 'lets_talk_scripts' );
