@@ -13,6 +13,8 @@
 
 ?>
 
+		</div>
+
 	</main>
 
 	<footer class="footer" role="contentinfo">
