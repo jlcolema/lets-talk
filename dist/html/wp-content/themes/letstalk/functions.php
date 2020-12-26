@@ -105,9 +105,6 @@ function lets_talk_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'lets_talk_scripts' );
 
-// Block Patterns.
-require get_template_directory() . '/inc/block-patterns.php';
-
 // Block Styles.
 require get_template_directory() . '/inc/block-styles.php';
 
