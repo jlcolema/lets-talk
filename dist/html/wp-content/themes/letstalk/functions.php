@@ -124,3 +124,35 @@ function letstalk_the_html_classes() {
 	}
 	echo 'class="' . esc_attr( $classes ) . '"';
 }
+
+/**
+ * Add an options page.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+if ( function_exists('acf_add_options_page') ) {
+	acf_add_options_page(array(
+		'page_title'	=> 'Globals',
+		'menu_title'	=> 'Globals',
+		'menu_slug'		=> 'theme-globals',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> true
+	));
+	acf_add_options_sub_page(array(
+		'page_title'	=> 'Alerts',
+		'menu_title'	=> 'Alerts',
+		'parent_slug'	=> 'theme-globals'
+	));
+	acf_add_options_sub_page(array(
+		'page_title'	=> 'Contact Information',
+		'menu_title'	=> 'Contact Information',
+		'parent_slug'	=> 'theme-globals'
+	));
+	acf_add_options_sub_page(array(
+		'page_title'	=> 'Social Media',
+		'menu_title'	=> 'Social Media',
+		'parent_slug'	=> 'theme-globals'
+	));
+}
