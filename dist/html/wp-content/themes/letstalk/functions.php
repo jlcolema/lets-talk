@@ -47,8 +47,9 @@ if ( ! function_exists( 'lets_talk_setup' ) ) {
 
 		register_nav_menus(
 			array(
-				'primary' => esc_html__( 'Primary menu', 'letstalk' ),
-				'footer'  => __( 'Secondary menu', 'letstalk' ),
+				'header' => esc_html__( 'Header menu', 'letstalk' ),
+				'footer'  => __( 'Footer menu', 'letstalk' ),
+				'utilities'	=> __( 'Utilities menu', 'letstalk' )
 			)
 		);
 
