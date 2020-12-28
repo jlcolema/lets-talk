@@ -127,6 +127,38 @@ function letstalk_the_html_classes() {
 }
 
 /**
+ * Custom WYSIWYG editors.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+
+// $mce_buttons = array( 'formatselect', 'bold', 'italic', 'bullist', 'numlist', 'blockquote', 'alignleft', 'aligncenter', 'alignright', 'link', 'wp_more', 'spellchecker', 'fullscreen', 'wp_adv' );
+// $mce_buttons_2 = array( 'strikethrough', 'hr', 'forecolor', 'pastetext', 'removeformat', 'charmap', 'outdent', 'indent', 'undo', 'redo', 'wp_help' );
+
+add_filter( 'acf/fields/wysiwyg/toolbars', 'letstalk_toolbars' );
+
+function letstalk_toolbars( $toolbars ) {
+	// Uncomment to view format of $toolbars.
+	// echo '< pre >';
+		// print_r($toolbars);
+	// echo '< /pre >';
+	// die;
+
+	// Add a new toolbar called "Simple"
+	// - this toolbar has only 1 row of buttons
+	$toolbars['Simple'] = array();
+	$toolbars['Simple'][1] = array('bold', 'italic', 'link', 'removeformat' );
+
+	// $toolbars['Super Simple'] = array();
+	// $toolbars['Super Simple'][1] = array('bold', 'italic');
+
+	// return $toolbars - IMPORTANT!
+	return $toolbars;
+}
+
+/**
  * Add an options page.
  *
  * @since 1.0.0
