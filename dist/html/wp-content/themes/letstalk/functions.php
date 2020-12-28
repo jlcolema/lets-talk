@@ -174,8 +174,8 @@ if ( function_exists('acf_add_options_page') ) {
 		'redirect'		=> true
 	));
 	acf_add_options_sub_page(array(
-		'page_title'	=> 'Alerts',
-		'menu_title'	=> 'Alerts',
+		'page_title'	=> 'Alert',
+		'menu_title'	=> 'Alert',
 		'parent_slug'	=> 'theme-globals'
 	));
 	acf_add_options_sub_page(array(
