@@ -188,4 +188,9 @@ if ( function_exists('acf_add_options_page') ) {
 		'menu_title'	=> 'Social Media',
 		'parent_slug'	=> 'theme-globals'
 	));
+	acf_add_options_sub_page(array(
+		'page_title'	=> 'Cookie Policy',
+		'menu_title'	=> 'Cookie Policy',
+		'parent_slug'	=> 'theme-globals'
+	));
 }
