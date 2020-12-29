@@ -3,13 +3,13 @@
 	General Functions
 --------------------------------------*/
 
-(function($){
+// (function($){
 
     /*--------------------------------------
         On Page Ready
     --------------------------------------*/
 
-	$(document).on('ready', function (){
+	// $(document).on('ready', function (){
 
 		/* Title
 		--------------------------------------*/
@@ -53,13 +53,13 @@
 
 		// });
 
-	});
+	// });
 
     /*--------------------------------------
         On Page Load
     --------------------------------------*/
     
-	$(window).on('load', function() {
+	// $(window).on('load', function() {
 
 		/* Title
 		--------------------------------------*/
@@ -350,30 +350,30 @@
 
 		// Add a div after the footer to display screen size.
 
-		$(".footer").after('<div id="dev"></div>');
+		// $(".footer").after('<div id="dev"></div>');
 
-		$("#dev").text( $(window).width() + " W / " + $(window).height() + " H"),
+		// $("#dev").text( $(window).width() + " W / " + $(window).height() + " H"),
 		
-		$(window).resize(function() {
+		// $(window).resize(function() {
 		
-			$("#dev").text( $(window).width() + " W / " + $(window).height() + " H")
+			// $("#dev").text( $(window).width() + " W / " + $(window).height() + " H")
 		
-		})
+		// })
 
 
-	});
+	// });
 
     /*--------------------------------------
         On Window Resize
     --------------------------------------*/
 
-	$(window).on('resize', function() {
+	// $(window).on('resize', function() {
 
 		/* Title
 		--------------------------------------*/
 
 		// Notes...
 
-	});
+	// });
 
-})(window.jQuery);
+// })(window.jQuery);
