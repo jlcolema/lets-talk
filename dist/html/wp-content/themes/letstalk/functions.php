@@ -91,6 +91,9 @@ add_action( 'after_setup_theme', 'lets_talk_setup' );
  */
 function lets_talk_scripts() {
 
+	// Block styles are not needed since Gutenberg is not in use.
+	wp_dequeue_style( 'wp-block-library' );
+
 	// Use the standard stylesheet.
 	wp_enqueue_style(
 		'lets-talk-styles',
@@ -224,3 +227,38 @@ function letstalk_custom_upload_mimes( $letstalk_existing_mimes ) {
 }
 
 add_filter( 'mime_types', 'letstalk_custom_upload_mimes' );
+
+/**
+ * Deregister features that are not needed.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function letstalk_deregister_features() {
+
+	// WP Embed
+
+	wp_deregister_script( 'wp-embed' );
+
+	// Emoji
+
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+	// Manifest
+
+	remove_action( 'wp_head', 'wlwmanifest_link' );
+
+	// RSD
+
+	remove_action( 'wp_head', 'rsd_link' );
+
+	// Rest and oEmbed
+
+	remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
+	remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10 );
+
+}
+
+add_action( 'init', 'letstalk_deregister_features' );
