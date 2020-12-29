@@ -28,11 +28,11 @@
 
 <body <?php body_class(); ?>>
 
-	<div class="alerts">
+	<div class="alert">
 
-		<div class="alerts__wrap">
+		<div class="alert__wrap">
 
-			Alerts
+			Alert
 
 		</div>
 
@@ -108,7 +108,7 @@
 
 		</div>
 
-	</div>
+	</header>
 
 	<main role="main" class="main">
 
