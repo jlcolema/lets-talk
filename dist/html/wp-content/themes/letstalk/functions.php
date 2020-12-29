@@ -45,6 +45,14 @@ if ( ! function_exists( 'lets_talk_setup' ) ) {
 		// add_theme_support( 'post-thumbnails' );
 		// set_post_thumbnail_size( 1568, 9999 );
 
+		/*
+		 * Enable support for custom image sizes.
+		 *
+		 * @link https://add-url-to-source/
+		 */	
+
+		// add_image_size( 'name-of-image-size', 400, 300, true );
+
 		register_nav_menus(
 			array(
 				'header' => esc_html__( 'Header menu', 'letstalk' ),
@@ -90,9 +98,6 @@ add_action( 'after_setup_theme', 'lets_talk_setup' );
  * @return void
  */
 function lets_talk_scripts() {
-
-	// Block styles are not needed since Gutenberg is not in use.
-	wp_dequeue_style( 'wp-block-library' );
 
 	// Use the standard stylesheet.
 	wp_enqueue_style(
@@ -227,6 +232,24 @@ function letstalk_custom_upload_mimes( $letstalk_existing_mimes ) {
 }
 
 add_filter( 'mime_types', 'letstalk_custom_upload_mimes' );
+
+/**
+ * Remove Block Library CSS.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function letstalk_remove_block_library_css() {
+
+	wp_dequeue_style( 'wp-block-library' );
+
+	wp_dequeue_style( 'wp-block-library-theme' );
+
+	// wp_dequeue_style( 'wc-block-style' );
+
+}
+add_action( 'wp_enqueue_scripts', 'letstalk_remove_block_library_css' );
 
 /**
  * Deregister features that are not needed.
