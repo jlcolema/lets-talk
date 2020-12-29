@@ -194,3 +194,28 @@ if ( function_exists('acf_add_options_page') ) {
 		'parent_slug'	=> 'theme-globals'
 	));
 }
+
+/**
+ * Add support for additional image formats.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function letstalk_custom_upload_mimes( $letstalk_existing_mimes ) {
+
+	// SVG
+
+	$letstalk_existing_mimes['svg'] = 'image/svg+xml';
+
+	// WebP
+
+	$letstalk_existing_mimes['webp'] = 'image/webp';
+
+	// Return the array back to the function with out added mime type(s).
+
+	return $letstalk_existing_mimes;
+
+}
+
+add_filter( 'mime_types', 'letstalk_custom_upload_mimes' );
