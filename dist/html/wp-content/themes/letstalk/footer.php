@@ -93,15 +93,7 @@
 
 	</footer>
 
-	<div class="cookies">
-
-		<div class="cookies__wrap">
-
-			Cookie Consent
-
-		</div>
-
-	</div>
+	<?php get_template_part( 'inc/cookie-consent' ); ?>
 
 	<?php wp_footer(); ?>
 
