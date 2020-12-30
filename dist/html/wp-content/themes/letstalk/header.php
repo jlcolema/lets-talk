@@ -28,15 +28,7 @@
 
 <body <?php body_class(); ?>>
 
-	<div class="alert">
-
-		<div class="alert__wrap">
-
-			Alert
-
-		</div>
-
-	</div>
+	<?php get_template_part( 'inc/alert' ); ?>
 
 	<header role="banner" class="header">
 
@@ -44,7 +36,7 @@
 
 			<div class="logo">
 
-				<a href="#" class="logo__link">Let's Talk IAPT</a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo__link"><?php bloginfo( 'name' ); ?></a>
 
 			</div>
 
