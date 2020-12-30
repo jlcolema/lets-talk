@@ -22,7 +22,7 @@ dist/html/wp-content/themes/*
 
 # Ignore theme assets directory.
 
-dist/html/wp-content/themes/letstalk/assets/*
+# dist/html/wp-content/themes/letstalk/assets/*
 
 # Ignore source files.
 
