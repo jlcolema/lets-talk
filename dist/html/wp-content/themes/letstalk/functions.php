@@ -1,23 +1,12 @@
 <?php
 /**
- * Timber starter-theme
- * https://github.com/timber/starter-theme
+ * Let's Talk IAPT
+ * https://letstalk.coleman.work
  *
  * @package  WordPress
- * @subpackage  Timber
- * @since   Timber 0.1
+ * @subpackage  Let's Talk IAPT
+ * @since   Let's Talk IAPT 1.0
  */
-
-/**
- * If you are installing Timber as a Composer dependency in your theme, you'll need this block
- * to load your dependencies and initialize Timber. If you are using Timber via the WordPress.org
- * plug-in, you can safely delete this block.
- */
-$composer_autoload = __DIR__ . '/vendor/autoload.php';
-if ( file_exists( $composer_autoload ) ) {
-	require_once $composer_autoload;
-	$timber = new Timber\Timber();
-}
 
 /**
  * This ensures that Timber is loaded and available as a PHP class.
@@ -52,12 +41,11 @@ Timber::$dirname = array( 'templates', 'views' );
  */
 Timber::$autoescape = false;
 
-
 /**
  * We're going to configure our theme inside of a subclass of Timber\Site
  * You can move this to its own file and include here via php's include("MySite.php")
  */
-class StarterSite extends Timber\Site {
+class LetsTalk extends Timber\Site {
 	/** Add timber support. */
 	public function __construct() {
 		add_action( 'after_setup_theme', array( $this, 'theme_supports' ) );
@@ -90,8 +78,14 @@ class StarterSite extends Timber\Site {
 	}
 
 	public function theme_supports() {
-		// Add default posts and comments RSS feed links to head.
-		add_theme_support( 'automatic-feed-links' );
+
+		/*
+		 * Make theme available for translation.
+		 * Translations can be filed in the /languages/ directory.
+		 * If you're building a theme based on Let's Talk IAPT, use a find and replace
+		 * to change 'letstalk' to the name of your theme in all the template files.
+		 */
+		load_theme_textdomain( 'letstalk', get_template_directory() . '/languages' );
 
 		/*
 		 * Let WordPress manage the document title.
@@ -107,6 +101,27 @@ class StarterSite extends Timber\Site {
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
+		// set_post_thumbnail_size( 1568, 9999 );
+
+		/*
+		 * Enable support for custom image sizes.
+		 *
+		 * @link https://add-url-to-source/
+		 */	
+
+		// add_image_size( 'name-of-image-size', 400, 300, true );
+		/*
+		 * Switch default core markup for search form, comment form, and comments
+		 * to output valid HTML5.
+		 */
+
+		register_nav_menus(
+			array(
+				'header' => esc_html__( 'Header menu', 'letstalk' ),
+				'footer'  => __( 'Footer menu', 'letstalk' ),
+				'utilities'	=> __( 'Utilities menu', 'letstalk' )
+			)
+		);
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -119,26 +134,19 @@ class StarterSite extends Timber\Site {
 				'comment-list',
 				'gallery',
 				'caption',
+				'style',
+				'script',
+				'navigation-widgets',
 			)
 		);
 
-		/*
-		 * Enable support for Post Formats.
-		 *
-		 * See: https://codex.wordpress.org/Post_Formats
-		 */
-		add_theme_support(
-			'post-formats',
-			array(
-				'aside',
-				'image',
-				'video',
-				'quote',
-				'link',
-				'gallery',
-				'audio',
-			)
-		);
+		// Add support for editor styles.
+		add_theme_support( 'editor-styles' );
+
+		$editor_stylesheet_path = './assets/css/style-editor.css';
+
+		// Enqueue editor styles.
+		add_editor_style( $editor_stylesheet_path );
 
 		add_theme_support( 'menus' );
 	}
@@ -164,4 +172,156 @@ class StarterSite extends Timber\Site {
 
 }
 
-new StarterSite();
+new LetsTalk();
+
+/**
+ * Custom WYSIWYG editors.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+
+// $mce_buttons = array( 'formatselect', 'bold', 'italic', 'bullist', 'numlist', 'blockquote', 'alignleft', 'aligncenter', 'alignright', 'link', 'wp_more', 'spellchecker', 'fullscreen', 'wp_adv' );
+// $mce_buttons_2 = array( 'strikethrough', 'hr', 'forecolor', 'pastetext', 'removeformat', 'charmap', 'outdent', 'indent', 'undo', 'redo', 'wp_help' );
+
+add_filter( 'acf/fields/wysiwyg/toolbars', 'letstalk_toolbars' );
+
+function letstalk_toolbars( $toolbars ) {
+	// Uncomment to view format of $toolbars.
+	// echo '< pre >';
+		// print_r($toolbars);
+	// echo '< /pre >';
+	// die;
+
+	// Add a new toolbar called "Simple"
+	// - this toolbar has only 1 row of buttons
+	$toolbars['Simple'] = array();
+	$toolbars['Simple'][1] = array('bold', 'italic', 'link', 'removeformat' );
+
+	// $toolbars['Super Simple'] = array();
+	// $toolbars['Super Simple'][1] = array('bold', 'italic');
+
+	// return $toolbars - IMPORTANT!
+	return $toolbars;
+}
+
+/**
+ * Add an options page.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+if ( function_exists('acf_add_options_page') ) {
+	acf_add_options_page(array(
+		'page_title'	=> 'Globals',
+		'menu_title'	=> 'Globals',
+		'menu_slug'		=> 'theme-globals',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> true
+	));
+	acf_add_options_sub_page(array(
+		'page_title'	=> 'Alert',
+		'menu_title'	=> 'Alert',
+		'parent_slug'	=> 'theme-globals'
+	));
+	acf_add_options_sub_page(array(
+		'page_title'	=> 'Contact Information',
+		'menu_title'	=> 'Contact Information',
+		'parent_slug'	=> 'theme-globals'
+	));
+	acf_add_options_sub_page(array(
+		'page_title'	=> 'Social Media',
+		'menu_title'	=> 'Social Media',
+		'parent_slug'	=> 'theme-globals'
+	));
+	acf_add_options_sub_page(array(
+		'page_title'	=> 'Cookie Policy',
+		'menu_title'	=> 'Cookie Policy',
+		'parent_slug'	=> 'theme-globals'
+	));
+	acf_add_options_sub_page(array(
+		'page_title'	=> '404',
+		'menu_title'	=> '404',
+		'parent_slug'	=> 'theme-globals'
+	));
+}
+
+/**
+ * Add support for additional image formats.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function letstalk_custom_upload_mimes( $letstalk_existing_mimes ) {
+
+	// SVG
+
+	$letstalk_existing_mimes['svg'] = 'image/svg+xml';
+
+	// WebP
+
+	$letstalk_existing_mimes['webp'] = 'image/webp';
+
+	// Return the array back to the function with out added mime type(s).
+
+	return $letstalk_existing_mimes;
+
+}
+
+add_filter( 'mime_types', 'letstalk_custom_upload_mimes' );
+
+/**
+ * Remove Block Library CSS.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function letstalk_remove_block_library_css() {
+
+	wp_dequeue_style( 'wp-block-library' );
+
+	wp_dequeue_style( 'wp-block-library-theme' );
+
+	// wp_dequeue_style( 'wc-block-style' );
+
+}
+add_action( 'wp_enqueue_scripts', 'letstalk_remove_block_library_css' );
+
+/**
+ * Deregister features that are not needed.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function letstalk_deregister_features() {
+
+	// WP Embed
+
+	wp_deregister_script( 'wp-embed' );
+
+	// Emoji
+
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+	// Manifest
+
+	remove_action( 'wp_head', 'wlwmanifest_link' );
+
+	// RSD
+
+	remove_action( 'wp_head', 'rsd_link' );
+
+	// Rest and oEmbed
+
+	remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
+	remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10 );
+
+}
+
+add_action( 'init', 'letstalk_deregister_features' );
