@@ -7,8 +7,8 @@ dist/html/*
 # "mu-plugins", "plugins", "themes" directory.
 
 dist/html/wp-content/*
-!dist/html/wp-content/mu-plugins/
-!dist/html/wp-content/plugins/
+# !dist/html/wp-content/mu-plugins/
+# !dist/html/wp-content/plugins/
 !dist/html/wp-content/themes/
 
 # Ignore these plugins.
