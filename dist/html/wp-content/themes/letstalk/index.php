@@ -1,38 +1,23 @@
 <?php
 /**
  * The main template file
- *
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
  * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
+ * E.g., it puts together the home page when no home.php file exists
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * Methods for TimberHelper can be found in the /lib sub-directory
  *
- * @package WordPress
- * @subpackage Lets_Talk_IAPT
- * @since 1.0.0
+ * @package  WordPress
+ * @subpackage  Timber
+ * @since   Timber 0.1
  */
 
-get_header();
-
-if ( have_posts() ) {
-
-	// Load posts loop.
-	while ( have_posts() ) {
-		the_post();
-
-		get_template_part( 'template-parts/content/content', get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) );
-	}
-
-	// Previous/next page navigation.
-	// lets_talk_the_posts_navigation();
-
-} else {
-
-	// If no content, include the "No posts found" template.
-	get_template_part( 'template-parts/content/content-none' );
-
+$context          = Timber::context();
+$context['posts'] = new Timber\PostQuery();
+$context['foo']   = 'bar';
+$templates        = array( 'index.twig' );
+if ( is_home() ) {
+	array_unshift( $templates, 'front-page.twig', 'home.twig' );
 }
-
-get_footer();
+Timber::render( $templates, $context );

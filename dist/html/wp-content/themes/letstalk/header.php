@@ -1,107 +1,15 @@
 <?php
 /**
- * The header.
+ * Third party plugins that hijack the theme will call wp_head() to get the header template.
+ * We use this to start our output buffer and render into the view/page-plugin.twig template in footer.php
  *
- * This is the template that displays all of the <head> section and everything up until main.
+ * If you're not using a plugin that requries this behavior (ones that do include Events Calendar Pro and
+ * WooCommerce) you can delete this file and footer.php
  *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WordPress
- * @subpackage Lets_Talk_IAPT
- * @since 1.0.0
+ * @package  WordPress
+ * @subpackage  Timber
+ * @since   Timber 0.1
  */
 
-?>
-<!doctype html>
-
-<html <?php language_attributes(); ?> <?php letstalk_the_html_classes(); ?>>
-
-<head>
-
-	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-	<?php wp_head(); ?>
-
-</head>
-
-<body <?php body_class(); ?>>
-
-	<?php get_template_part( 'inc/alert' ); ?>
-
-	<header role="banner" class="header">
-
-		<div class="header__wrap">
-
-			<div class="logo">
-
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo__link"><?php bloginfo( 'name' ); ?></a>
-
-			</div>
-
-			<div class="">
-
-				<a href="#" class="">NHS</a>
-
-			</div>
-
-			<nav role="" class="">
-
-				<ol class="">
-
-					<li class="">
-
-						<a href="#" class="">Urgent Help</li>
-
-					</li>
-
-					<li class="">
-
-						<a href="#" class="">Make a Referral</a>
-
-					</li>
-
-				</ol>
-
-			</nav>
-
-			<nav role="navigation" class="navigation">
-
-				<div class="navigation__toggle">
-
-					<span class="navigation__label">Menu</span>
-
-				</div>
-
-				<ol class="navigation__list">
-
-					<li class="navigation__item navigaiton__item--is-current">
-
-						<a href="#" class="navigation__link">Barnet</a>
-
-					</li>
-
-					<li class="navigation__item">
-
-						<a href="#" class="navigation__link">Enfield</a>
-
-					</li>
-
-					<li class="navigation__item">
-
-						<a href="#" class="navigation__link">Haringey</a>
-
-					</li>
-
-				</ol>
-
-			</nav>
-
-		</div>
-
-	</header>
-
-	<main role="main" class="main">
-
-		<div class="main__wrap">
+$GLOBALS['timberContext'] = Timber::context();
+ob_start();

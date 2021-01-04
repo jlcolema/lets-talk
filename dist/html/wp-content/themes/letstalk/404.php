@@ -1,27 +1,13 @@
 <?php
 /**
- * The template for displaying 404 pages (not found)
+ * The template for displaying 404 pages (Not Found)
  *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
+ * Methods for TimberHelper can be found in the /functions sub-directory
  *
- * @package WordPress
- * @subpackage Lets_Talk_IAPT
- * @since 1.0.0
+ * @package  WordPress
+ * @subpackage  Timber
+ * @since    Timber 0.1
  */
 
-get_header();
-?>
-
-	<header class="page-header alignwide">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing here', 'letstalk' ); ?></h1>
-	</header><!-- .page-header -->
-
-	<div class="error-404 not-found default-max-width">
-		<div class="page-content">
-			<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'letstalk' ); ?></p>
-			<?php get_search_form(); ?>
-		</div><!-- .page-content -->
-	</div><!-- .error-404 -->
-
-<?php
-get_footer();
+$context = Timber::context();
+Timber::render( '404.twig', $context );

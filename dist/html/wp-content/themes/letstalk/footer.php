@@ -1,102 +1,21 @@
 <?php
 /**
- * The template for displaying the footer
+ * Third party plugins that hijack the theme will call wp_footer() to get the footer template.
+ * We use this to end our output buffer (started in header.php) and render into the view/page-plugin.twig template.
  *
- * Contains the closing of the #content div and all content after.
+ * If you're not using a plugin that requries this behavior (ones that do include Events Calendar Pro and
+ * WooCommerce) you can delete this file and header.php
  *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WordPress
- * @subpackage Lets_Talk_IAPT
- * @since 1.0.0
+ * @package  WordPress
+ * @subpackage  Timber
+ * @since   Timber 0.1
  */
 
-?>
-
-		</div>
-
-	</main>
-
-	<footer role="contentinfo" class="footer">
-
-		<div class="footer__wrap">
-
-			<nav role="" class="">
-
-				<ol class="">
-
-					<li class="">
-
-						<a href="#" class="">Urgent Help</li>
-
-					</li>
-
-					<li class="">
-
-						<a href="#" class="">Make a Referral</a>
-
-					</li>
-
-				</ol>
-
-			</nav>
-
-			<div class="logo">
-
-				<a href="#" class="logo__link">Let's Talk IAPT</a>
-
-			</div>
-
-			<div class="">
-
-				<a href="#" class="">NHS</a>
-
-			</div>
-
-			<nav role="navigation" class="secondary-navigation">
-
-				<ol class="secondary-navigation__list">
-
-					<li class="secondary-navigation__item secondary-navigation__item--is-current">
-
-						<a href="#" class="secondary-navigation__link">Cookie Policy</a>
-
-					</li>
-
-					<li class="secondary-navigation__item">
-
-						<a href="#" class="secondary-navigation__link">Social Media</a>
-
-					</li>
-
-					<li class="secondary-navigation__item">
-
-						<a href="#" class="secondary-navigation__link">Accessibility</a>
-
-					</li>
-
-					<li class="secondary-navigation__item">
-
-						<a href="#" class="secondary-navigation__link">Privacy Policy</a>
-
-					</li>
-
-				</ol>
-
-			</nav>
-
-			&copy; Let's Talk 2020
-
-			Enfield, Barnet &amp; Haringey
-
-		</div>
-
-	</footer>
-
-	<?php get_template_part( 'inc/cookie-consent' ); ?>
-
-	<?php wp_footer(); ?>
-
-</body>
-
-</html>
+$timberContext = $GLOBALS['timberContext']; // @codingStandardsIgnoreFile
+if ( ! isset( $timberContext ) ) {
+	throw new \Exception( 'Timber context not set in footer.' );
+}
+$timberContext['content'] = ob_get_contents();
+ob_end_clean();
+$templates = array( 'page-plugin.twig' );
+Timber::render( $templates, $timberContext );

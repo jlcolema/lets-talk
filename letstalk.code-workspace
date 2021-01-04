@@ -16,6 +16,11 @@
 			"path": "dist/html/wp-content/themes/letstalk"
 		},
 		{
+			// Original theme
+			"name": "Original",
+			"path": "dist/html/wp-content/themes/letstalk-original"
+		},
+		{
 			// Reference theme
 			"name": "Reference",
 			"path": "dist/html/wp-content/themes/twentytwentyone"
