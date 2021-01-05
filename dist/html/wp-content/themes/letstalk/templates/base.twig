@@ -1,45 +1,195 @@
-{% block html_head_container %}
+<!doctype html>
 
-{% include 'html-header.twig' %}
-	{% block head %}
-	{% endblock %}
+<html {{ site.language_attributes }} class="">
+
+	<head>
+
+		<meta charset="{{ site.charset }}" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		{{function('wp_head')}}
+
 	</head>
-{% endblock %}
 
 	<body class="{{body_class}}" data-template="base.twig">
-		<a class="skip-link screen-reader-text" href="#content">{{ _e( 'Skip to content') }}</a>
-		<header class="header" >
+
+		{% include 'partials/alert.twig' %}
+
+		<header role="banner" class="header">
+
 			{% block header %}
-				<div class="wrapper">
-					<h1 class="hdr-logo" role="banner">
-						<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
-					</h1>
-					<nav id="nav-main" class="nav-main" role="navigation">
-						{% include "menu.twig" with {'items': menu.get_items} %}
-					</nav><!-- #nav -->
+
+				<div class="header__wrap">
+
+					<div class="logo">
+
+						<a href="{{ site.url }}" class="logo__link">{{ site.name }}</a>
+
+					</div>
+
+					<div class="nhs">
+
+						<a href="#" rel="external" class="nhs__link">NHS</a>
+
+					</div>
+
+					<nav role="navigation" class="tools">
+
+						<ol class="tools__list">
+
+							<li class="tools__item">
+
+								<a href="/urgent-help/" class="tools__link">Urgent Help</a>
+
+							</li>
+
+							<li class="tools__item">
+
+								<a href="/make-a-referral/" class="tools__link">Make a Referral</a>
+
+							</li>
+
+						</ol>
+
+					</nav>
+
+					<nav role="navigation" class="navigation">
+
+						<div class="navigation__toggle">
+
+							<span class="navigation__label">Menu</span>
+
+						</div>
+
+						<ol class="navigation__list">
+
+							<li class="navigatiaon__item navigation__item--is-current">
+
+								<a href="/locations/barnet/" class="navigation__link">Barnet</a>
+
+							</li>
+
+							<li class="navigation__item">
+
+								<a href="/locations/enfield/" class="navigation__link">Enfield</a>
+
+							</li>
+
+							<li class="navigation__item">
+
+								<a href="/locations/haringey/" class="navigation__link">Haringey</a>
+
+							</li>
+
+						</ol>
+
+					</nav>
+
 				</div>
+
 			{% endblock %}
+
 		</header>
 
-		<section id="content" role="main" class="content-wrapper">
-			{% if title %}<h1>{{title}}</h1>{% endif %}
-			<div class="wrapper {{sidebar_class}}">
+		<main role="main" class="main">
+
+			<div class="main__wrap">
+
 				{% block content %}
+
 					Sorry, no content
+
 				{% endblock %}
+		
 			</div>
-			{% if sidebar %}
-				<aside class="layout-sidebar">
-					{{sidebar}}
-				</aside>
-			{% endif %}
-		</section>
+
+		</main>
 
 		{% block footer %}
-			<footer id="footer">
-				{% include 'footer.twig' %}
+
+			<footer role="contentinfo" class="footer">
+
+				<div class="footer__wrap">
+
+					<nav role="navigation" class="tools">
+
+						<ol class="tools__list">
+
+							<li class="tools__item">
+
+								<a href="/urgent-help/" class="tools__link">Urgent Help</a>
+
+							</li>
+
+							<li class="tools__item">
+
+								<a href="/make-a-referral/" class="tools__link">Make a Referral</a>
+
+							</li>
+
+						</ol>
+
+					</nav>
+
+					<div class="services-provided-by">
+
+						<p>Barnet, Enfield and Haringey Mental Health NHS Trust provide IAPT services for Barnet and Enfield. Haringey IAPT is provided by Whittington Health NHS Trust.</p>
+
+					</div>
+
+					<div class="logo">
+
+						<a href="{{ site.link }}" class="logo__link">{{ site.name }}</a>
+
+					</div>
+
+					<div class="nhs">
+
+						<a href="#" rel="external" class="nhs__link">NHS</a>
+
+					</div>
+
+					<nav role="navigation" class="secondary-navigation">
+
+						<ol class="secondary-navigation__list">
+
+							<li class="secondary-navigation__item secondary-navigation__item--is-current">
+
+								<a href="/cookie-policy/" class="secondary-navigation__link">Cookie Policy</a>
+
+							</li>
+
+							<li class="secondary-navigation__item">
+
+								<a href="/accessibility/" class="secondary-navigation__link">Accessibility</a>
+
+							</li>
+
+							<li class="secondary-navigation__item">
+
+								<a href="/privacy-policy/" class="secondary-navigation__link">Privacy Policy</a>
+
+							</li>
+
+						</ol>
+
+					</nav>
+
+					<p class="copyright">&copy; {{ site.name }} {{ "now" | date( 'Y' ) }}</p>
+
+					<div class="">Enfield, Barnet &amp; Haringey</div>
+
+				</div>
+
 			</footer>
-			{{ function('wp_footer') }}
+
 		{% endblock %}
+
+		{% include 'partials/cookie-consent.twig' %}
+
+		{{ function('wp_footer') }}
+
 	</body>
+
 </html>
