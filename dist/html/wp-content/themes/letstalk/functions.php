@@ -175,6 +175,35 @@ class LetsTalk extends Timber\Site {
 new LetsTalk();
 
 /**
+ * Enqueue scripts and styles.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function lets_talk_scripts() {
+
+	// Use the standard stylesheet.
+	wp_enqueue_style(
+		'lets-talk-styles',
+		get_template_directory_uri() . '/assets/css/styles.css',
+		array(),
+		wp_get_theme()->get( 'Version' )
+	);
+
+	// Use the standard scripts file.
+	wp_enqueue_script(
+		'lets-talk-scripts',
+		get_template_directory_uri() . '/assets/js/scripts.js',
+		array(),
+		wp_get_theme()->get( 'Version' ),
+		true
+	);
+
+}
+add_action( 'wp_enqueue_scripts', 'lets_talk_scripts' );
+
+/**
  * Custom WYSIWYG editors.
  *
  * @since 1.0.0
