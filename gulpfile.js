@@ -170,6 +170,8 @@ gulp.task('watch', function() {
 
 	gulp.watch(basePaths.dist + '**/*.php').on('change', browsersync.reload);
 
+	gulp.watch(basePaths.dist + '**/*.twig').on('change', browsersync.reload);
+
 });
 
 /* Title
