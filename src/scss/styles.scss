@@ -52,20 +52,23 @@ with others.
 
 // 4. Components
 
-// @import 'components/_button';
-// @import 'components/_carousel';
+@import 'components/_accordion';
+@import 'components/_button';
 @import 'components/_form';
+@import 'components/_hero';
+@import 'components/testimonial';
+// @import 'components/_carousel';
 
 // 5. Vendor
 
 // @import 'vendor/_contact-form-7';
-// @import 'vendor/locomotive-scroll';
 
 // 6. Page-specific
 
 @import 'pages/_home';
 // @import 'pages/_work';
 // @import 'pages/_project';
+
 // @import 'pages/_proposal';
 @import 'pages/_404';
 
