@@ -1,38 +1,112 @@
 
 
-// Futura
+// Arial
 // -------------------------------------
 
-// Font Family: Futura
-// Service: Paratype
-// URL: https://www.paratype.com/fonts/pt/futura-pt
-// Foundry: Bauer Foundry
+// Font Family: Arial
+// Service: Name of Service
+// URL: https://url.com
+// Foundry: Name of Foundry
 
 // Currently in use:
 
-// Medium
+// 1. Regular
+// 2. Regular Italic
+// 3. Bold
+// 4. Bold Italic
 
-// @font-face {
+// Regular
 
-	// font-family: 'Futura Medium';
+@font-face {
 
-	// src: url('../fonts/futura/medium/futura-medium.eot');
-	// src: url('../fonts/futura/medium/futura-medium.eot?#iefix') format('embedded-opentype'),
-	// 	 url('../fonts/futura/medium/futura-medium.woff2') format('woff2'),
-	// 	 url('../fonts/futura/medium/futura-medium.woff') format('woff'),
-	// 	 url('../fonts/futura/medium/futura-medium.ttf') format('truetype');
+	font-family: 'Arial Regular';
 
-	// font-weight: normal;
-	// font-style: normal;
+	src: url('../fonts/arial/regular/arial-regular.woff2') format('woff2'),
+		 url('../fonts/arial/regular/arial-regular.woff') format('woff');
 
-	// font-display: swap;
+	font-weight: normal;
+	font-style: normal;
 
-// }
+	font-display: swap;
 
-@mixin futura-medium {
+}
 
-	// font-family: 'Futura Medium', Helvetica, Arial, sans-serif;
-	// font-weight: normal;
-	// font-style: normal;
+@mixin arial-regular {
+
+	font-family: 'Arial Regular', Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+// Regular Italic
+
+@font-face {
+
+	font-family: 'Arial Regular Italic';
+
+	src: url('../fonts/arial/regular-italic/arial-regular-italic.woff2') format('woff2'),
+		 url('../fonts/arial/regular-italic/arial-regular-italic.woff') format('woff');
+
+	font-weight: normal;
+	font-style: normal;
+
+	font-display: swap;
+
+}
+
+@mixin arial-regular-italic {
+
+	font-family: 'Arial Regular Italic', Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+// Bold
+
+@font-face {
+
+	font-family: 'Arial Bold';
+
+	src: url('../fonts/arial/bold/arial-bold.woff2') format('woff2'),
+		 url('../fonts/arial/bold/arial-bold.woff') format('woff');
+
+	font-weight: normal;
+	font-style: normal;
+
+	font-display: swap;
+
+}
+
+@mixin arial-bold {
+
+	font-family: 'Arial Bold', Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+// Bold Italic
+
+@font-face {
+
+	font-family: 'Arial Bold Italic';
+
+	src: url('../fonts/arial/bold-italic/arial-bold-italic.woff2') format('woff2'),
+		 url('../fonts/arial/bold-italic/arial-bold-italic.woff') format('woff');
+
+	font-weight: normal;
+	font-style: normal;
+
+	font-display: swap;
+
+}
+
+@mixin arial-bold-italic {
+
+	font-family: 'Arial Bold Italic', Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
 
 }
