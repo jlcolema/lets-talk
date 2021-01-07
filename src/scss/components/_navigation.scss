@@ -1,0 +1,58 @@
+/*------------------------------
+Component: Navigation
+------------------------------*/
+
+.navigation {}
+
+	.navigation__toggle {
+
+		display: none;
+
+	}
+
+		.navigation__label {}
+
+	.navigation__list {
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		align-items: flex-start;
+		align-content: flex-start;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+	}
+
+		.navigation__item {
+
+			margin: 0 1.25em 0 0;
+			@include arial-bold;
+
+			&:last-of-type {
+
+				margin: 0;
+
+			}
+
+		}
+
+			.navigation__link {
+
+				&:hover {}
+
+			}
+
+		.navigation__item--is-current {
+
+			.navigation__link {
+
+				color: $color-brand-purple;
+
+				&:hover {}
+
+			}
+
+		}

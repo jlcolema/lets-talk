@@ -1,0 +1,56 @@
+/*------------------------------
+Component: Subnavigation
+------------------------------*/
+
+.subnavigation {}
+
+	.subnavigation__toggle {
+
+		display: none;
+
+	}
+
+		.subnavigation__label {}
+
+	.subnavigation__list {
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		align-content: flex-start;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+	}
+
+		.subnavigation__item {
+
+			margin: 0;
+			@include arial-bold;
+
+			&:last-of-type {
+
+				margin: 0;
+
+			}
+
+		}
+
+			.subnavigation__link {
+
+				&:hover {}
+
+			}
+
+		.subnavigation__item--is-current {
+
+			.subnavigation__link {
+
+				&:hover {}
+
+			}
+
+		}
