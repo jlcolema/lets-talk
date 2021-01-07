@@ -1,3 +1,19 @@
 /*------------------------------
 Header
 ------------------------------*/
+
+.header {
+
+	padding: 0 1.25em;
+	background: pink;
+
+}
+
+	.header__wrap {
+
+		width: 100%;
+		max-width: 1160px;
+		margin: 0 auto;
+		background: darken(pink, 5%);
+
+	}
