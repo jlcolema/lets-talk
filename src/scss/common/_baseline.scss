@@ -42,12 +42,22 @@ body {
 
 // Notes...
 
-h1 {
+h1, h2, h3,
+h4, h5, h6 {
 
 	margin: 0 0 0.65em 0;
-	font-size: 3.375rem;
 	line-height: calc(2px + 2ex + 2px);
 	@include arial-bold;
+	color: $color-brand-purple;
+
+}
+
+h1 {
+
+	// margin: 0 0 0.65em 0;
+	font-size: 3.375rem;
+	// line-height: calc(2px + 2ex + 2px);
+	// @include arial-bold;
 	// text-transform: uppercase;
 	// word-break: break-word;
 	// hyphens: auto;
@@ -56,10 +66,10 @@ h1 {
 
 h2 {
 
-	margin: 0 0 0.65em 0;
+	// margin: 0 0 0.65em 0;
 	font-size: 2.25rem;
-	line-height: calc(2px + 2ex + 2px);
-	@include arial-bold;
+	// line-height: calc(2px + 2ex + 2px);
+	// @include arial-bold;
 	// text-transform: uppercase;
 	// word-break: break-word;
 	// hyphens: auto;
@@ -68,10 +78,10 @@ h2 {
 
 h3 {
 
-	margin: 0 0 0.65em 0;
+	// margin: 0 0 0.65em 0;
 	font-size: 1.5rem;
-	line-height: calc(2px + 2ex + 2px);
-	@include arial-bold;
+	// line-height: calc(2px + 2ex + 2px);
+	// @include arial-bold;
 	// text-transform: uppercase;
 	// word-break: break-word;
 	// hyphens: auto;
@@ -80,10 +90,10 @@ h3 {
 
 h4 {
 
-	margin: 0 0 0.65em 0;
+	// margin: 0 0 0.65em 0;
 	font-size: 1rem;
-	line-height: calc(2px + 2ex + 2px);
-	@include arial-bold;
+	// line-height: calc(2px + 2ex + 2px);
+	// @include arial-bold;
 	// text-transform: uppercase;
 	// word-break: break-word;
 	// hyphens: auto;
@@ -92,10 +102,10 @@ h4 {
 
 h5 {
 
-	margin: 0 0 0.65em 0;
+	// margin: 0 0 0.65em 0;
 	font-size: 0.75rem;
-	line-height: calc(2px + 2ex + 2px);
-	@include arial-bold;
+	// line-height: calc(2px + 2ex + 2px);
+	// @include arial-bold;
 	// text-transform: uppercase;
 	// word-break: break-word;
 	// hyphens: auto;
@@ -104,10 +114,10 @@ h5 {
 
 h6 {
 
-	margin: 0 0 0.65em 0;
+	// margin: 0 0 0.65em 0;
 	font-size: 0.5rem;
-	line-height: calc(2px + 2ex + 2px);
-	@include arial-bold;
+	// line-height: calc(2px + 2ex + 2px);
+	// @include arial-bold;
 	// text-transform: uppercase;
 	// word-break: break-word;
 	// hyphens: auto;
