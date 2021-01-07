@@ -22,37 +22,11 @@
 
 				<div class="header__wrap">
 
-					<div class="logo">
+					{% include 'partials/logo.twig' %}
 
-						<a href="{{ site.url }}" class="logo__link">{{ site.name }}</a>
+					{% include 'partials/nhs.twig' %}
 
-					</div>
-
-					<div class="nhs">
-
-						<a href="#" rel="external" class="nhs__link">NHS</a>
-
-					</div>
-
-					<nav role="navigation" class="tools">
-
-						<ol class="tools__list">
-
-							<li class="tools__item">
-
-								<a href="/urgent-help/" class="tools__link">Urgent Help</a>
-
-							</li>
-
-							<li class="tools__item">
-
-								<a href="/make-a-referral/" class="tools__link">Make a Referral</a>
-
-							</li>
-
-						</ol>
-
-					</nav>
+					{% include 'partials/tools.twig' %}
 
 					<nav role="navigation" class="navigation">
 
@@ -112,25 +86,7 @@
 
 				<div class="footer__wrap">
 
-					<nav role="navigation" class="tools">
-
-						<ol class="tools__list">
-
-							<li class="tools__item">
-
-								<a href="/urgent-help/" class="tools__link">Urgent Help</a>
-
-							</li>
-
-							<li class="tools__item">
-
-								<a href="/make-a-referral/" class="tools__link">Make a Referral</a>
-
-							</li>
-
-						</ol>
-
-					</nav>
+					{% include 'partials/tools.twig' %}
 
 					<div class="services-provided-by">
 
@@ -138,17 +94,9 @@
 
 					</div>
 
-					<div class="logo">
+					{% include 'partials/logo.twig' %}
 
-						<a href="{{ site.link }}" class="logo__link">{{ site.name }}</a>
-
-					</div>
-
-					<div class="nhs">
-
-						<a href="#" rel="external" class="nhs__link">NHS</a>
-
-					</div>
+					{% include 'partials/nhs.twig' %}
 
 					<nav role="navigation" class="secondary-navigation">
 

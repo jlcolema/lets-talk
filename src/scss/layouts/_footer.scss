@@ -14,6 +14,103 @@ Footer
 		width: 100%;
 		max-width: 1160px;
 		margin: 0 auto;
+		padding: 1.25em 0;
 		background: darken(pink, 5%);
 
 	}
+
+		/* Tools */
+
+		// This is a component due to it appearing in more than one place.
+		// Styles added here will override the global styles located in components/_tools.scss.
+
+		.tools {}
+
+			.tools__list {}
+
+				.tools__item {}
+
+					.tools__link {}
+
+				.tools__item--urgent-help {}
+
+				.tools__item--make-a-referral {}
+
+		/* Title */
+
+		.services-provided-by {
+
+			p {
+
+				font-size: 0.625rem;
+				margin: 0;
+
+				&:last-of-type {}
+
+			}
+
+		}
+
+		/* Logo */
+
+		// This is a component due to it appearing in more than one place.
+
+		.logo {}
+
+			.logo__link {}
+
+		/* NHS */
+
+		// This is a component due to it appearing in more than one place.
+
+		.nhs {}
+
+			.nhs__link {}
+
+		/* Title */
+
+		.secondary-navigation {
+
+			margin: 1.25em 0 0 0;
+
+		}
+
+			.secondary-navigation__list {
+
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: flex-start;
+				align-items: flex-start;
+				align-content: flex-start;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+
+			}
+
+				.secondary-navigation__item {
+
+					margin: 0 1.25em 0 0;
+
+					&:last-of-type {
+
+						margin: 0;
+
+					}
+
+				}
+
+					.secondary-navigation__link {}
+
+				.secondary-navigation__item--is-current {}
+
+		/* Copyright */
+
+		.copyright {
+
+			margin: 1.25em 0 0 0;
+			font-size: 0.75rem;
+			color: $color-brand-light-blue;
+
+		}
