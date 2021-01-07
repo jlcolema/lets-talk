@@ -5,7 +5,7 @@ Component: Consent
 .consent {
 
 	padding: 0 1.25em;
-	background: pink;
+	background: $color-gray-20;
 
 }
 
@@ -14,6 +14,55 @@ Component: Consent
 		width: 100%;
 		max-width: 1160px;
 		margin: 0 auto;
-		background: darken(pink, 5%);
 
 	}
+
+		.consent__toggle {
+
+			position: relative;
+			padding: 1.25em 0;
+			// text-align: center;
+			text-transform: uppercase;
+			cursor: pointer;
+
+			&:after {
+
+				content: "";
+				
+				position: absolute;
+				right: 0;
+				top: 50%;
+				width: 20px;
+				height: 20px;
+				margin: -10px 0 0 0;
+				background: $color-gray-40;
+				z-index: 1;
+
+			}
+
+		
+
+		}
+
+		.consent__details {
+
+			padding: 1.25em 0;
+			border-top: 1px solid darken($color-gray-20, 5%);
+
+			p {
+
+				&:last-of-type {
+
+					margin: 0;
+
+				}
+
+			}
+
+				a {
+
+					&:hover {}
+
+				}
+
+		}
