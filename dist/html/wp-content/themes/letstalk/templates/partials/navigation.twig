@@ -1,0 +1,23 @@
+<nav role="navigation" class="navigation">
+
+	<div class="navigation__toggle">
+
+		<span class="navigation__label">Menu</span>
+
+	</div>
+
+	<ol class="navigation__list">
+
+		{% for item in header_menu.items %}
+
+			<li class="navigation__item {% if item.current %}navigation__item--is-current{% endif %}">
+
+				<a href="{{ item.link }}" class="navigation__link">{{ item.title }}</a>
+
+			</li>
+
+		{% endfor %}
+
+	</ol>
+
+</nav>
