@@ -69,12 +69,19 @@ class LetsTalk extends Timber\Site {
 	 * @param string $context context['this'] Being the Twig's {{ this }}.
 	 */
 	public function add_to_context( $context ) {
+
 		$context['foo']   = 'bar';
 		$context['stuff'] = 'I am a value set in your functions.php file';
 		$context['notes'] = 'These values are available everytime you call Timber::context();';
 		$context['menu']  = new Timber\Menu();
 		$context['site']  = $this;
+
+		$context['header_menu'] = new Timber\Menu( 'Header menu' );
+		$context['footer_menu'] = new Timber\Menu( 'Footer menu' );
+		$context['tools_menu'] = new Timber\Menu( 'Utilities menu' );
+
 		return $context;
+
 	}
 
 	public function theme_supports() {
