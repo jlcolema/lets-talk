@@ -2,17 +2,15 @@
 
 	<ol class="tools__list">
 
-		<li class="tools__item tools__item--urgent-help">
+		{% for item in tools_menu.items %}
 
-			<a href="/urgent-help/" class="tools__link">Urgent Help</a>
+			<li class="tools__item tools__item--{{ item.slug }} {% if item.current %}tools__item--is-current{% endif %}">
 
-		</li>
+				<a href="{{ item.link }}" class="tools__link">{{ item.title }}</a>
 
-		<li class="tools__item tools__item--make-a-referral">
+			</li>
 
-			<a href="/make-a-referral/" class="tools__link">Make a Referral</a>
-
-		</li>
+		{% endfor %}
 
 	</ol>
 
