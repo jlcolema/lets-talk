@@ -1,0 +1,36 @@
+/*------------------------------
+Component: Logo
+------------------------------*/
+
+.logo {}
+
+	.logo__link {}
+
+		.logo__screen-reader-text {}
+
+		.logo__svg {}
+
+			.logo__path {
+
+				fill: $color-brand-light-blue;
+
+			}
+
+			.logo__path--01,
+			.logo__path--02,
+			.logo__path--03,
+			.logo__path--04,
+			.logo__path--05,
+			.logo__path--06,
+			.logo__path--07,
+			.logo__path--08,
+			.logo__path--09 {
+
+				fill: $color-brand-purple;
+
+			}
+
+			.logo__path--10,
+			.logo__path--11,
+			.logo__path--12,
+			.logo__path--13 {}
