@@ -12,7 +12,7 @@
 
 	</head>
 
-	<body class="{{body_class}}" data-template="base.twig">
+	<body class="{{ body_class }}" data-template="base.twig">
 
 		{% include 'partials/alert.twig' %}
 
@@ -72,23 +72,15 @@
 
 						<ol class="secondary-navigation__list">
 
-							<li class="secondary-navigation__item secondary-navigation__item--is-current">
+							{% for item in footer_menu.items %}
 
-								<a href="/cookie-policy/" class="secondary-navigation__link">Cookie Policy</a>
+								<li class="secondary-navigation__item {% if item.current %}secondary-navigation__item--is-current{% endif %}">
 
-							</li>
+									<a href="{{ item.link }}" class="secondary-navigation__link">{{ item.title }}</a>
 
-							<li class="secondary-navigation__item">
+								</li>
 
-								<a href="/accessibility/" class="secondary-navigation__link">Accessibility</a>
-
-							</li>
-
-							<li class="secondary-navigation__item">
-
-								<a href="/privacy-policy/" class="secondary-navigation__link">Privacy Policy</a>
-
-							</li>
+							{% endfor %}
 
 						</ol>
 
