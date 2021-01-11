@@ -14,6 +14,34 @@ Header
 		width: 100%;
 		max-width: 1160px;
 		margin: 0 auto;
+		padding: 1.25em 0;
 		background: darken(pink, 5%);
+		border-bottom: 1px solid $color-brand-light-blue;
 
 	}
+
+		.navigation {}
+
+			.navigation__toggle {}
+
+				.navigation__label {}
+
+			.navigation__list {}
+
+				.navigation__item {}
+
+					.navigation__link {
+
+						&:hover {}
+
+					}
+
+				.navigation__item--is-current {
+
+					.navigation__link {
+
+						&:hover {}
+
+					}
+
+				}
