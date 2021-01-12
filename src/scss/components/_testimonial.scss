@@ -1,3 +1,29 @@
 /*------------------------------
 Component: Testimonial
 ------------------------------*/
+
+.testimonial {}
+
+	.testimonial__svg {}
+
+		.testimonial__bubble {
+
+			fill: $color-brand-light-blue;
+
+		}
+
+		.testimonial__apostrophes {
+
+			fill: $color-base-white;
+
+		}
+
+	.testimonial__blockquote {
+
+		p {
+
+			&:last-of-type {}
+
+		}
+
+	}
