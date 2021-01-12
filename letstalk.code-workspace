@@ -11,6 +11,11 @@
 			"path": "src"
 		},
 		{
+			// Templates
+			"name": "Templates",
+			"path": "dist/html/wp-content/themes/letstalk/templates"
+		},
+		{
 			// Theme files
 			"name": "Theme",
 			"path": "dist/html/wp-content/themes/letstalk"
