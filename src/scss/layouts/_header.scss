@@ -5,22 +5,90 @@ Header
 .header {
 
 	padding: 0 1.25em;
-	background: pink;
+	// background: pink;
 
 }
 
 	.header__wrap {
 
+		position: relative;
 		width: 100%;
 		max-width: 1150px;
+		height: 200px;
 		margin: 0 auto;
-		padding: 1.25em 0;
-		background: darken(pink, 5%);
+		// padding: 1.25em 0;
+		// background: darken(pink, 15%);
 		border-bottom: 2px solid $color-brand-light-blue;
 
 	}
 
-		.navigation {}
+		.logo {
+
+			// Custom positioning for header.
+
+			.header & {
+
+				position: absolute;
+				left: 0;
+				top: 54px;
+				z-index: 1;
+
+			}
+
+		}
+
+			.logo__link {}
+
+				.logo__svg {}
+
+		.nhs {
+
+			// Custom positioning for header.
+
+			.header & {
+
+				position: absolute;
+				top: 50px;
+				right: 0;
+				z-index: 1;
+
+			}
+
+		}
+
+			.nhs__link {}
+
+				.nhs__svg {}
+
+		.tools {
+
+			// Custom positioning for header.
+
+			.header & {
+
+				position: absolute;
+				left: 0;
+				bottom: 14px;
+				z-index: 1;
+
+			}
+
+		}
+
+			.tools__list {}
+
+				.tools__item {}
+
+					.tools__link {}
+
+		.navigation {
+
+			position: absolute;
+			right: 0;
+			bottom: 12px;
+			z-index: 1;
+
+		}
 
 			.navigation__toggle {}
 

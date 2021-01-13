@@ -83,7 +83,11 @@ Component: Tools
 
 				}
 
-				&:hover {}
+				&:hover {
+
+					color: $color-brand-light-blue;
+
+				}
 
 			}
 
