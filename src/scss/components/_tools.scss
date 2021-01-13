@@ -21,6 +21,7 @@ Component: Tools
 		.tools__item {
 
 			margin: 0 1.25em 0 0;
+			font-size: 1.5rem;
 			@include arial-bold;
 			text-transform: uppercase;
 
@@ -34,6 +35,22 @@ Component: Tools
 
 			.tools__link {
 
+				&:before {
+
+					position: relative;
+					top: 6px;
+					content: "";
+					display: inline-block;
+					width: 32px;
+					height: 32px;
+					margin: 0 0.375em 0 0;
+					// background-color: darken(pink, 10%);
+					background-position: center center;
+					background-repeat: no-repeat;
+					background-size: 32px;
+
+				}
+
 				&:hover {}
 
 			}
@@ -44,6 +61,12 @@ Component: Tools
 
 				color: $color-brand-green;
 
+				&:before {
+
+					background-image: url(../img/icon-exclamation.svg);
+
+				}
+
 				&:hover {}
 
 			}
@@ -53,6 +76,12 @@ Component: Tools
 		.tools__item--make-a-referral {
 
 			.tools__link {
+
+				&:before {
+
+					background-image: url(../img/icon-calendar.svg);
+
+				}
 
 				&:hover {}
 
