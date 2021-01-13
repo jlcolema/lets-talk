@@ -28,7 +28,8 @@ Component: Navigation
 
 		.navigation__item {
 
-			margin: 0 1.25em 0 0;
+			margin: 0 0.75em 0 0;
+			font-size: 2.0rem;
 			@include arial-bold;
 
 			&:last-of-type {
