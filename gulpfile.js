@@ -75,7 +75,7 @@ gulp.task('js', function() {
 
 		// Libraries
 
-		// basePaths.dev + 'js/libraries/jquery.3.5.1.js',
+		basePaths.dev + 'js/libraries/jquery.3.5.1.js',
 
 		// Plugins
 
