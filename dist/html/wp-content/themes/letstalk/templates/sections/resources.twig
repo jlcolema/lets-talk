@@ -94,7 +94,35 @@
 
 			<div class="accordion__details">
 
-				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, animi consequuntur magni consectetur explicabo magnam eos repudiandae commodi beatae est nihil voluptas voluptate expedita obcaecati ducimus consequatur doloremque corporis non.</p>
+				<div class="">
+
+					<ul class="">
+
+						{% for local_resource in location.meta( 'location_resources_local_support' ) %}
+
+							<li class="">
+							
+								<h3 class="">{{ local_resource.local_support_name }}</h3>
+
+								<div class="">
+
+									<a href="{{ local_resource.local_support_url }}" class="">{{ local_resource.local_support_url }}</a>
+
+								</div>
+
+								<div class="">
+
+									{{ local_resource.local_support_description }}
+
+								</div>
+							
+							</li>
+
+						{% endfor %}
+
+					</ul>
+
+				</div>
 
 			</div>
 
