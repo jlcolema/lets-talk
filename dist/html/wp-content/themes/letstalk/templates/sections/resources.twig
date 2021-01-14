@@ -6,7 +6,7 @@
 
 	<div class="section__overview">
 
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut voluptatibus quaerat quam aliquam illo perspiciatis vitae magnam tenetur. Minus, cumque dolorem nisi aperiam quos reiciendis error soluta mollitia aliquid animi?</p>
+		{{ location.location_resources_overview }}
 
 	</div>
 
@@ -54,7 +54,35 @@
 
 			<div class="accordion__details">
 
-				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, animi consequuntur magni consectetur explicabo magnam eos repudiandae commodi beatae est nihil voluptas voluptate expedita obcaecati ducimus consequatur doloremque corporis non.</p>
+				<div class="">
+
+					<ul class="">
+
+						{% for resource in resources %}
+
+							<li class="">
+
+								<h3 class="">{{ resource.title }}</h3>
+
+								<div class="">
+
+									<a href="{{ resource.resource_url }}" class="">{{ resource.resource_url }}</a>
+
+								</div>
+
+								<div class="">
+
+									{{ resource.resource_description }}
+
+								</div>
+
+							</li>
+
+						{% endfor %}
+
+					</ul>
+
+				</div>
 
 			</div>
 

@@ -22,6 +22,16 @@ $problem_args = array(
 
 );
 
+$resource_args = array(
+
+	'post_type' => 'resource',
+	'post_status' => 'publish',
+	'orderby' => 'title',
+	'order' => 'ASC'
+
+);
+
 $context['problems'] = Timber::get_posts( $problem_args );
+$context['resources'] = Timber::get_posts( $resource_args );
 
 Timber::render( array( 'single-location.twig' ), $context );
