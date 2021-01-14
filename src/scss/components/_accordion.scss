@@ -4,8 +4,25 @@ Component: Accordion
 
 .accordion__list {}
 
-	.accordion__item {}
+	.accordion__item {
 
-		.accordion__summary {}
+		margin: 0 0 1em 0;
 
-		.accordion__detail {}
+	}
+
+		.accordion__summary {
+
+			padding: 1em;
+			@include arial-bold;
+			color: $color-base-white;
+			background: $color-brand-light-blue;
+			border-radius: 12px;
+			cursor: pointer;
+
+		}
+
+		.accordion__details {
+
+			margin: 1em 0 0 0;
+
+		}
