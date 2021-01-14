@@ -1,14 +1,12 @@
-<section id="overview" class="location__section location__section--is-active">
+<section id="overview" class="location__section">
 
 	{% include 'partials/hero.twig' %}
 
-	<h1 class="section__header">Title</h1>
+	<h1 class="section__header">{{ location.title }}</h1>
 
 	<div class="section__overview">
 
-		<p>Let&rsquo;s Talk IAPT (Improving Access to Psychological Therapies) is a free NHS evidence-based talking therapy service for people 16 years old and over, who are worried or have low mood. We provide a range of treatment programmes including one to one therapy, counselling and group work.</p>
-
-		<p>The service is for anyone over the age of 16 who is registered with a GP in the London Borough of Barnet. We have therapists who speak a number of languages and we can also provide interpreters.We hope that you can find all the necessary information on this website to decide whether we are the right service for you, but please feel free to contact us if you have any questions.</p>
+		{{ location.location_welcome_overview }}
 
 	</div>
 
