@@ -16,7 +16,11 @@
 
 		{# Alerts only need to display on the home page #}
 
-		{% include 'partials/alert.twig' %}
+		{% if fn( 'is_front_page' ) %}
+
+			{% include 'partials/alert.twig' %}
+
+		{% endif %}
 
 		<header role="banner" class="header">
 
