@@ -2,6 +2,23 @@
 Component: Hero
 ------------------------------*/
 
-.hero {}
+.hero {
 
-	.hero__img {}
+	display: flex;
+	justify-content: center;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	width: 100vw;
+	height: 500px;
+	margin: 0 -50vw 1.25em -50vw;
+	background: pink;
+	overflow: hidden;
+
+}
+
+	.hero__img {
+
+		max-width: none;
+
+	}
