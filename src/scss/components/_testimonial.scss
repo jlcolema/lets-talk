@@ -2,27 +2,48 @@
 Component: Testimonial
 ------------------------------*/
 
-.testimonial {}
+.testimonial {
 
-	.testimonial__svg {}
+	display: flex;
+	align-items: center;
+	padding: 3.0em;
+	border-top: 2px solid $color-brand-light-blue;
+	border-bottom: 2px solid $color-brand-light-blue;
 
-		.testimonial__bubble {
+}
 
-			fill: $color-brand-light-blue;
+	.testimonial__illustration {}
 
-		}
+		.testimonial__svg {}
 
-		.testimonial__apostrophes {
+			.testimonial__bubble {
 
-			fill: $color-base-white;
+				fill: $color-brand-light-blue;
 
-		}
+			}
+
+			.testimonial__apostrophes {
+
+				fill: $color-base-white;
+
+			}
 
 	.testimonial__blockquote {
 
+		margin: 0;
+		padding: 0 0 0 5.0em;
+
 		p {
 
-			&:last-of-type {}
+			font-size: 2.25rem;
+			line-height: 1.166666667;
+			@include arial-regular-italic;
+
+			&:last-of-type {
+
+				margin: 0;
+
+			}
 
 		}
 
