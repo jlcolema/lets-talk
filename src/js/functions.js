@@ -18,16 +18,16 @@
 
 		// Code...
 
-		/* Nav Toggle
+		/* Alert Toggle
 		--------------------------------------*/
 
 		// Notes...
 
-		// $('.navigation__toggle').click( function() {
+		$('.alert__toggle').click( function() {
 
-		// 	$(this).parent().toggleClass('navigation--is-open');
+			$(this).parent().toggleClass('alert--is-open');
 
-		// });
+		});
 
 		/* Smooth Scroll
 		--------------------------------------*/

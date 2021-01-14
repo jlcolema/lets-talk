@@ -36,8 +36,14 @@ Component: Alert
 				width: 20px;
 				height: 20px;
 				margin-top: -10px;
-				transform: rotate(45deg);
+				transition: all 0.125s ease-in;
 				z-index: 1;
+
+				.alert--is-open & {
+
+					transform: rotate(45deg);
+
+				}
 
 			}
 
@@ -55,8 +61,15 @@ Component: Alert
 
 		.alert__details {
 
+			display: none;
 			padding: 1.25em 0;
 			border-top: 1px solid darken($color-brand-purple, 5%);
+
+			.alert--is-open & {
+
+				display: block;
+
+			}
 
 			p {
 
