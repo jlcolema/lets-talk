@@ -1,0 +1,35 @@
+/*------------------------------
+Component: Resource
+------------------------------*/
+
+.resources {}
+
+	.resources__list {
+
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+	}
+
+		.resources__item {}
+
+			.resources__name {
+
+				margin: 0;
+
+			}
+
+			.resources__url {}
+
+				.resources__link {}
+
+			.resources__description {
+
+				p {
+
+					&:last-of-type {}
+
+				}
+
+			}

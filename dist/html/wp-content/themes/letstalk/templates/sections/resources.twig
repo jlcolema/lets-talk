@@ -54,23 +54,23 @@
 
 			<div class="accordion__details">
 
-				<div class="">
+				<div class="resources">
 
-					<ul class="">
+					<ul class="resources__list">
 
 						{% for resource in resources %}
 
-							<li class="">
+							<li class="resources__item">
 
-								<h3 class="">{{ resource.title }}</h3>
+								<h3 class="resources__name">{{ resource.title }}</h3>
 
-								<div class="">
+								<div class="resources__url">
 
-									<a href="{{ resource.resource_url }}" class="">{{ resource.resource_url }}</a>
+									<a href="{{ resource.resource_url }}" class="resources__link">{{ resource.resource_url }}</a>
 
 								</div>
 
-								<div class="">
+								<div class="resources__description">
 
 									{{ resource.resource_description }}
 
@@ -94,23 +94,23 @@
 
 			<div class="accordion__details">
 
-				<div class="">
+				<div class="resources">
 
-					<ul class="">
+					<ul class="resources__list">
 
 						{% for local_resource in location.meta( 'location_resources_local_support' ) %}
 
-							<li class="">
+							<li class="resources__item">
 							
-								<h3 class="">{{ local_resource.local_support_name }}</h3>
+								<h3 class="resources__name">{{ local_resource.local_support_name }}</h3>
 
-								<div class="">
+								<div class="resources__url">
 
-									<a href="{{ local_resource.local_support_url }}" class="">{{ local_resource.local_support_url }}</a>
+									<a href="{{ local_resource.local_support_url }}" class="resources__link">{{ local_resource.local_support_url }}</a>
 
 								</div>
 
-								<div class="">
+								<div class="resources__description">
 
 									{{ local_resource.local_support_description }}
 
