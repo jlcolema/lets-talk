@@ -29,6 +29,33 @@
 
 		});
 
+		/* Subnavigation
+		--------------------------------------*/
+
+		// Notes...
+
+		$('.subnavigation__item').click( function() {
+
+			// Remove `is-current` class from all items
+
+			$(this).siblings().removeClass('subnavigation__item--is-current');
+
+			// Add `is-current` class to the selected item
+
+			$(this).addClass('subnavigation__item--is-current');
+
+			// Sections
+			
+			$('.location__section').removeClass('location__section--is-visible');
+
+			$('.main__wrap').find('.location__section').eq(
+
+				$(this).index()
+
+			).addClass('location__section--is-visible');
+
+		});
+
 		/* Smooth Scroll
 		--------------------------------------*/
 
