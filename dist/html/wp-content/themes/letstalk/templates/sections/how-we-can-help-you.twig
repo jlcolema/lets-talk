@@ -6,311 +6,57 @@
 
 	<div class="section__overview">
 
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio earum temporibus dicta vel rem molestias accusantium voluptas atque culpa placeat nostrum at quibusdam nisi, nesciunt veniam aperiam incidunt totam eius.</p>
+		{{ location.location_services_overview }}
 
 	</div>
 
 	<div class="accordion__list">
 
-		<details class="accordion__item">
-		
-			<summary class="accordion__summary">Guided Self Help (GSH)</summary>
+		{% for service in location.meta( 'location_services_list' ) %}
 
-			<div class="accordion__details">
+			<details class="accordion__item">
 
-				<div class="">
+				<summary class="accordion__summary">{{ service.location_service_name }}</summary>
 
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magnam nostrum atque odit ea mollitia! Voluptatum sit doloremque a expedita, vero, autem quaerat quae provident sed distinctio fugiat iusto molestias.</p>
+				<div class="accordion__details">
 
-				</div>
+					{# Description #}
 
-				<div class="">
+					<div class="">
 
-					<ul class="">
+						{{ service.location_service_description }}
 
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
+					</div>
 
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
+					{# List #}
 
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
+					<div class="">
 
-					</ul>
+						<ul class="">
 
-				</div>
+							{% for service_option in service.location_service_options %}
+						
+								<li class="">{{ service_option.location_service_option_item }}</li>
 
-			</div>
+							{% endfor %}
 
-		</details>
+						</ul>
 
-		<details class="accordion__item">
-		
-			<summary class="accordion__summary">Computerised Cognitive Behavioural Therapy (cCBT)</summary>
+					</div>
 
-			<div class="accordion__details">
+					{# Notes #}
 
-				<div class="">
+					<div class="">
 
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magnam nostrum atque odit ea mollitia! Voluptatum sit doloremque a expedita, vero, autem quaerat quae provident sed distinctio fugiat iusto molestias.</p>
+						{{ service.location_service_notes }}
 
-				</div>
-
-				<div class="">
-
-					<ul class="">
-
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
-
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
-
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
-
-					</ul>
+					</div>
 
 				</div>
 
-			</div>
+			</details>
 
-		</details>
-
-		<details class="accordion__item">
-		
-			<summary class="accordion__summary">SilverCloud/IESO</summary>
-
-			<div class="accordion__details">
-
-				<div class="">
-
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magnam nostrum atque odit ea mollitia! Voluptatum sit doloremque a expedita, vero, autem quaerat quae provident sed distinctio fugiat iusto molestias.</p>
-
-				</div>
-
-				<div class="">
-
-					<ul class="">
-
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
-
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
-
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
-
-					</ul>
-
-				</div>
-
-			</div>
-
-		</details>
-
-		<details class="accordion__item">
-		
-			<summary class="accordion__summary">Cognitive Behaviour Therapy</summary>
-
-			<div class="accordion__details">
-
-				<div class="">
-
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magnam nostrum atque odit ea mollitia! Voluptatum sit doloremque a expedita, vero, autem quaerat quae provident sed distinctio fugiat iusto molestias.</p>
-
-				</div>
-
-				<div class="">
-
-					<ul class="">
-
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
-
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
-
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
-
-					</ul>
-
-				</div>
-
-			</div>
-
-		</details>
-
-		<details class="accordion__item">
-		
-			<summary class="accordion__summary">CBT for Long Term Conditions</summary>
-
-			<div class="accordion__details">
-
-				<div class="">
-
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magnam nostrum atque odit ea mollitia! Voluptatum sit doloremque a expedita, vero, autem quaerat quae provident sed distinctio fugiat iusto molestias.</p>
-
-				</div>
-
-				<div class="">
-
-					<ul class="">
-
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
-
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
-
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
-
-					</ul>
-
-				</div>
-
-			</div>
-
-		</details>
-
-		<details class="accordion__item">
-		
-			<summary class="accordion__summary">EMDR</summary>
-
-			<div class="accordion__details">
-
-				<div class="">
-
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magnam nostrum atque odit ea mollitia! Voluptatum sit doloremque a expedita, vero, autem quaerat quae provident sed distinctio fugiat iusto molestias.</p>
-
-				</div>
-
-				<div class="">
-
-					<ul class="">
-
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
-
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
-
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
-
-					</ul>
-
-				</div>
-
-			</div>
-
-		</details>
-
-		<details class="accordion__item">
-		
-			<summary class="accordion__summary">Counselling for Depression</summary>
-
-			<div class="accordion__details">
-
-				<div class="">
-
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magnam nostrum atque odit ea mollitia! Voluptatum sit doloremque a expedita, vero, autem quaerat quae provident sed distinctio fugiat iusto molestias.</p>
-
-				</div>
-
-				<div class="">
-
-					<ul class="">
-
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
-
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
-
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
-
-					</ul>
-
-				</div>
-
-			</div>
-
-		</details>
-
-		<details class="accordion__item">
-		
-			<summary class="accordion__summary">Interpersonal Psychotherapy (IPT)</summary>
-
-			<div class="accordion__details">
-
-				<div class="">
-
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magnam nostrum atque odit ea mollitia! Voluptatum sit doloremque a expedita, vero, autem quaerat quae provident sed distinctio fugiat iusto molestias.</p>
-
-				</div>
-
-				<div class="">
-
-					<ul class="">
-
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
-
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
-
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
-
-					</ul>
-
-				</div>
-
-			</div>
-
-		</details>
-
-		<details class="accordion__item">
-		
-			<summary class="accordion__summary">Dynamic Interpersonal Therapy (DIT)</summary>
-
-			<div class="accordion__details">
-
-				<div class="">
-
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magnam nostrum atque odit ea mollitia! Voluptatum sit doloremque a expedita, vero, autem quaerat quae provident sed distinctio fugiat iusto molestias.</p>
-
-				</div>
-
-				<div class="">
-
-					<ul class="">
-
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
-
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
-
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
-
-					</ul>
-
-				</div>
-
-			</div>
-
-		</details>
-
-		<details class="accordion__item">
-		
-			<summary class="accordion__summary">Behavioural Couples Therapy (BCT)</summary>
-
-			<div class="accordion__details">
-
-				<div class="">
-
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magnam nostrum atque odit ea mollitia! Voluptatum sit doloremque a expedita, vero, autem quaerat quae provident sed distinctio fugiat iusto molestias.</p>
-
-				</div>
-
-				<div class="">
-
-					<ul class="">
-
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
-
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
-
-						<li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod esse quaerat voluptas debitis error, aliquid tempora, perferendis eaque explicabo sequi exercitationem, est itaque tempore nihil? At laudantium ipsam corrupti.</li>
-
-					</ul>
-
-				</div>
-
-			</div>
-
-		</details>
+		{% endfor %}
 
 	</div>
 
