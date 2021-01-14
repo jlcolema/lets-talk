@@ -17,3 +17,17 @@ Main
 		// background: darken(pink, 5%);
 
 	}
+
+		.subnavigation {}
+
+		.location__section {
+
+			display: none;
+
+		}
+
+		.location__section--is-active {
+
+			display: block;
+
+		}
