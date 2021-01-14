@@ -6,65 +6,21 @@
 
 	<div class="accordion__list faqs__list">
 
-		<details class="accordion__item faqs__item">
+		{% for faq in faqs %}
 
-			<summary class="accordion__summary faqs__question">Question?</summary>
+			<details class="accordion__item faqs__item">
 
-			<div class="accordion__details faqs__answer">
+				<summary class="accordion__summary faqs__question">{{ faq.title }}</summary>
 
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam in placeat ut atque magnam accusamus ipsum magni, illo similique sapiente non suscipit unde asperiores. Harum commodi tempore quisquam explicabo obcaecati!</p>
+				<div class="accordion__details faqs__answer">
 
-			</div>
+					{{ faq.faq_answer }}
 
-		</details>
+				</div>
 
-		<details class="accordion__item faqs__item">
+			</details>
 
-			<summary class="accordion__summary faqs__question">Question?</summary>
-
-			<div class="accordion__details faqs__answer">
-
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam in placeat ut atque magnam accusamus ipsum magni, illo similique sapiente non suscipit unde asperiores. Harum commodi tempore quisquam explicabo obcaecati!</p>
-
-			</div>
-
-		</details>
-
-		<details class="accordion__item faqs__item">
-
-			<summary class="accordion__summary faqs__question">Question?</summary>
-
-			<div class="accordion__details faqs__answer">
-
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam in placeat ut atque magnam accusamus ipsum magni, illo similique sapiente non suscipit unde asperiores. Harum commodi tempore quisquam explicabo obcaecati!</p>
-
-			</div>
-
-		</details>
-
-		<details class="accordion__item faqs__item">
-
-			<summary class="accordion__summary faqs__question">Question?</summary>
-
-			<div class="accordion__details faqs__answer">
-
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam in placeat ut atque magnam accusamus ipsum magni, illo similique sapiente non suscipit unde asperiores. Harum commodi tempore quisquam explicabo obcaecati!</p>
-
-			</div>
-
-		</details>
-
-		<details class="accordion__item faqs__item">
-
-			<summary class="accordion__summary faqs__question">Question?</summary>
-
-			<div class="accordion__details faqs__answer">
-
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam in placeat ut atque magnam accusamus ipsum magni, illo similique sapiente non suscipit unde asperiores. Harum commodi tempore quisquam explicabo obcaecati!</p>
-
-			</div>
-
-		</details>
+		{% endfor %}
 
 	</div>
 

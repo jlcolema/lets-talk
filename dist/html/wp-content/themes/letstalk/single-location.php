@@ -31,7 +31,17 @@ $resource_args = array(
 
 );
 
+$faq_args = array(
+
+	'post_type' => 'faq',
+	'post_status' => 'publish',
+	'orderby' => 'title',
+	'order' => 'ASC'
+
+);
+
 $context['problems'] = Timber::get_posts( $problem_args );
 $context['resources'] = Timber::get_posts( $resource_args );
+$context['faqs'] = Timber::get_posts( $faq_args );
 
 Timber::render( array( 'single-location.twig' ), $context );
