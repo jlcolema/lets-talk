@@ -13,4 +13,15 @@ $context         = Timber::context();
 $timber_post     = Timber::get_post();
 $context['location'] = $timber_post;
 
+$problem_args = array(
+
+	'post_type' => 'problem',
+	'post_status' => 'publish',
+	'orderby' => 'title',
+	'order' => 'ASC'
+
+);
+
+$context['problems'] = Timber::get_posts( $problem_args );
+
 Timber::render( array( 'single-location.twig' ), $context );

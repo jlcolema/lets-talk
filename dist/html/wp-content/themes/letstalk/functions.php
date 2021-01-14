@@ -82,6 +82,10 @@ class LetsTalk extends Timber\Site {
 		$context['footer_menu'] = new Timber\Menu( 'Footer menu' );
 		$context['tools_menu'] = new Timber\Menu( 'Utilities menu' );
 
+		// Posts
+
+		// $context['problem'] = new Timber\PostQuery();
+
 		// Globals
 
 		$context['options'] = get_fields('option');
