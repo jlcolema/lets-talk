@@ -5,14 +5,16 @@ Home
 .home__contents {
 
 	display: flex;
-	flex-direction: row-reverse;
+	flex-direction: row;
 	align-items: center;
+	margin: 0 0 1.5em 0;
 
 }
 
 	.tree {
 
 		width: 50%;
+		padding: 0 2em 0 0;
 		// background: pink;
 
 	}
