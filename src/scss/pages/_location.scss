@@ -14,8 +14,20 @@ Location
 
 			.subnavigation__link {}
 
-.location__section {}
+.location__section {
 
-	.section__header {}
+	position: relative;
+
+}
+
+	.section__header {
+
+		position: absolute;
+		left: 0;
+		top: 1em;
+		color: $color-base-white;
+		z-index: 1;
+
+	}
 
 	.section__overview {}
