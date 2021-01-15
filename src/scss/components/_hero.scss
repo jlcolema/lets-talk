@@ -9,14 +9,14 @@ Component: Hero
 	display: flex;
 	justify-content: center;
 	position: relative;
-	// left: 50%;
-	// right: 50%;
-	// width: 100vw;
+	left: 50%;
+	right: 50%;
+	width: 100vw;
 	// height: 500px;
-	margin: 0 0 2em 0;
-	// margin: 0 -50vw 1.25em -50vw;
+	// margin: 0 0 2em 0;
+	margin: 0 -50vw 2em -50vw;
 	// background: pink;
-	// overflow: hidden;
+	overflow: hidden;
 
 }
 
@@ -29,7 +29,7 @@ Component: Hero
 		.hero__overlay {
 
 			position: absolute;
-			left: 0;
+			// left: 0;
 			bottom: 0;
 			width: 100%;
 			max-width: 1150px;
