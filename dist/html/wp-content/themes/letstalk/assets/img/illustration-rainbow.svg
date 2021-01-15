@@ -1,13 +1,1 @@
-<svg width="848px" height="20px" viewBox="0 0 848 20">
-    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="logo-letstalk--alternate" transform="translate(0.000000, -2.000000)" fill-rule="nonzero">
-            <rect id="Rectangle" fill="#FE0000" transform="translate(60.560000, 28.860000) rotate(-90.000000) translate(-60.560000, -28.860000) " x="32.7" y="-31.7" width="55.72" height="121.12"></rect>
-            <rect id="Rectangle" fill="#FE6100" transform="translate(181.670000, 28.850000) rotate(-90.000000) translate(-181.670000, -28.850000) " x="153.81" y="-31.71" width="55.72" height="121.12"></rect>
-            <rect id="Rectangle" fill="#FEFE00" transform="translate(302.790000, 28.860000) rotate(-90.000000) translate(-302.790000, -28.860000) " x="274.93" y="-31.7" width="55.72" height="121.12"></rect>
-            <rect id="Rectangle" fill="#017F01" transform="translate(423.910000, 28.860000) rotate(-90.000000) translate(-423.910000, -28.860000) " x="396.05" y="-31.7" width="55.72" height="121.12"></rect>
-            <rect id="Rectangle" fill="#0000FE" transform="translate(545.030000, 28.860000) rotate(-90.000000) translate(-545.030000, -28.860000) " x="517.17" y="-31.7" width="55.72" height="121.12"></rect>
-            <rect id="Rectangle" fill="#4B0081" transform="translate(666.150000, 28.850000) rotate(-90.000000) translate(-666.150000, -28.850000) " x="638.29" y="-31.71" width="55.72" height="121.12"></rect>
-            <rect id="Rectangle" fill="#BB30FD" transform="translate(787.260000, 28.850000) rotate(-90.000000) translate(-787.260000, -28.850000) " x="759.4" y="-31.71" width="55.72" height="121.12"></rect>
-        </g>
-    </g>
-</svg>
+<svg width="848" height="20" xmlns="http://www.w3.org/2000/svg"><g fill="none"><path fill="#FE0000" d="M0 54.72V-1h121.12v55.72z"/><path fill="#FE6100" d="M121.11 54.71V-1.01h121.12v55.72z"/><path fill="#FEFE00" d="M242.23 54.72V-1h121.12v55.72z"/><path fill="#017F01" d="M363.35 54.72V-1h121.12v55.72z"/><path fill="#0000FE" d="M484.47 54.72V-1h121.12v55.72z"/><path fill="#4B0081" d="M605.59 54.71V-1.01h121.12v55.72z"/><path fill="#BB30FD" d="M726.7 54.71V-1.01h121.12v55.72z"/></g></svg>

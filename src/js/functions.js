@@ -34,6 +34,12 @@
 
 		// Notes...
 
+		$('.subnavigation__link').on('click', function(e) {
+
+			e.preventDefault();
+
+		})
+
 		$('.subnavigation__item').click( function() {
 
 			// Remove `is-current` class from all items
