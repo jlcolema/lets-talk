@@ -1,8 +1,28 @@
 <section id="welcome" class="location__section location__section--is-visible">
 
-	{% include 'partials/hero.twig' %}
+	{#
 
-	<h1 class="section__header">{{ location.title }}</h1>
+		{% include 'partials/hero.twig' %}
+
+	#}
+
+	<div class="hero hero--{{ location.slug }}">
+
+		<img src="https://letstalk.coleman.work/wp-content/uploads/BarnetHome.jpg" srcset="" sizes="" width="" height="" decoding="async" alt="A very nice description" class="hero__img hero__img--barnet" />
+
+		<img src="https://letstalk.coleman.work/wp-content/uploads/EnfieldHome.jpg" srcset="" sizes="" width="" height="" decoding="async" alt="A very nice description" class="hero__img hero__img--enfield" />
+
+		<img src="https://letstalk.coleman.work/wp-content/uploads/HaringeyHome.jpg" srcset="" sizes="" width="" height="" decoding="async" alt="A very nice description" class="hero__img hero__img--haringey" />
+
+		<div class="hero__overlay">
+		
+			<span class="hero__text">{{ location.title }}</span>
+			
+		</div>
+
+	</div>
+
+	<h1 class="section__header" style="display: none;">{{ location.title }}</h1>
 
 	<div class="section__overview">
 

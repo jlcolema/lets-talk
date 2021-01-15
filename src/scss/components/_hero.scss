@@ -4,21 +4,98 @@ Component: Hero
 
 .hero {
 
+	position: relative;
+
 	display: flex;
 	justify-content: center;
 	position: relative;
-	left: 50%;
-	right: 50%;
-	width: 100vw;
-	height: 500px;
-	margin: 0 -50vw 1.25em -50vw;
+	// left: 50%;
+	// right: 50%;
+	// width: 100vw;
+	// height: 500px;
+	margin: 0 0 2em 0;
+	// margin: 0 -50vw 1.25em -50vw;
 	// background: pink;
-	overflow: hidden;
+	// overflow: hidden;
 
 }
 
 	.hero__img {
 
-		max-width: none;
+		// max-width: none;
 
 	}
+
+		.hero__overlay {
+
+			position: absolute;
+			left: -10px;
+			bottom: -8px;
+			z-index: 1;
+
+		}
+
+			.hero__text {
+
+				margin: 0;
+				font-size: 10.75rem;
+				line-height: 0;
+				@include arial-bold;
+				text-transform: uppercase;
+				color: $color-base-white;
+
+			}
+
+.hero--barnet {
+
+	.hero__img--barnet {}
+
+	.hero__img--enfield {
+
+		display: none;
+
+	}
+
+	.hero__img--haringey {
+
+		display: none;
+
+	}
+
+}
+
+.hero--enfield {
+
+	.hero__img--barnet {
+
+		display: none;
+
+	}
+
+	.hero__img--enfield {}
+
+	.hero__img--haringey {
+
+		display: none;
+
+	}
+
+}
+
+.hero--haringey {
+
+	.hero__img--barnet {
+
+		display: none;
+
+	}
+
+	.hero__img--enfield {
+
+		display: none;
+
+	}
+
+	.hero__img--haringey {}
+
+}
