@@ -22,21 +22,27 @@ Component: Hero
 
 	.hero__img {
 
-		// max-width: none;
+		max-width: none;
 
 	}
 
 		.hero__overlay {
 
 			position: absolute;
-			left: -10px;
-			bottom: -8px;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			max-width: 1150px;
+			// background: pink;
 			z-index: 1;
 
 		}
 
 			.hero__text {
 
+				position: relative;
+				left: -10px;
+				bottom: -10px;
 				margin: 0;
 				font-size: 10.75rem;
 				line-height: 0;
