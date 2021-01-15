@@ -2,35 +2,45 @@
 Home
 ------------------------------*/
 
-.home__header {
+.home__contents {
 
-	margin: 0;
-	padding: 1em 0 0 0;
-	font-size: 2.5rem;
-	color: $color-brand-light-blue;
-
-}
-
-.home__sub {
-
-	margin: 0;
-	font-size: 1.875rem;
-	color: $color-brand-light-blue;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
 
 }
 
-.tree {
+	.tree {
 
-	width: 100%;
-	max-width: 800px;
-	margin: 0 auto;
+		width: 50%;
+		// background: pink;
 
-}
+	}
 
-	.tree__svg {}
+		.tree__svg {}
 
-.home__content {
+	.home__content {
 
-	margin: 3em 0 0 0;
+		width: 50%;
+		padding: 2em;
+		// background: yellow;
+		box-shadow: 3px 3px 10px rgba($color-brand-dark-blue, 0.35);
 
-}
+	}
+
+		.home__header {
+
+			margin: 0;
+			padding: 0;
+			font-size: 1.75rem;
+			color: $color-brand-light-blue;
+
+		}
+
+		.home__sub {
+
+			margin: 0 0 1em 0;
+			font-size: 1.25rem;
+			color: $color-brand-light-blue;
+
+		}
