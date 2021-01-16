@@ -86,7 +86,15 @@
 
 					<div class="">
 
-						<h3 class="">Treatments We Offer</h3>
+						{% if treatments_we_offer.treatments_we_offer_header %}
+
+							<h3 class="">{{ treatments_we_offer.treatments_we_offer_header }}</h3>
+						
+						{% else %}
+
+							<h3 class="">Treatments We Offer</h3>
+
+						{% endif %}
 
 						{# Details #}
 
