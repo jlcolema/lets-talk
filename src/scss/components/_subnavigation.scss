@@ -31,6 +31,12 @@ Component: Subnavigation
 			margin: 0;
 			@include arial-bold;
 
+			&:first-of-type {
+
+				display: none;
+
+			}
+
 			&:last-of-type {
 
 				margin: 0;
