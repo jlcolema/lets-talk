@@ -14,7 +14,7 @@ Header
 		position: relative;
 		width: 100%;
 		max-width: 1150px;
-		height: 200px;
+		height: 120px;
 		margin: 0 auto;
 		// padding: 1.25em 0;
 		// background: darken(pink, 15%);
@@ -30,7 +30,7 @@ Header
 
 				position: absolute;
 				left: 0;
-				top: 54px;
+				top: 14px;
 				z-index: 1;
 
 			}
@@ -39,7 +39,17 @@ Header
 
 			.logo__link {}
 
-				.logo__svg {}
+				.logo__svg {
+
+					// Custom sizing for header.
+
+					.header & {
+
+						width: 290px;
+
+					}
+
+				}
 
 		.nhs {
 
@@ -48,7 +58,7 @@ Header
 			.header & {
 
 				position: absolute;
-				top: 50px;
+				top: 14px;
 				right: 0;
 				z-index: 1;
 
@@ -58,7 +68,17 @@ Header
 
 			.nhs__link {}
 
-				.nhs__svg {}
+				.nhs__svg {
+
+					// Custom sizings for header.
+
+					.header & {
+
+						width: 112px;
+
+					}
+
+				}
 
 		.tools {
 
