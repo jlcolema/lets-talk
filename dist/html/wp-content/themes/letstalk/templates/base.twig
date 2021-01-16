@@ -18,7 +18,7 @@
 
 		{% if fn( 'is_front_page' ) %}
 
-			{% include 'partials/alert.twig' %}
+			{% include 'components/alert.twig' %}
 
 		{% endif %}
 
@@ -28,13 +28,13 @@
 
 				<div class="header__wrap">
 
-					{% include 'partials/logo.twig' %}
+					{% include 'svg/logo.twig' %}
 
-					{% include 'partials/nhs.twig' %}
+					{% include 'svg/nhs.twig' %}
 
-					{% include 'partials/tools.twig' %}
+					{% include 'components/tools.twig' %}
 
-					{% include 'partials/navigation.twig' %}
+					{% include 'components/navigation.twig' %}
 
 				</div>
 
@@ -62,7 +62,7 @@
 
 				<div class="footer__wrap">
 
-					{% include 'partials/tools.twig' %}
+					{% include 'components/tools.twig' %}
 
 					<div class="services-provided-by">
 
@@ -70,9 +70,9 @@
 
 					</div>
 
-					{% include 'partials/logo.twig' %}
+					{% include 'svg/logo.twig' %}
 
-					{% include 'partials/nhs.twig' %}
+					{% include 'svg/nhs.twig' %}
 
 					<nav role="navigation" class="secondary-navigation">
 
@@ -100,7 +100,7 @@
 
 		{% endblock %}
 
-		{% include 'partials/consent.twig' %}
+		{% include 'components/consent.twig' %}
 
 		{{ function('wp_footer') }}
 

@@ -1,6 +1,12 @@
 <section id="resources" class="location__section">
 
-	{% include 'partials/hero.twig' %}
+	<div class="hero">
+
+		{% set location_resources_hero = Image(location.location_resources_hero) %}
+
+		<img src="{{ location_resources_hero.src }}" srcset="" sizes="" width="" height="" decoding="async" alt="{{ location_resources_hero.alt }}" class="hero__img" />
+
+	</div>
 
 	<h2 class="section__header">Resources</h2>
 
@@ -130,6 +136,6 @@
 
 	</div>
 
-	{% include 'partials/testimonial.twig' %}
+	{% include 'components/testimonial.twig' %}
 
 </section>

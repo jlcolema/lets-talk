@@ -1,6 +1,12 @@
 <section id="problems-we-help-with" class="location__section">
 
-	{% include 'partials/hero.twig' %}
+	<div class="hero">
+
+		{% set location_problems_hero = Image(location.location_problems_hero) %}
+
+		<img src="{{ location_problems_hero.src }}" srcset="" sizes="" width="" height="" decoding="async" alt="{{ location_problems_hero.alt }}" class="hero__img" />
+
+	</div>
 
 	<h2 class="section__header">Problems We Help With</h2>
 

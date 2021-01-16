@@ -13,6 +13,8 @@ $context         = Timber::context();
 $timber_post     = Timber::get_post();
 $context['location'] = $timber_post;
 
+/* Custom Post Type: Problems */
+
 $problem_args = array(
 
 	'post_type' => 'problem',
@@ -22,6 +24,8 @@ $problem_args = array(
 
 );
 
+/* Custom Post Type: Resources */
+
 $resource_args = array(
 
 	'post_type' => 'resource',
@@ -30,6 +34,8 @@ $resource_args = array(
 	'order' => 'ASC'
 
 );
+
+/* Custom Post Type: FAQs */
 
 $faq_args = array(
 

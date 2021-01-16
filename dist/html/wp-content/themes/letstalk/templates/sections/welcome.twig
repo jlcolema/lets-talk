@@ -1,24 +1,10 @@
 <section id="welcome" class="location__section location__section--is-visible">
 
-	{#
+	<div class="hero">
 
-		{% include 'partials/hero.twig' %}
+		{% set location_welcome_hero = Image(location.location_welcome_hero) %}
 
-	#}
-
-	<div class="hero hero__welcome hero--{{ location.slug }}">
-
-		<img src="https://letstalk.coleman.work/wp-content/uploads/BarnetHome.jpg" srcset="" sizes="" width="" height="" decoding="async" alt="A very nice description" class="hero__img hero__img--barnet" />
-
-		<img src="https://letstalk.coleman.work/wp-content/uploads/EnfieldHome.jpg" srcset="" sizes="" width="" height="" decoding="async" alt="A very nice description" class="hero__img hero__img--enfield" />
-
-		<img src="https://letstalk.coleman.work/wp-content/uploads/HaringeyHome.jpg" srcset="" sizes="" width="" height="" decoding="async" alt="A very nice description" class="hero__img hero__img--haringey" />
-
-		<div class="hero__overlay">
-		
-			<span class="hero__text">{{ location.title }}</span>
-			
-		</div>
+		<img src="{{ location_welcome_hero.src }}" srcset="" sizes="" width="" height="" decoding="async" alt="{{ location_welcome_hero.alt }}" class="hero__img" />
 
 	</div>
 
