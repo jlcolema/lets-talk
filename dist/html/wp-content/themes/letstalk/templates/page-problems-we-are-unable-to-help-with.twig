@@ -38,79 +38,87 @@
 
 				{# Support Groups #}
 
-				<div class="">
+				{% if problem.support_groups %}
 
-					<h3 class="subheader">Support Groups</h3>
+					<div class="">
 
-					<div class="resources">
+						<h3 class="subheader">Support Groups</h3>
 
-						<ul class="resources__list">
+						<div class="resources">
 
-							{% for support_group in problem.support_groups %}
+							<ul class="resources__list">
 
-								<li class="resources__item">
+								{% for support_group in problem.support_groups %}
 
-									<h4 class="resources__name">{{ support_group.support_group_name }}</h4>
+									<li class="resources__item">
 
-									<div class="resources__url">
+										<h4 class="resources__name">{{ support_group.support_group_name }}</h4>
 
-										<a href="" class="resources__link">{{ support_group.support_group_url }}</a>
+										<div class="resources__url">
 
-									</div>
+											<a href="" class="resources__link">{{ support_group.support_group_url }}</a>
 
-									<div class="resources__description">
+										</div>
 
-										{{ support_group.support_group_description | wpautop }}
+										<div class="resources__description">
 
-									</div>
+											{{ support_group.support_group_description | wpautop }}
 
-								</li>
+										</div>
 
-							{% endfor %}
+									</li>
 
-						</ul>
+								{% endfor %}
+
+							</ul>
+
+						</div>
 
 					</div>
 
-				</div>
+				{% endif %}
 
 				{# Online Resources #}
 
-				<div class="">
+				{% if problem.online_resources %}
 
-					<h3 class="subheader">Online Resources</h3>
+					<div class="">
 
-					<div class="resources">
+						<h3 class="subheader">Online Resources</h3>
 
-						<ul class="resources__list">
+						<div class="resources">
 
-							{% for online_resource in problem.online_resources %}
+							<ul class="resources__list">
 
-								<li class="resources__item">
+								{% for online_resource in problem.online_resources %}
 
-									<h4 class="resources__name">{{ online_resource.online_resource_name }}</h4>
+									<li class="resources__item">
 
-									<div class="resources__url">
+										<h4 class="resources__name">{{ online_resource.online_resource_name }}</h4>
 
-										<a href="" class="resources__link">{{ online_resource.online_resource_url }}</a>
+										<div class="resources__url">
 
-									</div>
+											<a href="" class="resources__link">{{ online_resource.online_resource_url }}</a>
 
-									<div class="resources__description">
+										</div>
 
-										{{ online_resource.online_resource_description | wpautop }}
+										<div class="resources__description">
 
-									</div>
+											{{ online_resource.online_resource_description | wpautop }}
 
-								</li>
+										</div>
 
-							{% endfor %}
+									</li>
 
-						</ul>
+								{% endfor %}
+
+							</ul>
+
+						</div>
 
 					</div>
 
-				</div>
+				{% endif %}
 
 			</div>
 
