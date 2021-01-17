@@ -10,9 +10,9 @@
 
 	<h2 class="section__header">Resources</h2>
 
-	<div class="section__overview">
+	<div class="overview section__overview">
 
-		{{ location.location_resources_overview }}
+		{{ location.location_resources_overview | wpautop }}
 
 	</div>
 
@@ -118,7 +118,7 @@
 
 								<div class="resources__description">
 
-									{{ local_resource.local_support_description }}
+									{{ local_resource.local_support_description | wpautop }}
 
 								</div>
 							

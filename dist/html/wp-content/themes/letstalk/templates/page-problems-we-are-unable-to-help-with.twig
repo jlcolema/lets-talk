@@ -2,11 +2,17 @@
 
 {% block content %}
 
-	{% include 'components/hero.twig' %}
+	<div class="hero">
+
+		{% set problems_unable_hero = Image(post.problems_unable_hero) %}
+
+		<img src="{{ problems_unable_hero.src }}" srcset="" sizes="" width="" height="" decoding="async" alt="{{ problems_unable_hero.alt }}" class="hero__img" />
+
+	</div>
 
 	<h1 class="page__header">Problems We Are Unable to Help With</h1>
 
-	<div class="section__overview">
+	<div class="overview section__overview">
 
 		<p>Let&rsquo;s Talk IAPT provides psychological therapy for common mental health problems such as depression and anxiety. The first appointment with the service is an assessment to explore your current difficulties and what you want to change, to ensure we are the right service to help you.</p>
 

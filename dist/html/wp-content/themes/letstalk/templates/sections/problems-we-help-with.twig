@@ -10,9 +10,9 @@
 
 	<h2 class="section__header">Problems We Help With</h2>
 
-	<div class="section__overview">
+	<div class="overview section__overview">
 
-		{{ location.location_problems_overview }}
+		{{ location.location_problems_overview | wpautop }}
 
 	</div>
 
@@ -100,7 +100,7 @@
 
 						<div class="">
 
-							{{ treatments_we_offer.treatments_we_offer_details }}
+							{{ treatments_we_offer.treatments_we_offer_details | wpautop }}
 
 						</div>
 

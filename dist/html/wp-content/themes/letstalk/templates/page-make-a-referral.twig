@@ -2,11 +2,17 @@
 
 {% block content %}
 
-	{% include 'components/hero.twig' %}
+	<div class="hero">
+
+		{% set make_a_referral_hero = Image(post.make_a_referral_hero) %}
+
+		<img src="{{ make_a_referral_hero.src }}" srcset="" sizes="" width="" height="" decoding="async" alt="{{ make_a_referral_hero.alt }}" class="hero__img" />
+
+	</div>
 
 	<h1 class="page__header">Making a Referral</h1>
 
-	<div class="section__overview">
+	<div class="overview section__overview">
 
 		<p>Let&rsquo;s Talk IAPT is available to anyone 16 years and over and registered with a GP in Barnet, Enfield and Haringey. If you are under 16, talk to your GP to find the right service for you.</p>
 

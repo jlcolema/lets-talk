@@ -10,9 +10,9 @@
 
 	<h2 class="section__header">How We Can Help You</h2>
 
-	<div class="section__overview">
+	<div class="overview section__overview">
 
-		{{ location.location_services_overview }}
+		{{ location.location_services_overview | wpautop }}
 
 	</div>
 
@@ -30,7 +30,7 @@
 
 					<div class="">
 
-						{{ service.location_service_description }}
+						{{ service.location_service_description | wpautop }}
 
 					</div>
 
@@ -54,7 +54,7 @@
 
 					<div class="">
 
-						{{ service.location_service_notes }}
+						{{ service.location_service_notes | wpautop }}
 
 					</div>
 
