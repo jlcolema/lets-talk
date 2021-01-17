@@ -14,73 +14,109 @@
 
 	<div class="overview section__overview">
 
-		<p>Let&rsquo;s Talk IAPT provides psychological therapy for common mental health problems such as depression and anxiety. The first appointment with the service is an assessment to explore your current difficulties and what you want to change, to ensure we are the right service to help you.</p>
-
-		<p>Some problems that people come with but where other services are better able to provide support are listed below.</p>
+		{{ post.meta('problems_unable_overview') }}
 
 	</div>
 
 	<div class="accordion__list">
 
+		{% for problem in post.meta('problems_unable_list') %}
+
 		<details class="accordion__item">
 
-			<summary class="accordion__summary">Title</summary>
+			<summary class="accordion__summary">{{ problem.problem_unable_name }}</summary>
 
 			<div class="accordion__details">
 
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt facere odio facilis vel magnam cum laboriosam sunt veritatis, aspernatur commodi fugit velit ut vero, dicta labore recusandae, voluptates hic laborum.</p>
+				{# Description #}
+
+				<div class="">
+
+					{{ problem.problem_unable_description | wpautop }}
+
+				</div>
+
+				{# Support Groups #}
+
+				<div class="">
+
+					<h3 class="subheader">Support Groups</h3>
+
+					<div class="resources">
+
+						<ul class="resources__list">
+
+							{% for support_group in problem.support_groups %}
+
+								<li class="resources__item">
+
+									<h4 class="resources__name">{{ support_group.support_group_name }}</h4>
+
+									<div class="resources__url">
+
+										<a href="" class="resources__link">{{ support_group.support_group_url }}</a>
+
+									</div>
+
+									<div class="resources__description">
+
+										{{ support_group.support_group_description | wpautop }}
+
+									</div>
+
+								</li>
+
+							{% endfor %}
+
+						</ul>
+
+					</div>
+
+				</div>
+
+				{# Online Resources #}
+
+				<div class="">
+
+					<h3 class="subheader">Online Resources</h3>
+
+					<div class="resources">
+
+						<ul class="resources__list">
+
+							{% for online_resource in problem.online_resources %}
+
+								<li class="resources__item">
+
+									<h4 class="resources__name">{{ online_resource.online_resource_name }}</h4>
+
+									<div class="resources__url">
+
+										<a href="" class="resources__link">{{ online_resource.online_resource_url }}</a>
+
+									</div>
+
+									<div class="resources__description">
+
+										{{ online_resource.online_resource_description | wpautop }}
+
+									</div>
+
+								</li>
+
+							{% endfor %}
+
+						</ul>
+
+					</div>
+
+				</div>
 
 			</div>
 
 		</details>
 
-		<details class="accordion__item">
-
-			<summary class="accordion__summary">Title</summary>
-
-			<div class="accordion__details">
-
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt facere odio facilis vel magnam cum laboriosam sunt veritatis, aspernatur commodi fugit velit ut vero, dicta labore recusandae, voluptates hic laborum.</p>
-
-			</div>
-
-		</details>
-
-		<details class="accordion__item">
-
-			<summary class="accordion__summary">Title</summary>
-
-			<div class="accordion__details">
-
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt facere odio facilis vel magnam cum laboriosam sunt veritatis, aspernatur commodi fugit velit ut vero, dicta labore recusandae, voluptates hic laborum.</p>
-
-			</div>
-
-		</details>
-
-		<details class="accordion__item">
-
-			<summary class="accordion__summary">Title</summary>
-
-			<div class="accordion__details">
-
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt facere odio facilis vel magnam cum laboriosam sunt veritatis, aspernatur commodi fugit velit ut vero, dicta labore recusandae, voluptates hic laborum.</p>
-
-			</div>
-
-		</details>
-
-		<details class="accordion__item">
-
-			<summary class="accordion__summary">Title</summary>
-
-			<div class="accordion__details">
-
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt facere odio facilis vel magnam cum laboriosam sunt veritatis, aspernatur commodi fugit velit ut vero, dicta labore recusandae, voluptates hic laborum.</p>
-
-			</div>
-
-		</details>
+		{% endfor %}
 
 	</div>
 
