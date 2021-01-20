@@ -2,20 +2,71 @@
 Component: Button
 ------------------------------*/
 
-.button {}
+.buttons {}
 
-	.button__link {
+	.button__list {
 
-		display: inline-block;
-		padding: 1em;
-		color: $color-base-white;
-		background: $color-brand-light-blue;
-		border-radius: 12px;
+		display: flex;
+		margin: 0;
+		padding: 0;
+		list-style: none;
 
-		&:hover {
+	}
 
-			color: $color-base-white;
+		.button__item {
+
+			margin: 0 2em 0 0;
+
+			&:last-of-type {
+
+				margin: 0;
+
+			}
 
 		}
 
-	}
+		.button {}
+
+			.button__link {
+
+				display: inline-block;
+				padding: 1em;
+				color: $color-base-white;
+				background: $color-brand-light-blue;
+				border-radius: 12px;
+
+				&:hover {
+
+					color: $color-base-white;
+
+				}
+
+			}
+
+			.button__link--no-background {
+
+				padding: 0;
+				@include arial-bold;
+				color: $color-brand-light-blue;
+				background: none;
+				border-radius: none;
+
+				&:hover {
+
+					color: $color-brand-light-blue;
+
+				}
+
+			}
+
+			.button__link--is-green {
+
+				color: $color-brand-green;
+
+				&:hover {
+
+					color: $color-brand-green;
+
+				}
+
+			}

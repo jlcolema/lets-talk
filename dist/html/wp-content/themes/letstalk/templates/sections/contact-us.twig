@@ -1,62 +1,102 @@
-<section id="contact-us" class="location__section">
+<section id="contact-us" class="location__section location__section--contact-us">
 
 	<h2 class="section__header">Contact Us</h2>
 
-	<div class="">
+	<div class="section__overview">
 
-		{# Contact Information #}
+		<h3 class="">Let&rsquo;s Talk <span class="is-blue">IAPT - {{ location.title }}</span></h3>
+
+		<p class="">For those registered with a {{ location.title }} GP only.</p>
 
 	</div>
 
-	<div class="">
+	<div class="h-card">
+
+		<div class="h-card__geo p-geo">
+
+			{# Map #}
+
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158857.7281066297!2d-0.24168148405229384!3d51.52877184088774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2sus!4v1611089875616!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="h-card__iframe"></iframe>
+
+		</div>
+
+		<div class="h-card__meta">
+
+			{# Address #}
+
+			<h4 class="p-name">
+			
+				<span class="is-purple">Let&rsquo;s Talk</span> IAPT - {{ location.title }}
+				
+			</h4>
+
+			{% set address = location.meta('location_contact_address') %}
+
+			<div class="p-adr">
+
+				<div class="p-street-address">{{ address.address_street }}</div>
+
+				<div class="p-extended-address">{{ address.address_district }}</div>
+
+				<div class="p-locality">{{ address.address_city }}</div>
+
+				<div class="p-region">{{ address.address_county }}</div>
+
+				<div class="p-postal-code">{{ address.address_postcode }}</div>
+
+			</div>
+
+			{# Hours #}
+
+			<div class="h-card__hours">
+
+				<h4 class="h-card__subheader">Office Opening Hours</h4>
+
+				<div class="h-card__content">
+
+					<p>Monday - Friday: 08:00 - 17:00</p>
+
+					<p>Closed: Public bank holidays</p>
+
+				</div>
+
+			</div>
+
+			{# Phone #}
+
+			<div class="p-tel">{{ location.location_contact_phone }}</div>
+
+			{# Email #}
+
+			<div class="u-email">
+
+				<a href="mailto:" class="u-email__link">{{ location.location_contact_email }}</a>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="contact__note">
 
 		{# Note #}
 
-	</div>
+		<h4 class="contact__note-header">Please note: Let&rsquo;s Talk IAPT is not an emergency service.</h4>
 
-	<div class="">
+		<div class="buttons">
 
-		{# Other Locations #}
+			<ul class="button__list">
 
-	</div>
-
-	<h3 class="">Let&rsquo;s Talk IAPT -- Barnet</h3>
-
-	<p>For those registered with a Barnet GP only.</p>
-
-	<div class="">
-
-		<div class="">
-
-			<p>Map</p>
-
-		</div>
-
-		<div class="">
-
-			Address, Hours, Phone, Email
-
-		</div>
-
-	</div>
-
-	<div class="">
-
-		<h3 class="">Please note: Let&rsquo;s Talk IAPT is not an emergency service.</h3>
-
-		<div class="">
-
-			<ul class="">
-
-				<li class="">
-
-					<a href="#">To make a referral click here</a>
+				<li class="button__item button">
+				
+					<a href="/make-a-referral/" class="button__link button__link--no-background">To make a referral click here</a>
 
 				</li>
 
-				<li class="">
+				<li class="button__item button">
 
-					<a href="#">Need urgent help click here</a>
+					<a href="/urgent-help/" class="button__link button__link--no-background button__link--is-green">Need urgent help click here</a>
 
 				</li>
 
@@ -64,31 +104,29 @@
 
 		</div>
 
-		<div class="">
-
-			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis totam necessitatibus voluptas fuga odio aspernatur repellendus esse voluptate voluptatum accusamus dolores nisi, magni quaerat nobis quasi quas a rem autem?</p>
-
-		</div>
+		<p class="contact__note-details">If you are hearing voices, or at risk of harming yourself or others, please call your GP or the 24 hour Crisis Resolution and Home Treatment.</p>
 
 	</div>
 
-	<div class="">
+	<div class="contact__other-locations">
 
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima corporis iure dolor accusamus aut porro pariatur alias delectus aliquam in ea omnis cum perferendis autem fugiat reiciendis tenetur, saepe recusandae.</p>
+		{# Other Locations #}
 
-		<div class="">
+		<p class="">To contact Let&rsquo;s Talk IAPT in Enfield or Haringey please click the links below</p>
 
-			<ul class="">
+		<div class="buttons">
 
-				<li class="">
+			<ul class="button__list">
 
-					<a href="#" class="">Let&rsquo;s Talk IAPT -- Enfield</a>
+				<li class="button__item button">
+
+					<a href="#" class="button__link">Let&rsquo;s Talk IAPT - Enfield</a>
 
 				</li>
 
-				<li class="">
+				<li class="button__item button">
 
-					<a href="#" class="">Let&rsquo;s Talk IAPT -- Haringey</a>
+					<a href="#" class="button__link">Let&rsquo;s Talk IAPT - Haringey</a>
 
 				</li>
 
