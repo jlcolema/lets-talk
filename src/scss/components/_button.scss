@@ -70,3 +70,11 @@ Component: Button
 				}
 
 			}
+
+			.button__link--is-dark-blue-background {
+
+				background: $color-brand-dark-blue;
+
+				&:hover {}
+
+			}

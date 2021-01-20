@@ -1,0 +1,229 @@
+/*------------------------------
+Make a Referral
+------------------------------*/
+
+.div {}
+
+	.refer__options {}
+
+		.refer__list {
+
+			display: flex;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+
+		}
+
+			.refer__item {
+
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width: 50%;
+				padding: 0 2em;
+				// background: pink;
+
+			}
+
+				.refer__name {
+
+					margin: 0;
+					font-size: 1.25rem;
+					color: $color-brand-light-blue;
+
+				}
+
+				.refer__name--is-dark-blue {
+
+					color: $color-brand-dark-blue;
+
+				}
+
+				.refer__button {
+
+					margin: 1em 0 0 0;
+					@include arial-bold;
+
+				}
+
+					.refer-button__link {}
+
+					.refer-button__link--is-dark-blue-background {
+
+						background: $color-brand-dark-blue;
+
+					}
+
+				.refer__note {
+
+					width: 100%;
+					max-width: 200px;
+					margin: 1em auto 0 auto;
+					text-align: center;
+
+					p {
+
+						&:last-of-type {
+
+							margin: 0;
+
+						}
+
+					}
+
+				}
+
+	.refer__detail {
+
+		margin: 2em 0 0 0;
+		color: $color-brand-light-blue;
+		text-align: center;
+
+		p {
+
+			&:last-of-type {
+
+				margin: 0;
+
+			}
+
+		}
+
+	}
+
+	.refer__highlight {
+
+		display: flex;
+		justify-content: center;
+		position: relative;
+		left: 50%;
+		right: 50%;
+		width: 100vw;
+		// height: 500px;
+		margin: 3em -50vw 0 -50vw;
+		padding: 0 2.50em;
+		// background: pink;
+
+		color: $color-base-white;
+		background: $color-brand-dark-blue;
+
+	}
+
+		.refer__highlight-content {
+
+			width: 100%;
+			max-width: 1150px;
+			margin: 0 auto;
+			padding: 1em 0;
+			text-align: center;
+
+			p {
+
+				&:last-of-type {
+
+					margin: 0;
+
+				}
+
+			}
+
+		}
+
+	.refer__contacts {
+
+		margin: 3em 0 0 0;
+		// background: pink;
+
+	}
+
+		.refer__contacts-content {
+
+			p {
+
+				&:last-of-type {
+
+					margin: 0;
+
+				}
+
+			}
+
+				b {
+
+					color: $color-brand-purple;
+
+				}
+
+		}
+
+		.refer__contacts-icons {
+
+			display: flex;
+			justify-content: center;
+			margin: 3em 0 0 0;
+
+		}
+
+			.refer__contacts-icon {
+
+				width: 200px;
+				height: 200px;
+				margin: 0 3em;
+				background: pink;
+
+				&:first-of-type {
+
+					margin-left: 0;
+
+				}
+
+				&:last-of-type {
+
+					margin-right: 0;
+
+				}
+
+				svg {
+
+					height: 200px;
+
+				}
+
+			}
+
+			.icon-phone--alternate {
+
+				background: url(../img/icon-phone--alternate.svg) center center no-repeat;
+
+			}
+
+			.icon-face {
+
+				background: url(../img/icon-face.svg) center center no-repeat;
+
+			}
+
+			.icon-monitor {
+
+				background: url(../img/icon-monitor.svg) center center no-repeat;
+
+			}
+
+		.refer__contacts-details {
+
+			margin: 3em 0 0 0;
+			text-align: center;
+			color: $color-brand-light-blue;
+
+			p {
+
+				&:last-of-type {
+
+					margin: 0;
+
+				}
+
+			}
+
+		}
