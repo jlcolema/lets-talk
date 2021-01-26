@@ -80,26 +80,26 @@
 
 		// If a URL has an external address, open in a new window/tab.
 
-		// $('a').each(function() {
+		$('a').each(function() {
 
-		// 	var external_url = new RegExp('/' + window.location.host + '/');
+			var external_url = new RegExp('/' + window.location.host + '/');
 
-		// 	if (!external_url.test(this.href)) {
+			if (!external_url.test(this.href)) {
 
 				// $(this).addClass('external');
 
-		// 		$(this).click(function(event) {
+				$(this).click(function(event) {
 
-		// 			event.preventDefault();
-		// 			event.stopPropagation();
+					event.preventDefault();
+					event.stopPropagation();
 
-		// 			window.open(this.href, '_blank');
+					window.open(this.href, '_blank');
 
-		// 		});
+				});
 
-		// 	}
+			}
 
-		// });
+		});
 
 		/* Screen Size
 		--------------------------------------*/
