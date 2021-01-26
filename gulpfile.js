@@ -156,7 +156,7 @@ gulp.task('watch', function() {
 			key: '/Applications/MAMP/Library/OpenSSL/certs/letstalk.local.key',
 			cert: '/Applications/MAMP/Library/OpenSSL/certs/letstalk.local.crt',
 		  },
-		browser: 'microsoft edge'
+		// browser: 'microsoft edge'
 
 	});
 
