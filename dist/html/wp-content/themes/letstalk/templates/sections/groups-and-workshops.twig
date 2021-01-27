@@ -10,93 +10,31 @@
 
 	<h2 class="section__header section__header--is-overlay">Groups and Workshops</h2>
 
-	<div class="content">
+	<div class="section__overview content">
 
 		{{ location.location_groups_content | wpautop }}
 
 	</div>
 
-	{# Temporarily hidden. #}
+	<div class="accordion__list">
 
-	{#
-
-		<div class="accordion__list">
+		{% for item in location.meta('location_groups_list') %}
 
 			<details class="accordion__item">
 
-				<summary class="accordion__summary">Our Group Therapy Courses may include:</summary>
+				<summary class="accordion__summary">{{ item.location_group_title }}</summary>
 
 				<div class="accordion__details">
 
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias sapiente cumque explicabo itaque nobis dolorum atque at! Consequatur iure fuga quasi natus eius tempora, suscipit delectus vero ab ex at.</p>
+					{{ item.location_group_content }}
 
 				</div>
 
 			</details>
 
-			<details class="accordion__item">
+		{% endfor %}
 
-				<summary class="accordion__summary">What to expect from a group session?</summary>
-
-				<div class="accordion__details">
-
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias sapiente cumque explicabo itaque nobis dolorum atque at! Consequatur iure fuga quasi natus eius tempora, suscipit delectus vero ab ex at.</p>
-
-				</div>
-
-			</details>
-
-			<details class="accordion__item">
-
-				<summary class="accordion__summary">Do I need to talk about myself?</summary>
-
-				<div class="accordion__details">
-
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias sapiente cumque explicabo itaque nobis dolorum atque at! Consequatur iure fuga quasi natus eius tempora, suscipit delectus vero ab ex at.</p>
-
-				</div>
-
-			</details>
-
-			<details class="accordion__item">
-
-				<summary class="accordion__summary">Are groups effective?</summary>
-
-				<div class="accordion__details">
-
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias sapiente cumque explicabo itaque nobis dolorum atque at! Consequatur iure fuga quasi natus eius tempora, suscipit delectus vero ab ex at.</p>
-
-				</div>
-
-			</details>
-
-			<details class="accordion__item">
-
-				<summary class="accordion__summary">Group therapy has a number of advantages:</summary>
-
-				<div class="accordion__details">
-
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias sapiente cumque explicabo itaque nobis dolorum atque at! Consequatur iure fuga quasi natus eius tempora, suscipit delectus vero ab ex at.</p>
-
-				</div>
-
-			</details>
-
-			<details class="accordion__item">
-
-				<summary class="accordion__summary">How to sign up?</summary>
-
-				<div class="accordion__details">
-
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias sapiente cumque explicabo itaque nobis dolorum atque at! Consequatur iure fuga quasi natus eius tempora, suscipit delectus vero ab ex at.</p>
-
-				</div>
-
-			</details>
-
-		</div>
-
-	#}
+	</div>
 
 	{% include 'components/testimonial.twig' %}	
 
