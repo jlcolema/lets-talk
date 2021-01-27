@@ -6,73 +6,11 @@
 
 		<div class="help__topic help__topic--urgent">
 
-			<h1 class="help__header">Urgent Help</h1>
+			<h1 class="help__header">{{ post.title }}</h1>
 
 			<div class="help__overview">
 
-				<p>Let&rsquo;s Talk IAPT is not able to provide support for people who are in immediate danger and crisis or immediate risk of serious harm or injury.</p>
-
-				<p class="is-green"><b>If you are in need of immediate help or in crisis, please contact the services below for support.</b></p>
-
-			</div>
-
-			<div class="help__options">
-
-				<ul class="help__list">
-
-					<li class="help__item">
-					
-						<div class="">
-						
-							<b>Barnet, Enfield and Haringey Mental Health Trust - 24-hour Crisis Telephone Service:</b> <span class="is-green">0800 151 0023</span>
-
-						</div>
-
-						<div class="help__description">
-
-							<p>You can call this number to get help or advice in a crisis from our trained mental health advisors and clinicians, 24 hours a day, 7 days a week, 365 days a year.</p>
-
-						</div>
-
-					</li>
-
-					<li class="help__item">
-
-						<div class="">
-
-							<b>Contact your GP</b>
-
-						</div>
-
-						<div class="help__description">
-
-							<p>You can request an emergency appointment with your GP; they will be able to help you access the right services and ensure you get the right level of support.</p>
-
-						</div>
-
-					</li>
-
-					<li class="help__item">
-
-						<div class="">
-
-							<b>Contact the Emergency Services by dialling <span class="is-green">999</span></b>
-
-						</div>
-
-					</li>
-
-					<li class="help__item">
-
-						<div class="">
-
-							<p class="is-green">Go to your local Accident &amp; Emergency department</p>
-
-						</div>
-
-					</li>
-
-				</ul>
+				{{ post.meta('urgent_help_overview') }}
 
 			</div>
 
@@ -80,59 +18,31 @@
 
 		<div class="help__topic help__topic--other">
 
-			<h2 class="help__header">Other helplines</h2>
+			<h2 class="help__header">Other Helplines</h2>
 
 			<div class="help__options">
 
 				<ul class="help__list">
 
-					<li class="help__item">
+					{% for item in post.meta('helplines' ) %}
 
-						<h3 class="help__name">Samaritans</h3>
+						<li class="help__item">
 
-						<div class="help__phone">116 123</div>
+							<h3 class="help__name">{{ item.helpline_name }}</h3>
 
-						<div class="help__availability">Available: 24 hours a day</div>
+							<div class="help__phone">{{ item.helpline_number }}</div>
 
-						<div class="help__description">
+							<div class="help__availability">Available: {{ item.helpline_available }}</div>
 
-							<p>Confidential and non-judgemental emotional support whenever you need someone to talk to.</p>
+							<div class="help__description">
 
-						</div>
+								{{ item.helpline_description }}
 
-					</li>
+							</div>
 
-					<li class="help__item">
+						</li>
 
-						<h3 class="help__name">Saneline</h3>
-
-						<div class="help__phone">0300 304 7000</div>
-
-						<div class="help__availability">Available: Daily 4.30pm – 10.30pm</div>
-
-						<div class="help__description">
-						
-							<p>Saneline is an out-of-hours telephone helpline offering practical information, crisis care and emotional support to anybody affected by mental health problems.</p>
-
-						</div>
-
-					</li>
-
-					<li class="help__item">
-
-						<h3 class="help__name">FRANK helpline</h3>
-
-						<div class="help__phone">0800 77 6600</div>
-
-						<div class="help__availability">Available: 24 hours a day</div>
-
-						<div class="help__description">
-
-							<p>The FRANK campaign helpline provides information and advice about drugs and information on local services. The service can take calls in over 120 languages via a three way call with a translator.</p>
-
-						</div>
-
-					</li>
+					{% endfor %}
 
 				</ul>
 
