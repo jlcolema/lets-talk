@@ -10,17 +10,11 @@
 
 	</div>
 
-	<h1 class="page__header section__header page__header--is-overlay">Making a Referral</h1>
+	<h1 class="page__header section__header page__header--is-overlay">{{ post.title }}</h1>
 
 	<div class="overview section__overview">
 
-		<p>Let&rsquo;s Talk IAPT is available to anyone 16 years and over and registered with a GP in Barnet, Enfield and Haringey. If you are under 16, talk to your GP to find the right service for you.</p>
-
-		<p>We actively encourage self-referrals but referrals can also be made by professionals, carers or patients. All we ask is that the patient is always aware of and in agreement with the referral.</p>
-
-		<p>If you are registered with a GP outside the areas above, you can find your local talking therapies service: here (Hyperlink)</p>
-
-		<p>The service is designed to work with mild to moderate common mental illnesses, including depression and anxiety disorders. Please note that IAPT services are unable to provide therapy for However, people with significant issues of risk to self or others, or those with severe mental health or drug and alcohol problems would be stepped up to the appropriate specialist mental health team.</p>
+		{{ post.meta('make_a_referral_overview') }}
 
 	</div>
 
@@ -32,41 +26,27 @@
 
 			<ul class="refer__list">
 
-				<li class="refer__item">
+				{% for item in post.meta('referrals') %}
 
-					<h2 class="refer__name refer__name--is-dark-blue">Barnet and Enfield</h2>
+					<li class="refer__item">
 
-					<div class="button refer__button">
+						<h2 class="refer__name refer__name--is-dark-blue">{{ item.referral_name }}</h2>
 
-						<a href="#" class="button__link refer-button__link button__link--is-dark-blue-background">Refer Online</a>
+						<div class="button refer__button">
 
-					</div>
+							<a href="{{ item.referral_url }}" class="button__link refer-button__link button__link--is-dark-blue-background">Refer Online</a>
 
-					<div class="refer__note">
+						</div>
 
-						<p>For those registered with an Enfield or Barnet GP</p>
+						<div class="refer__note">
 
-					</div>
+							<p>{{ item.referral_description }}</p>
 
-				</li>
+						</div>
 
-				<li class="refer__item">
+					</li>
 
-					<h2 class="refer__name">Haringey</h2>
-
-					<div class="button refer__button">
-
-						<a href="#" class="button__link refer-button__link">Refer Online</a>
-
-					</div>
-
-					<div class="refer__note">
-
-						<p>For those registered with an Haringey GP</p>
-
-					</div>
-
-				</li>
+				{% endfor %}
 
 			</ul>
 
@@ -98,11 +78,7 @@
 
 		<div class="refer__contacts-content">
 		
-			<p>We will try to contact you within two weeks of your referral; however this may not always be possible due to the large number of referrals we receive.</p>
-
-			<p>In line with our policy we are unable to disclose any information regarding a client’s referral without their verbal consent.</p>
-
-			<p><b>Please note</b> - First assessments will be carried out by telephone unless there is a specific request for a face to face appointment.</p>
+			{{ post.meta('make_a_referral_details') }}
 
 		</div>
 
