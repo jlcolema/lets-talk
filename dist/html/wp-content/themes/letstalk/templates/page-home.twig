@@ -14,13 +14,17 @@
 
 			<div class="home__content">
 
-				<h1 class="home__header">Welcome to Let&rsquo;s Talk IAPT</h1>
+				<h1 class="home__header">Welcome to {{ site.name }}</h1>
 
-				<div class="home__sub">Barnet, Enfield and Haringey Psychological Therapies Service</div>
-
-				<p>Covering the North London Boroughs of Barnet, Enfield and Haringey Let&rsquo;s Talk Improving Access to Psychological Therapies (IAPT) is a free NHS, evidence-based, talking therapy service offering support for common mental health difficulties such as depression and anxiety.</p>
+				<div class="home__sub">
 				
-				<p>Let&rsquo;s Talk IAPT are actively working for social change through anti-racism work and promoting inclusivity and equity. We welcome any feedback from service users that can support us to do this.</p>
+					<span>Barnet, Enfield and Haringey</span>
+
+					<span>Psychological Therapies Service</span>
+
+				</div>
+				
+				{{ post.meta('home_overview') }}
 
 			</div>
 
