@@ -73,25 +73,35 @@ Location
 
 	}
 
-	.outreach__button-item {
+/* Outreach Buttons */
 
-		width: 200px;
+.outreach__buttons {}
+
+	.outreach__buttons-list {
+
+		justify-content: center;
 
 	}
 
-	.outreach__button-link {
+		.outreach__button-item {
 
-		display: block;
-		text-align: center;
-		border-radius: 50px;
-
-		span {
-
-			display: block;
+			width: 200px;
 
 		}
 
-	}
+		.outreach__button-link {
+
+			display: block;
+			text-align: center;
+			border-radius: 50px;
+
+			span {
+
+				display: block;
+
+			}
+
+		}
 
 	.h-card {
 
