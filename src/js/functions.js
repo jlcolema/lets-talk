@@ -34,11 +34,11 @@
 
 		// Notes...
 
-		$('.subnavigation__link').on('click', function(e) {
+		// $('.subnavigation__link').on('click', function(e) {
 
-			e.preventDefault();
+			// e.preventDefault();
 
-		})
+		// })
 
 		$('.subnavigation__item').click( function() {
 
@@ -65,15 +65,15 @@
 		/* Smooth Scroll
 		--------------------------------------*/
 
-		/* Navigation */
+		/* Subavigation */
 
 		// Notes...
 
-		// $('.menu-item a').smoothScroll({
+		$('.subnavigation__link').smoothScroll({
 
-		// 	offset: 0
+			offset: 0
 
-		// });
+		});
 
 		/* External Links
 		--------------------------------------*/

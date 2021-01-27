@@ -80,7 +80,7 @@ gulp.task('js', function() {
 		// Plugins
 
 		// basePaths.dev + 'js/plugins/slick-1.8.0.js',
-		// basePaths.dev + 'js/plugins/smooth-scroll-2.2.0.js',
+		basePaths.dev + 'js/plugins/smoothscroll.2.2.0.js',
 		// basePaths.dev + 'js/plugins/infinite-slide-2.0.1.js',
 
 		// Functions
