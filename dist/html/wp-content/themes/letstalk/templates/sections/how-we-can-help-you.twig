@@ -1,18 +1,30 @@
 <section id="how-we-can-help-you" class="location__section location__section--how-we-can-help-you">
 
-	<div class="hero">
+	<div class="intro">
 
-		{% set location_services_hero = Image(location.location_services_hero) %}
+		<div class="intro__hero">
 
-		<img src="{{ location_services_hero.src }}" srcset="" sizes="" width="" height="" decoding="async" alt="{{ location_services_hero.alt }}" class="hero__img" />
+			<div class="hero">
 
-	</div>
+				{% set location_services_hero = Image(location.location_services_hero) %}
 
-	<h2 class="section__header section__header--is-overlay">How We Can Help You</h2>
+				<img src="{{ location_services_hero.src }}" srcset="" sizes="" width="" height="" decoding="async" alt="{{ location_services_hero.alt }}" class="hero__img" />
 
-	<div class="overview section__overview">
+			</div>
 
-		{{ location.location_services_overview | wpautop }}
+		</div>
+
+		<div class="intro__text">
+
+			<h2 class="section__header section__header--is-overlay">How We Can Help You</h2>
+
+			<div class="overview section__overview">
+
+				{{ location.location_services_overview | wpautop }}
+
+			</div>
+
+		</div>
 
 	</div>
 

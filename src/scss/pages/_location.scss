@@ -29,15 +29,38 @@ Location
 .location__section--faqs {}
 .location__section--contact-us {}
 
+	.intro {
+
+		display: flex;
+		align-items: center;
+		// background: pink;
+
+	}
+
+		.intro__hero {
+
+			width: 50%;
+			// background: orange;
+
+		}
+
+		.intro__text {
+
+			width: 50%;
+			padding: 0 0 0 3em;
+			// background: blue;
+
+		}
+
 	.section__header {}
 
 	.section__header--is-overlay {
 
-		position: absolute;
-		left: 0;
-		top: 1em;
-		color: $color-base-white;
-		z-index: 1;
+		// position: absolute;
+		// left: 0;
+		// top: 1em;
+		// color: $color-base-white;
+		// z-index: 1;
 
 	}
 

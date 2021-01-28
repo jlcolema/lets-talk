@@ -1,28 +1,40 @@
 <section id="welcome" class="location__section location__section--is-visible location__section--welcome">
 
-	<div class="hero">
+	<div class="intro">
 
-		{% set location_welcome_hero = Image(location.location_welcome_hero) %}
+		<div class="intro__hero">
 
-		<img src="{{ location_welcome_hero.src }}" srcset="" sizes="" width="" height="" decoding="async" alt="{{ location_welcome_hero.alt }}" class="hero__img" />
+			<div class="hero">
 
-		<div class="hero__overlay">
+				{% set location_welcome_hero = Image(location.location_welcome_hero) %}
 
-			<div class="hero__inner-overlay">
+				<img src="{{ location_welcome_hero.src }}" srcset="" sizes="" width="" height="" decoding="async" alt="{{ location_welcome_hero.alt }}" class="hero__img" />
 
-				<div class="hero__text">{{ location.title }}</div>
+				<div class="hero__overlay">
+
+					<div class="hero__inner-overlay">
+
+						<div class="hero__text">{{ location.title }}</div>
+
+					</div>
+
+				</div>
 
 			</div>
 
 		</div>
 
-	</div>
+		<div class="intro__text">
 
-	<h1 class="section__header" style="display: none;">{{ location.title }}</h1>
+			<h1 class="section__header" style="display: none;">{{ location.title }}</h1>
 
-	<div class="overview section__overview">
+			<div class="overview section__overview">
 
-		{{ location.location_welcome_overview | wpautop }}
+				{{ location.location_welcome_overview | wpautop }}
+
+			</div>
+
+		</div>
 
 	</div>
 

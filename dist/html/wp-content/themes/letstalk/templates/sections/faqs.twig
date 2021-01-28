@@ -1,18 +1,30 @@
 <section id="faqs" class="location__section location__section--faqs">
 
-	<div class="hero">
+	<div class="intro">
 
-		{% set location_faqs_hero = Image(location.location_faqs_hero) %}
+		<div class="intro__hero">
 
-		<img src="{{ location_faqs_hero.src }}" srcset="" sizes="" width="" height="" decoding="async" alt="{{ location_faqs_hero.alt }}" class="hero__img" />
+			<div class="hero">
 
-	</div>
+				{% set location_faqs_hero = Image(location.location_faqs_hero) %}
 
-	<h2 class="section__header section__header--is-overlay">Frequently Asked Questions</h2>
+				<img src="{{ location_faqs_hero.src }}" srcset="" sizes="" width="" height="" decoding="async" alt="{{ location_faqs_hero.alt }}" class="hero__img" />
 
-	<div class="overview section__overview">
+			</div>
 
-		{{ location.location_faqs_overview | wpautop }}
+		</div>
+
+		<div class="intro__text">
+
+			<h2 class="section__header section__header--is-overlay">Frequently Asked Questions</h2>
+
+			<div class="overview section__overview">
+
+				{{ location.location_faqs_overview | wpautop }}
+
+			</div>
+
+		</div>
 
 	</div>
 

@@ -6,16 +6,16 @@ Component: Hero
 
 	position: relative;
 
-	display: flex;
-	justify-content: center;
-	position: relative;
-	left: 50%;
-	right: 50%;
-	width: 100vw;
+	// display: flex;
+	// justify-content: center;
+	// position: relative;
+	// left: 50%;
+	// right: 50%;
+	// width: 100vw;
 	// height: 500px;
-	margin: 0 -50vw 2em -50vw;
+	// margin: 0 -50vw 2em -50vw;
 	// background: pink;
-	overflow: hidden;	
+	// overflow: hidden;
 
 }
 
@@ -41,17 +41,19 @@ Component: Hero
 
 	.hero__img {
 
-		max-width: none;
+		// max-width: none;
+		border-radius: 5px;
 
 	}
 
 		.hero__overlay {
 
+			display: none;
 			position: absolute;
 			bottom: 0;
 			width: 100%;
-			padding: 0 2.50em;
-			// background: pink;
+			// padding: 0 2.50em;
+			background: pink;
 			z-index: 5;
 
 		}
@@ -68,11 +70,12 @@ Component: Hero
 				.hero__text {
 
 					position: relative;
-					left: -10px;
+					// left: -10px;
 					font-size: 10.75rem;
 					line-height: 0.58;
 					@include arial-bold;
 					text-transform: uppercase;
+					text-align: center;
 					color: $color-base-white;
 
 				}

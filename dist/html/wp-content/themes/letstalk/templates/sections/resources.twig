@@ -1,18 +1,30 @@
 <section id="resources" class="location__section location__section--resources">
 
-	<div class="hero">
+	<div class="intro">
 
-		{% set location_resources_hero = Image(location.location_resources_hero) %}
+		<div class="intro__hero">
 
-		<img src="{{ location_resources_hero.src }}" srcset="" sizes="" width="" height="" decoding="async" alt="{{ location_resources_hero.alt }}" class="hero__img" />
+			<div class="hero">
 
-	</div>
+				{% set location_resources_hero = Image(location.location_resources_hero) %}
 
-	<h2 class="section__header section__header--is-overlay">Resources</h2>
+				<img src="{{ location_resources_hero.src }}" srcset="" sizes="" width="" height="" decoding="async" alt="{{ location_resources_hero.alt }}" class="hero__img" />
 
-	<div class="overview section__overview">
+			</div>
 
-		{{ location.location_resources_overview | wpautop }}
+		</div>
+
+		<div class="intro__text">
+
+			<h2 class="section__header section__header--is-overlay">Resources</h2>
+
+			<div class="overview section__overview">
+
+				{{ location.location_resources_overview | wpautop }}
+
+			</div>
+
+		</div>
 
 	</div>
 

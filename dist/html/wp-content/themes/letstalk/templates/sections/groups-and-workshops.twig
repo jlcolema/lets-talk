@@ -1,18 +1,30 @@
 <section id="groups-and-workshops" class="location__section location__section--groups-and-workshops">
 
-	<div class="hero">
+	<div class="intro">
 
-		{% set location_groups_hero = Image(location.location_groups_hero) %}
+		<div class="intro__hero">
 
-		<img src="{{ location_groups_hero.src }}" srcset="" sizes="" width="" height="" decoding="async" alt="{{ location_groups_hero.alt }}" class="hero__img" />
+			<div class="hero">
 
-	</div>
+				{% set location_groups_hero = Image(location.location_groups_hero) %}
 
-	<h2 class="section__header section__header--is-overlay">Groups and Workshops</h2>
+				<img src="{{ location_groups_hero.src }}" srcset="" sizes="" width="" height="" decoding="async" alt="{{ location_groups_hero.alt }}" class="hero__img" />
 
-	<div class="overview section__overview content">
+			</div>
 
-		{{ location.location_groups_content | wpautop }}
+		</div>
+
+		<div class="intro__text">
+
+			<h2 class="section__header section__header--is-overlay">Groups and Workshops</h2>
+
+			<div class="overview section__overview content">
+
+				{{ location.location_groups_content | wpautop }}
+
+			</div>
+
+		</div>
 
 	</div>
 
