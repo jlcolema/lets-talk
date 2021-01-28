@@ -19,6 +19,7 @@ $problem_args = array(
 
 	'post_type' => 'problem',
 	'post_status' => 'publish',
+	'numberposts' => -1,
 	'orderby' => 'title',
 	'order' => 'ASC'
 
