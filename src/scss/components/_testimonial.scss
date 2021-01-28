@@ -7,7 +7,7 @@ Component: Testimonial
 	display: flex;
 	align-items: center;
 	margin: 3em 0 0 0;
-	padding: 3.0em;
+	padding: 3.0em 14.0em;
 	border-top: 2px solid $color-brand-light-blue;
 	border-bottom: 2px solid $color-brand-light-blue;
 
@@ -32,7 +32,7 @@ Component: Testimonial
 	.testimonial__blockquote {
 
 		margin: 0;
-		padding: 0 0 0 5.0em;
+		padding: 0 0 0 4.0em;
 
 		p {
 
