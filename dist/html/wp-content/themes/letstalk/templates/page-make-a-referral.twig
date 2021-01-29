@@ -2,19 +2,31 @@
 
 {% block content %}
 
-	<div class="hero">
+	<h1 class="page__header section__header">{{ post.title }}</h1>
 
-		{% set make_a_referral_hero = Image(post.make_a_referral_hero) %}
+	<div class="intro">
 
-		<img src="{{ make_a_referral_hero.src }}" srcset="" sizes="" width="" height="" decoding="async" alt="{{ make_a_referral_hero.alt }}" class="hero__img" />
+		<div class="intro__hero">
 
-	</div>
+			<div class="hero">
 
-	<h1 class="page__header section__header page__header--is-overlay">{{ post.title }}</h1>
+				{% set make_a_referral_hero = Image(post.make_a_referral_hero) %}
 
-	<div class="overview section__overview">
+				<img src="{{ make_a_referral_hero.src }}" srcset="" sizes="" width="" height="" decoding="async" alt="{{ make_a_referral_hero.alt }}" class="hero__img" />
 
-		{{ post.meta('make_a_referral_overview') }}
+			</div>
+
+		</div>
+
+		<div class="intro__text">
+
+			<div class="overview section__overview">
+
+				{{ post.meta('make_a_referral_overview') }}
+
+			</div>
+
+		</div>
 
 	</div>
 
