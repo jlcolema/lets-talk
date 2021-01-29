@@ -72,12 +72,12 @@ Component: Hero
 				.hero__text {
 
 					position: relative;
-					// left: -10px;
-					font-size: 6rem;
+					left: 48px;
+					font-size: 5rem;
 					line-height: 0.58;
 					@include arial-bold;
 					text-transform: uppercase;
-					text-align: center;
+					text-align: left;
 					color: $color-base-white;
 
 				}
