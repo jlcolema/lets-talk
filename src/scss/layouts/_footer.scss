@@ -101,7 +101,23 @@ Footer
 
 		}
 
-			.logo__link {}
+			.logo__link {
+
+				position: relative;
+				display: block;
+
+				&:hover {
+
+					.logo__ally {
+
+						display: block;
+						color: $color-brand-light-blue;
+
+					}
+
+				}
+
+			}
 
 				.logo__svg {
 
@@ -110,6 +126,42 @@ Footer
 					.footer & {
 
 						width: 290px;
+
+					}
+
+				}
+
+				.logo__ally {
+
+					display: none;
+					position: absolute;
+					left: 150px;
+					top: -38px;
+					width: 240px;
+					padding: 0.5em 0;
+					background: $color-base-white;
+					box-shadow: 0 2px 3px 0 rgba($color-base-black, 0.25);
+					z-index: 1;
+
+					&:after {
+
+						content: "";
+						position: absolute;
+						left: 0;
+						bottom: -10px;
+						width: 0;
+						height: 0;
+						border-top: 10px solid $color-base-white;
+						border-right: 10px solid transparent;
+						z-index: 1;
+
+					}
+
+					p {
+
+						font-size: 0.75em;
+						text-align: center;
+						margin: 0;
 
 					}
 
