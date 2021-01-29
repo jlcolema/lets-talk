@@ -117,11 +117,22 @@ Main
 
 			}
 
-				.help__item {}
+				.help__item {
+
+					margin: 0 0 2em 0;
+
+					&:last-of-type {
+
+						margin: 0;
+
+					}
+
+				}
 
 					.help__name {
 
 						font-size: 1rem;
+						margin: 0;
 
 					}
 
