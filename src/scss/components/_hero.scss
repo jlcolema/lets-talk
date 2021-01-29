@@ -4,7 +4,7 @@ Component: Hero
 
 .hero {
 
-	position: relative;
+	// position: relative;
 
 	// display: flex;
 	// justify-content: center;
@@ -19,7 +19,9 @@ Component: Hero
 
 }
 
-.hero__welcome {
+.location__section--welcome .hero {
+
+	position: relative;
 
 	&:after {
 
@@ -48,12 +50,12 @@ Component: Hero
 
 		.hero__overlay {
 
-			display: none;
+			// display: none;
 			position: absolute;
 			bottom: 0;
 			width: 100%;
 			// padding: 0 2.50em;
-			background: pink;
+			// background: pink;
 			z-index: 5;
 
 		}
@@ -71,7 +73,7 @@ Component: Hero
 
 					position: relative;
 					// left: -10px;
-					font-size: 10.75rem;
+					font-size: 6rem;
 					line-height: 0.58;
 					@include arial-bold;
 					text-transform: uppercase;
