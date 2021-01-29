@@ -1,6 +1,6 @@
 <section id="groups-and-workshops" class="location__section location__section--groups-and-workshops">
 
-	<h2 class="section__header">Groups and Workshops</h2>
+	<h2 class="section__header section__header--is-overlay">Groups and Workshops</h2>
 
 	<div class="intro">
 
@@ -11,6 +11,16 @@
 				{% set location_groups_hero = Image(location.location_groups_hero) %}
 
 				<img src="{{ location_groups_hero.src }}" srcset="" sizes="" width="" height="" decoding="async" alt="{{ location_groups_hero.alt }}" class="hero__img" />
+
+				<div class="hero__overlay hero__overlay--default">
+
+					<div class="hero__inner-overlay">
+
+						<h2>Groups and Workshops</h2>
+
+					</div>
+
+				</div>
 
 			</div>
 

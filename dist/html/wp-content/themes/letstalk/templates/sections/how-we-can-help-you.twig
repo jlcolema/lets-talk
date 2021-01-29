@@ -1,6 +1,6 @@
 <section id="how-we-can-help-you" class="location__section location__section--how-we-can-help-you">
 
-	<h2 class="section__header">How We Can Help You</h2>
+	<h2 class="section__header section__header--is-overlay">How We Can Help You</h2>
 
 	<div class="intro">
 
@@ -11,6 +11,16 @@
 				{% set location_services_hero = Image(location.location_services_hero) %}
 
 				<img src="{{ location_services_hero.src }}" srcset="" sizes="" width="" height="" decoding="async" alt="{{ location_services_hero.alt }}" class="hero__img" />
+
+				<div class="hero__overlay hero__overlay--default">
+
+					<div class="hero__inner-overlay">
+
+						<h2>How We Can Help You</h2>
+
+					</div>
+
+				</div>
 
 			</div>
 

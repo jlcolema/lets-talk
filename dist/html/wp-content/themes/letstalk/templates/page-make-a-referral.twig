@@ -2,9 +2,9 @@
 
 {% block content %}
 
-	<h1 class="page__header section__header">{{ post.title }}</h1>
+	<h1 class="page__header section__header section__header--is-overlay">{{ post.title }}</h1>
 
-	<div class="intro">
+	<div class="intro intro--added-margin">
 
 		<div class="intro__hero">
 
@@ -13,6 +13,16 @@
 				{% set make_a_referral_hero = Image(post.make_a_referral_hero) %}
 
 				<img src="{{ make_a_referral_hero.src }}" srcset="" sizes="" width="" height="" decoding="async" alt="{{ make_a_referral_hero.alt }}" class="hero__img" />
+
+				<div class="hero__overlay hero__overlay--default">
+
+					<div class="hero__inner-overlay">
+
+						<h2 class="is-purple">{{ post.title }}</h2>
+
+					</div>
+
+				</div>
 
 			</div>
 

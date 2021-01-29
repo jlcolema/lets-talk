@@ -4,7 +4,7 @@ Component: Hero
 
 .hero {
 
-	// position: relative;
+	position: relative;
 
 	// display: flex;
 	// justify-content: center;
@@ -60,12 +60,33 @@ Component: Hero
 
 		}
 
+		.hero__overlay--default {
+
+			left: 0;
+			top: 0;
+			bottom: auto;
+			padding: 1em;
+
+		}
+
 			.hero__inner-overlay {
 
 				width: 100%;
 				max-width: 1150px;
 				margin: 0 auto;
 				// background: pink;
+
+				h2 {
+
+					color: $color-base-white;
+
+					&.is-purple {
+
+						color: $color-brand-purple;
+
+					}
+
+				}
 
 			}
 

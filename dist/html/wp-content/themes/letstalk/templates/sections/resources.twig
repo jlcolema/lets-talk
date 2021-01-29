@@ -1,6 +1,6 @@
 <section id="resources" class="location__section location__section--resources">
 
-	<h2 class="section__header">Resources</h2>
+	<h2 class="section__header section__header--is-overlay">Resources</h2>
 
 	<div class="intro">
 
@@ -11,6 +11,16 @@
 				{% set location_resources_hero = Image(location.location_resources_hero) %}
 
 				<img src="{{ location_resources_hero.src }}" srcset="" sizes="" width="" height="" decoding="async" alt="{{ location_resources_hero.alt }}" class="hero__img" />
+
+				<div class="hero__overlay hero__overlay--default">
+
+					<div class="hero__inner-overlay">
+
+						<h2 class="is-purple">Resources</h2>
+
+					</div>
+
+				</div>
 
 			</div>
 

@@ -38,6 +38,12 @@ Location
 
 	}
 
+	.intro--added-margin {
+
+		margin-top: 2em;
+
+	}
+
 		.intro__hero {
 
 			width: 50%;
@@ -57,10 +63,18 @@ Location
 
 	.section__header--is-overlay {
 
+		// Temporarily hidden...
+
+		display: none;
+
 		// position: absolute;
-		// left: 0;
+		// left: 1em;
 		// top: 1em;
+		// width: 100%;
+		// max-width: 50%;
+		// padding: 1em;
 		// color: $color-base-white;
+		// background: pink;
 		// z-index: 1;
 
 	}

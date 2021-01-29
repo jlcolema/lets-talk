@@ -1,6 +1,6 @@
 <section id="faqs" class="location__section location__section--faqs">
 
-	<h2 class="section__header">Frequently Asked Questions</h2>
+	<h2 class="section__header section__header--is-overlay">Frequently Asked Questions</h2>
 
 	<div class="intro">
 
@@ -11,6 +11,16 @@
 				{% set location_faqs_hero = Image(location.location_faqs_hero) %}
 
 				<img src="{{ location_faqs_hero.src }}" srcset="" sizes="" width="" height="" decoding="async" alt="{{ location_faqs_hero.alt }}" class="hero__img" />
+
+				<div class="hero__overlay hero__overlay--default">
+
+					<div class="hero__inner-overlay">
+
+						<h2 class="is-purple">Frequently Asked Questions</h2>
+
+					</div>
+
+				</div>
 
 			</div>
 
