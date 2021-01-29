@@ -121,7 +121,7 @@ Make a Referral
 			margin: 0 auto;
 			padding: 1em 0;
 			text-align: center;
-
+			
 			p {
 
 				&:last-of-type {
@@ -131,6 +131,16 @@ Make a Referral
 				}
 
 			}
+
+				a {
+
+					&:hover {
+
+						color: $color-base-white;
+
+					}
+
+				}
 
 		}
 
