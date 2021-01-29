@@ -45,6 +45,12 @@ Component: Button
 
 					color: $color-base-white;
 
+					.location__section--contact-us & {
+
+						background: $color-brand-dark-blue;
+
+					}
+
 				}
 
 			}
