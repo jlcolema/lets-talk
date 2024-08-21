@@ -1,0 +1,80 @@
+%!Adobe-FontList 1.20
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Users/Admin/Documents/Design /Time to Talk/Let's Talk Concepts/LetsTalk_Files_2020/LetsTalk_SitePages_2020/How_we_Can_Help_Barnet Folder/Document fonts/AdobeFnt21.lst
+FileLength:1731
+FileModTime:630956888
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Arial-BoldMT
+FamilyName:Arial
+StyleName:Bold
+MenuName:Arial
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Arial Bold
+WritingScript:Roman
+OutlineFileName:/Users/Admin/Documents/Design /Time to Talk/Let's Talk Concepts/LetsTalk_Files_2020/LetsTalk_SitePages_2020/How_we_Can_Help_Barnet Folder/Document fonts/Arial Bold.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:751104
+FileModTime:373795200
+NameArray:0,Mac,4,Arial Bold
+NameArray:0,Win,1,Arial
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Arial-ItalicMT
+FamilyName:Arial
+StyleName:Italic
+MenuName:Arial
+StyleBits:1
+WeightClass:400
+WidthClass:5
+AngleClass:1
+FullName:Arial Italic
+WritingScript:Roman
+OutlineFileName:/Users/Admin/Documents/Design /Time to Talk/Let's Talk Concepts/LetsTalk_Files_2020/LetsTalk_SitePages_2020/How_we_Can_Help_Barnet Folder/Document fonts/Arial Italic.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:557760
+FileModTime:373795200
+NameArray:0,Mac,4,Arial Italic
+NameArray:0,Win,1,Arial
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:ArialMT
+FamilyName:Arial
+StyleName:Regular
+MenuName:Arial
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Arial
+WritingScript:Roman
+OutlineFileName:/Users/Admin/Documents/Design /Time to Talk/Let's Talk Concepts/LetsTalk_Files_2020/LetsTalk_SitePages_2020/How_we_Can_Help_Barnet Folder/Document fonts/Arial.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:774476
+FileModTime:373795200
+NameArray:0,Mac,4,Arial
+NameArray:0,Win,1,Arial
+%EndFont
+
