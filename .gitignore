@@ -40,8 +40,13 @@ node_modules/
 
 # Title
 
-# *.code-workspace
+*.nova
+*.code-workspace
 
 # Ignore OS generated files.
 
 .DS_Store
+
+# Miscellaneous
+
+package-lock.json
