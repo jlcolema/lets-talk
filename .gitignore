@@ -1,3 +1,5 @@
+organize/*
+
 # Ignore everything in the root except the "wp-content" directory.
 
 dist/html/*
